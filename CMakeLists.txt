@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Add source files
 set(SOURCES
     src/main.cpp
+    src/Map.cpp
 )
 
 # Create executable
