@@ -1,11 +1,13 @@
 #ifndef POSITION_HPP
 #define POSITION_HPP
 /**
-* @file Position.hpp
-* @author Bharat Mathur [bharatm11]
-* @date 26 March 2026
-* @brief struct to define 2D position on the battlefield grid
+ * @file Position.hpp
+ * @author Bharat Mathur [bharatm11]
+ * @date 26 March 2026
+ * @brief struct to define 2D position on the battlefield grid
  */
+
+ #include <functional>
 
 struct Position
 {
@@ -31,7 +33,22 @@ struct Position
     {
         return !(*this == pos);
     }
-};
 
+    /**
+     * @brief Hash function to support unordered containers
+     */
+    struct PositionHash
+    {
+        /**
+         * @brief Hash function for Position
+         * @param pos Position
+         * @return Hash value
+         */
+        std::size_t operator()(const Position &pos) const
+        {
+            return std::hash<int>()(pos.row) ^ (std::hash<int>()(pos.col) << 1);
+        }
+    };
+};
 
 #endif // POSITION_HPP
