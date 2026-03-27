@@ -34,7 +34,7 @@ public:
      * @param p Position to query
      * @return Cell type at the position, or Open if out of bounds
      */
-    CellType getCell(Position p) const;
+    CellType getCellType(Position p) const;
 
     /**
      * @brief Check if a position is walkable
@@ -63,7 +63,7 @@ public:
     int numCols() const { return m_numCols; }
 
     /**
-     * @brief Get all walkable of a position (4-directions)
+     * @brief Get all walkable cells from a position (4-directions)
      * @param p Position
      * @return Vector of walkable neighbor positions
      */

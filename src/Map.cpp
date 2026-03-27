@@ -39,25 +39,53 @@ void Map::generateRandom(int rows, int cols, float wallRatio)
     m_grid[0][m_numCols - 1] = CellType::Target;
 }
 
-CellType Map::getCell(Position p) const
+CellType Map::getCellType(Position p) const
 {
-    CellType defaultCell = CellType::Open;
-    return defaultCell;
+    if (!isInBounds(p))
+    {
+        return CellType::Open; // Treat out-of-bounds as open for pathfinding
+    }
+
+    return m_grid[p.row][p.col];
 }
 
 bool Map::isWalkable(Position p) const
 {
-    return false;
+    if (!isInBounds(p))
+    {
+        return false; // Out-of-bounds is not walkable
+    }
+
+    CellType cell = m_grid[p.row][p.col];
+    return cell != CellType::Elevated;
 }
 
 bool Map::isInBounds(Position p) const
 {
-    return false;
+    return ((p.row >= 0) && (p.row < m_numRows) && (p.col >= 0) && (p.col < m_numCols));
 }
 
 std::vector<Position> Map::getNeighbors(Position p) const
 {
-    return {};
+    
+    std::vector<Position> neighbors; // return object
+
+    Position directions[] = {
+        {p.row - 1, p.col}, // up
+        {p.row + 1, p.col}, // down
+        {p.row, p.col - 1}, // left
+        {p.row, p.col + 1}  // right
+    };
+
+    for (const auto &dir : directions)
+    {
+        if (isWalkable(dir))
+        {
+            neighbors.push_back(dir);
+        }
+    }
+
+    return neighbors;
 }
 
 Position Map::findStart() const
