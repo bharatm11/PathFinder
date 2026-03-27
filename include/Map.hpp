@@ -22,20 +22,6 @@ public:
     Map() = default;
 
     /**
-     * @brief Load a map from a RiskyLab Tilemap JSON file
-     * @param filepath Path to the JSON file
-     * @return true if load succeeded, false otherwise
-     */
-    bool loadFromJson(const std::string &filepath);
-
-    /**
-     * @brief Save the map to a RiskyLab Tilemap JSON file
-     * @param filepath Path to the output JSON file
-     * @return true if save succeeded, false otherwise
-     */
-    bool saveToJson(const std::string &filepath) const;
-
-    /**
      * @brief Generate a random map
      * @param rows Number of rows in the map
      * @param cols Number of columns in the map
