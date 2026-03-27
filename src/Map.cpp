@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Map.hpp"
 
+
+
 void Map::generateRandom(int rows, int cols, float wallRatio)
 {
     // Return early if dimensions are invalid
@@ -67,7 +69,7 @@ bool Map::isInBounds(Position p) const
 
 std::vector<Position> Map::getNeighbors(Position p) const
 {
-    
+
     std::vector<Position> neighbors; // return object
 
     Position directions[] = {
@@ -90,14 +92,39 @@ std::vector<Position> Map::getNeighbors(Position p) const
 
 Position Map::findStart() const
 {
-    return {};
+    for (int r = 0; r < m_numRows; ++r)
+    {
+        for (int c = 0; c < m_numCols; ++c)
+        {
+            if (m_grid[r][c] == CellType::Start)
+                {
+                    return {r, c};
+                }
+        }
+    }
+    return {-1, -1};
 }
 
 Position Map::findTarget() const
 {
-    return {};
+    for (int r = 0; r < m_numRows; ++r)
+    {
+        for (int c = 0; c < m_numCols; ++c)
+        {
+            if (m_grid[r][c] == CellType::Target)
+            {
+                return {r, c};
+            }                
+        }
+    }
+    return {-1, -1};
 }
 
 void Map::setCell(Position p, CellType type)
 {
+    if (isInBounds(p))
+    {
+        m_grid[p.row][p.col] = type;
+    }
 }
+
