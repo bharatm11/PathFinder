@@ -2,6 +2,30 @@
 #include <fstream>
 #include <iostream>
 #include <exception>
+#include <cmath>
+
+int JsonLoader::normalizeTileValue(double value)
+{
+    static const int supportedTileCodes[] = {
+        static_cast<int>(CellType::Open),
+        static_cast<int>(CellType::Start),
+        static_cast<int>(CellType::Elevated),
+        static_cast<int>(CellType::Target)};
+
+    // Find the closest supported tile code to the input value
+    int closestTileCode = supportedTileCodes[0];
+    double smallestDistance = std::fabs(value - static_cast<double>(closestTileCode));
+    for (int candidateTileCode : supportedTileCodes)
+    {
+        const double candidateDistance = std::fabs(value - static_cast<double>(candidateTileCode));
+        if (candidateDistance < smallestDistance)
+        {
+            closestTileCode = candidateTileCode;
+            smallestDistance = candidateDistance;
+        }
+    }
+    return closestTileCode;
+}
 
 bool JsonLoader::loadMap(const std::string &filepath,
                          std::vector<int> &outData,
@@ -20,14 +44,40 @@ bool JsonLoader::loadMap(const std::string &filepath,
         file >> j;
         file.close();
 
-        // Extract width and height
-        if (!j.contains("width") || !j.contains("height"))
+        // Extract map dimensions
+        if (j.contains("width") && j.contains("height"))
         {
-            throw std::runtime_error("Missing 'width' or 'height' field in JSON");
+            outWidth = j["width"].get<int>();
+            outHeight = j["height"].get<int>();
         }
+        else
+        {
+            // Fallback for editor-exported format: derive dimensions from canvas and tile size.
+            if (!j.contains("canvas") || !j.contains("tilesets") || j["tilesets"].empty())
+            {
+                throw std::runtime_error("Missing map dimensions: expected width/height or canvas+tilesets");
+            }
 
-        outWidth = j["width"].get<int>();
-        outHeight = j["height"].get<int>();
+            const auto &canvas = j["canvas"];
+            const auto &tileset = j["tilesets"][0];
+            if (!canvas.contains("width") || !canvas.contains("height") ||
+                !tileset.contains("tilewidth") || !tileset.contains("tileheight"))
+            {
+                throw std::runtime_error("Missing canvas/tile size fields needed to infer dimensions");
+            }
+
+            const int canvasWidth = canvas["width"].get<int>();
+            const int canvasHeight = canvas["height"].get<int>();
+            const int tileWidth = tileset["tilewidth"].get<int>();
+            const int tileHeight = tileset["tileheight"].get<int>();
+            if (tileWidth <= 0 || tileHeight <= 0)
+            {
+                throw std::runtime_error("Invalid tile size while inferring dimensions");
+            }
+
+            outWidth = canvasWidth / tileWidth;
+            outHeight = canvasHeight / tileHeight;
+        }
 
         // Extract data from layers
         if (!j.contains("layers") || j["layers"].empty())
@@ -41,7 +91,21 @@ bool JsonLoader::loadMap(const std::string &filepath,
             throw std::runtime_error("Missing 'data' field in layer");
         }
 
-        outData = layer["data"].get<std::vector<int>>();
+        if (!layer["data"].is_array())
+        {
+            throw std::runtime_error("Layer 'data' must be an array");
+        }
+
+        outData.clear();
+        outData.reserve(layer["data"].size());
+        for (const auto &value : layer["data"])
+        {
+            if (!value.is_number())
+            {
+                throw std::runtime_error("Layer data contains a non-numeric tile value");
+            }
+            outData.push_back(normalizeTileValue(value.get<double>()));
+        }
 
         // Verify data size
         if (static_cast<int>(outData.size()) != outWidth * outHeight)

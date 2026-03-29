@@ -18,8 +18,17 @@ class Map
 public:
     /**
      * @brief Construct an empty map
+     * param none
+     * return none
      */
     Map() = default;
+
+    /**
+     * @brief Load a map from a RiskyLab Tilemap JSON file
+     * @param filepath Path to the JSON file
+     * @return true if load succeeded, false otherwise
+     */
+    bool loadFromJson(const std::string &filepath);
 
     /**
      * @brief Generate a random map
@@ -88,7 +97,6 @@ public:
      */
     void setCell(Position p, CellType type);
 
-private:
     std::vector<std::vector<CellType>> m_grid; // 2D map grid 
     int m_numRows = 0;                            // Number of rows
     int m_numCols = 0;                            // Number of columns

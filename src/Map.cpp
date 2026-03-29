@@ -1,8 +1,49 @@
 #include <random>
 #include <iostream>
 #include "Map.hpp"
+#include "JsonLoader.hpp"
 
+bool Map::loadFromJson(const std::string &filepath)
+{
+    std::vector<int> flatData;
+    int width = 0;
+    int height = 0;
 
+    if (!JsonLoader::loadMap(filepath, flatData, width, height))
+    {
+        return false;
+    }
+
+    m_numCols = width;
+    m_numRows = height;
+    m_grid.assign(m_numRows, std::vector<CellType>(m_numCols, CellType::Open));
+
+    for (int r = 0; r < m_numRows; ++r)
+    {
+        for (int c = 0; c < m_numCols; ++c)
+        {
+            const int value = flatData[r * m_numCols + c];
+            switch (value)
+            {
+            case static_cast<int>(CellType::Start):
+                m_grid[r][c] = CellType::Start;
+                break;
+            case static_cast<int>(CellType::Elevated):
+                m_grid[r][c] = CellType::Elevated;
+                break;
+            case static_cast<int>(CellType::Target):
+                m_grid[r][c] = CellType::Target;
+                break;
+            case static_cast<int>(CellType::Open):
+            default:
+                m_grid[r][c] = CellType::Open;
+                break;
+            }
+        }
+    }
+
+    return true;
+}
 
 void Map::generateRandom(int rows, int cols, float wallRatio)
 {
