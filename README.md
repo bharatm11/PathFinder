@@ -83,4 +83,4 @@ cmake .. -DDOXYGEN_EXECUTABLE="C:/Program Files/doxygen/bin/doxygen.exe"
 cmake --build . --target docs
 ```
 
-Open: `build/docs/html/index.html`
+Open: `docs/html/index.html`
