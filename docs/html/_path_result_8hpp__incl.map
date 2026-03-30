@@ -1,0 +1,11 @@
+<map id="C:/Users/bhara/Downloads/Submission/include/PathResult.hpp" name="C:/Users/bhara/Downloads/Submission/include/PathResult.hpp">
+<area shape="rect" id="Node000001" title="Result struct returned PathFinder A* search." alt="" coords="5,5,238,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="13,96,70,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,51,67,87,63,83,102,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="95,96,148,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,46,124,81,119,79,120,51"/>
+<area shape="rect" id="Node000004" href="$_position_8hpp.html" title="struct to define 2D position on the battlefield grid" alt="" coords="172,96,266,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="147,46,195,85,189,87,146,51"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="180,171,258,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="221,121,221,156,217,154,217,125"/>
+</map>

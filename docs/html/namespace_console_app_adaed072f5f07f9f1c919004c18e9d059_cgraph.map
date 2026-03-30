@@ -1,0 +1,18 @@
+<map id="ConsoleApp::executePathfinding" name="ConsoleApp::executePathfinding">
+<area shape="rect" id="Node000001" title="Execute pathfinder." alt="" coords="5,81,217,108"/>
+<area shape="rect" id="Node000002" href="$class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="265,5,401,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,78,279,36,275,40,154,83"/>
+<area shape="rect" id="Node000003" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="620,81,740,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,92,606,92,604,97,217,97"/>
+<area shape="rect" id="Node000004" href="$class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="267,107,399,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="216,104,254,110,249,111,217,109"/>
+<area shape="rect" id="Node000008" href="$class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467" title="Print a cell positions as path coordinates." alt="" coords="266,157,400,184"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="153,106,279,150,275,153,152,111"/>
+<area shape="rect" id="Node000005" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="449,107,572,133"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="399,117,436,120,431,120,400,123"/>
+<area shape="rect" id="Node000006" href="$class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="458,157,564,184"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="383,131,450,153,444,153,382,137"/>
+<area shape="rect" id="Node000007" href="$class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="454,208,567,235"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="380,131,402,143,418,156,427,169,436,181,451,194,459,201,454,200,447,198,432,185,423,172,414,160,400,148,379,137"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="572,108,608,105,602,106,573,113"/>
+</map>

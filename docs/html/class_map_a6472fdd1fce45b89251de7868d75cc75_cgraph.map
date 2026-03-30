@@ -1,0 +1,5 @@
+<map id="Map::saveToJson" name="Map::saveToJson">
+<area shape="rect" id="Node000001" title="Save map to a RiskyLab Tilemap JSON file." alt="" coords="5,5,130,32"/>
+<area shape="rect" id="Node000002" href="$class_json_loader.html#a69a5c23a1dd54d94efe286afe8914eb3" title="Save a map to RiskyLab Tilemap JSON format." alt="" coords="178,5,327,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,16,165,18,159,19,130,21"/>
+</map>

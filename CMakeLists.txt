@@ -46,6 +46,16 @@ if(DOXYGEN_FOUND)
     set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
     set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
 
+    # Enable UML/call graphs when Graphviz dot is available.
+    if(DOXYGEN_DOT_FOUND)
+        set(DOXYGEN_HAVE_DOT YES)
+        get_filename_component(DOXYGEN_DOT_PATH "${DOXYGEN_DOT_EXECUTABLE}" DIRECTORY)
+    else()
+        set(DOXYGEN_HAVE_DOT NO)
+        set(DOXYGEN_DOT_PATH "")
+        message(WARNING "Graphviz 'dot' not found. UML/call graphs in Doxygen output will be disabled.")
+    endif()
+
     configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
 
     add_custom_target(docs ALL

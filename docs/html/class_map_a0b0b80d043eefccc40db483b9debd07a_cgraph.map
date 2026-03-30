@@ -1,0 +1,5 @@
+<map id="Map::isWalkable" name="Map::isWalkable">
+<area shape="rect" id="Node000001" title="Check if a position is walkable." alt="" coords="5,5,123,32"/>
+<area shape="rect" id="Node000002" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="171,5,290,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,16,158,18,152,19,123,21"/>
+</map>

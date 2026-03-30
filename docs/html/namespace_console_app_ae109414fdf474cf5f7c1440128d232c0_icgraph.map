@@ -1,0 +1,5 @@
+<map id="ConsoleApp::getPositionFromInput" name="ConsoleApp::getPositionFromInput">
+<area shape="rect" id="Node000001" title="Read a position (row and column) from console. Calls readNumber for each coordinate." alt="" coords="103,5,298,48"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,28,55,29,55,24,90,26"/>
+</map>

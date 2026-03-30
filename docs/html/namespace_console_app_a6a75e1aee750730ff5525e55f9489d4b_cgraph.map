@@ -1,0 +1,14 @@
+<map id="ConsoleApp::replaceMarker" name="ConsoleApp::replaceMarker">
+<area shape="rect" id="Node000001" title="Replace existing marker (start or target) on the map with a new position." alt="" coords="5,81,188,108"/>
+<area shape="rect" id="Node000002" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="236,5,359,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,78,247,36,244,40,135,83"/>
+<area shape="rect" id="Node000004" href="$class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="244,56,350,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="188,81,231,77,226,79,189,86"/>
+<area shape="rect" id="Node000005" href="$class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="241,107,354,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="188,104,228,110,223,111,188,109"/>
+<area shape="rect" id="Node000006" href="$class_map.html#a56edaec62c0f20677b60513cf249c676" title="Set a cell to a specific type." alt="" coords="250,157,345,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="135,106,248,150,243,153,134,111"/>
+<area shape="rect" id="Node000003" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="407,81,526,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="333,30,360,42,426,74,421,74,358,46,333,35"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="332,154,358,143,421,116,426,114,360,148,333,159"/>
+</map>

@@ -15,3 +15,12 @@ QUIET                  = YES
 WARN_IF_UNDOCUMENTED   = NO
 GENERATE_LATEX         = NO
 GENERATE_HTML          = YES
+
+# UML / Graphviz
+HAVE_DOT               = @DOXYGEN_HAVE_DOT@
+DOT_PATH               = "@DOXYGEN_DOT_PATH@"
+UML_LOOK               = YES
+UML_LIMIT_NUM_FIELDS   = 50
+DOT_UML_DETAILS        = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES

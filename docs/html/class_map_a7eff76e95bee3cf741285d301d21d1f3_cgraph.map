@@ -1,0 +1,7 @@
+<map id="Map::getNeighbors" name="Map::getNeighbors">
+<area shape="rect" id="Node000001" title="Get all walkable cells from a position (4&#45;directions)." alt="" coords="5,5,137,32"/>
+<area shape="rect" id="Node000002" href="$class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="185,5,302,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,16,172,18,166,19,137,21"/>
+<area shape="rect" id="Node000003" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="350,5,469,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="302,16,337,19,332,19,302,21"/>
+</map>

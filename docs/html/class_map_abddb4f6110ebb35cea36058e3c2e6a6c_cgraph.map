@@ -1,0 +1,5 @@
+<map id="Map::getCellType" name="Map::getCellType">
+<area shape="rect" id="Node000001" title="Get the cell type at a position." alt="" coords="5,5,129,32"/>
+<area shape="rect" id="Node000002" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="177,5,296,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,16,164,18,159,19,129,21"/>
+</map>

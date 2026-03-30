@@ -1,0 +1,11 @@
+<map id="Renderer::printMap" name="Renderer::printMap">
+<area shape="rect" id="Node000001" title="Print the map to console." alt="" coords="5,56,138,83"/>
+<area shape="rect" id="Node000002" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="186,5,309,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,53,186,35,181,38,122,58"/>
+<area shape="rect" id="Node000004" href="$class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="194,56,300,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="138,67,181,69,176,70,139,72"/>
+<area shape="rect" id="Node000005" href="$class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="191,107,304,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="121,81,186,101,181,103,120,86"/>
+<area shape="rect" id="Node000003" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="357,5,476,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="309,16,344,18,339,19,310,21"/>
+</map>
