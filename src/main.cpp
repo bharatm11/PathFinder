@@ -99,9 +99,28 @@ int main(int argc, char *argv[])
 
     std::cout << "Path found. Length: " << result.path.size() << std::endl;
 
+    // Print the path coordinates 
+    if (result.path.size() == 0)
+    {
+        std::cout << "(empty)";
+    }
+    else
+    {
+        for (size_t i = 0; i < result.path.size(); ++i)
+        {
+            const auto &p = result.path[i];
+            std::cout << "(" << p.row << "," << p.col << ")";
+            if (i + 1 < result.path.size())
+            {
+                std::cout << " -> ";
+            }
+        }
+    }
+
+    std::cout << "\n";
+
     std::cout << "Solved map (* = traversed path):" << std::endl;
     printMap(jsonMap, result.path);
-
 
     return 0;
 }
