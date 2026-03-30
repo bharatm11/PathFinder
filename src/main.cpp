@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "Map.hpp"
 #include "PathFinder.hpp"
 
@@ -21,15 +22,30 @@ char cellToChar(CellType cell)
     std::cout << "Target: " << "T" << std::endl;
     std::cout << "Elevated: " << "#" << std::endl;
     std::cout << "Open: " << "." << std::endl;
+    std::cout << "Traversed path: " << "*" << std::endl;
 }
 
-void printMap(const Map &map)
+bool isTraversedCell(const Position &cell, const std::vector<Position> &path)
+{
+    return (std::find(path.begin(), path.end(), cell) != path.end());
+}
+
+void printMap(const Map &map, const std::vector<Position> &path = {})
 {
     for (int r = 0; r < map.numRows(); ++r)
     {
         for (int c = 0; c < map.numCols(); ++c)
         {
-            std::cout << cellToChar(map.getCellType({r, c})) << ' ';
+            const Position cell{r, c};
+            if (!path.empty() && isTraversedCell(cell, path) 
+            && (map.getCellType(cell) != CellType::Start) && (map.getCellType(cell) != CellType::Target))
+            {
+                std::cout << '*' << ' ';
+            }
+            else
+            {
+                std::cout << cellToChar(map.getCellType(cell)) << ' ';
+            }
         }
         std::cout << '\n';
     }
@@ -79,6 +95,9 @@ int main(int argc, char *argv[])
     }
 
     std::cout << "Path found. Length: " << result.path.size() << std::endl;
+
+    std::cout << "Solved map (* = traversed path):" << std::endl;
+    printMap(jsonMap, result.path);
 
 
     return 0;
