@@ -84,3 +84,11 @@ cmake --build . --target docs
 ```
 
 Open: `docs/html/index.html`
+
+## Known Bugs
+
+- JSON normalization + marker ambiguity:
+	When importing JSON, numeric tile values are normalized to the nearest supported cell type. If input data contains noisy/non-standard values, this can produce unexpected `Start` or `Target` cells.
+
+- Multiple start/target markers on import:
+	If a JSON map contains multiple `Start` (`0`) or `Target` (`8`) cells, the loader currently keeps all of them in the grid, and pathfinding uses the first one found during scan (`findStart`/`findTarget`). This may lead to multiple start or target locations.
