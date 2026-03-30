@@ -1,71 +1,80 @@
 <map id="main" name="main">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,563,55,589"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,537,55,564"/>
 <area shape="rect" id="Node000002" href="$namespace_console_app.html#ae6b9b06bd9625397cabb3a524b00af75" title="Display main menu." alt="" coords="108,5,309,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="29,562,30,462,39,309,47,228,60,153,78,92,88,68,101,49,115,38,113,43,105,52,93,70,83,94,65,155,53,229,44,309,35,462,34,562"/>
-<area shape="rect" id="Node000003" href="$namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,284,314,311"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="31,562,52,480,72,428,101,378,133,344,172,317,169,321,137,348,105,382,77,430,57,482,36,563"/>
-<area shape="rect" id="Node000007" href="$class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="1042,132,1159,159"/>
-<area shape="poly" id="edge25_Node000001_Node000007" title=" " alt="" coords="28,562,29,511,38,435,47,392,60,350,77,308,100,270,175,178,211,142,249,114,290,93,336,78,389,69,452,67,680,67,839,66,908,73,995,92,1031,105,1066,124,1061,124,1029,110,993,97,907,78,839,71,680,72,452,72,390,75,337,83,292,98,251,119,215,147,179,181,105,274,82,311,65,351,52,394,43,435,35,511,34,562"/>
-<area shape="rect" id="Node000011" href="$class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="387,385,519,412"/>
-<area shape="poly" id="edge31_Node000001_Node000011" title=" " alt="" coords="31,562,38,533,50,496,71,459,101,429,133,410,167,397,238,382,309,378,374,384,369,386,308,384,239,387,168,402,135,415,104,433,75,462,55,498,43,534,36,563"/>
-<area shape="rect" id="Node000015" href="$class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="626,588,732,615"/>
-<area shape="poly" id="edge29_Node000001_Node000015" title=" " alt="" coords="54,573,167,571,314,573,474,582,613,594,608,596,473,587,314,579,167,577,56,578"/>
-<area shape="rect" id="Node000016" href="$class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="622,487,736,513"/>
-<area shape="poly" id="edge30_Node000001_Node000016" title=" " alt="" coords="36,561,62,526,80,508,101,494,168,468,238,452,310,445,381,444,450,449,513,458,618,481,613,483,512,463,449,455,381,450,310,450,239,457,170,473,104,498,83,512,66,529,41,563"/>
-<area shape="rect" id="Node000018" href="$class_map.html#a37b0876b916f4a90fabfcf90b387d313" title="Find the start position in the map." alt="" coords="157,588,260,615"/>
-<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="54,577,143,590,139,594,56,582"/>
-<area shape="rect" id="Node000019" href="$class_map.html#adf53720950a61164844df888a64cfdfa" title="Find the target position in the map." alt="" coords="153,639,264,665"/>
-<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="46,587,73,607,104,624,140,638,135,640,102,629,70,611,48,592"/>
-<area shape="rect" id="Node000020" href="$class_map.html#a623ff35948ec4fb068633ae6636a377a" title="Generate a random map." alt="" coords="132,689,285,716"/>
-<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="37,587,64,632,82,655,104,675,120,685,115,687,101,680,78,659,59,635,37,593"/>
-<area shape="rect" id="Node000021" href="$namespace_console_app.html#ae109414fdf474cf5f7c1440128d232c0" title="Read a position (row and column) from console. Calls readNumber for each coordinate." alt="" coords="111,791,306,833"/>
-<area shape="poly" id="edge23_Node000001_Node000021" title=" " alt="" coords="32,587,40,625,52,674,73,725,87,749,105,770,117,782,112,783,101,774,83,752,68,727,47,675,35,626,33,593"/>
-<area shape="rect" id="Node000022" href="$namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6" title="Read a number from console." alt="" coords="368,769,539,796"/>
-<area shape="poly" id="edge32_Node000001_Node000022" title=" " alt="" coords="33,587,42,618,55,656,75,694,104,726,122,736,146,744,209,758,354,776,350,779,208,764,145,750,120,741,101,730,71,697,50,658,37,620,33,592"/>
-<area shape="rect" id="Node000023" href="$class_map.html#abf1a7748ff6051b8ca642653999f279e" title="Load a map from a RiskyLab Tilemap JSON file." alt="" coords="140,857,276,884"/>
-<area shape="poly" id="edge26_Node000001_Node000023" title=" " alt="" coords="34,587,59,722,79,796,92,825,105,843,129,860,123,861,101,847,87,827,74,798,54,723,32,593"/>
-<area shape="rect" id="Node000026" href="$namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b" title="Replace existing marker (start or target) on the map with a new position." alt="" coords="362,487,544,513"/>
-<area shape="poly" id="edge33_Node000001_Node000026" title=" " alt="" coords="46,561,72,544,102,529,164,513,227,502,349,495,344,499,228,508,165,518,104,535,74,548,51,564"/>
-<area shape="rect" id="Node000028" href="$class_map.html#a6472fdd1fce45b89251de7868d75cc75" title="Save map to a RiskyLab Tilemap JSON file." alt="" coords="146,908,270,935"/>
-<area shape="poly" id="edge39_Node000001_Node000028" title=" " alt="" coords="33,587,42,654,56,746,76,836,90,871,105,894,117,904,134,914,129,914,115,909,101,898,85,873,71,838,50,747,37,655,32,592"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="29,537,31,441,40,295,49,218,62,148,79,89,101,49,115,38,113,43,105,52,83,91,67,149,54,219,46,295,36,441,34,537"/>
+<area shape="rect" id="Node000003" href="$namespace_console_app.html#a42319459a07ae1f33d8b36cc0648571d" title="Execute pathfinder." alt="" coords="103,233,314,260"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="28,537,28,489,36,419,45,381,58,344,76,308,101,277,117,265,115,270,105,281,81,311,63,346,50,383,42,420,34,489,33,537"/>
+<area shape="rect" id="Node000007" href="$class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="1042,183,1159,209"/>
+<area shape="poly" id="edge25_Node000001_Node000007" title=" " alt="" coords="30,536,38,470,52,376,73,283,86,246,100,220,140,175,177,140,214,113,253,94,295,80,341,72,452,67,680,67,770,63,842,58,876,59,911,64,950,75,995,92,1022,108,1046,127,1083,170,1078,170,1042,131,1019,112,993,97,949,80,910,69,875,64,842,63,771,68,680,72,452,72,341,77,296,86,255,99,217,118,180,144,143,179,105,223,91,248,78,285,57,377,43,471,35,537"/>
+<area shape="rect" id="Node000011" href="$class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="387,284,519,311"/>
+<area shape="poly" id="edge33_Node000001_Node000011" title=" " alt="" coords="29,537,31,496,41,441,50,411,62,382,79,356,101,334,131,314,165,298,200,288,236,281,307,277,374,282,369,285,307,282,237,286,201,293,166,303,134,318,104,338,83,360,67,385,55,413,46,442,36,497,34,537"/>
+<area shape="rect" id="Node000015" href="$class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="626,487,732,513"/>
+<area shape="poly" id="edge31_Node000001_Node000015" title=" " alt="" coords="53,538,102,523,243,503,384,494,511,492,613,495,608,498,511,497,384,499,243,508,103,528,57,542"/>
+<area shape="rect" id="Node000016" href="$class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="622,436,736,463"/>
+<area shape="poly" id="edge32_Node000001_Node000016" title=" " alt="" coords="33,536,57,487,76,461,101,440,161,410,215,393,265,386,314,387,417,403,545,421,610,432,605,434,544,427,416,408,314,392,266,391,216,398,163,415,104,445,80,465,61,490,38,538"/>
+<area shape="rect" id="Node000017" href="$class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467" title="Print a cell positions as path coordinates." alt="" coords="386,335,520,361"/>
+<area shape="poly" id="edge34_Node000001_Node000017" title=" " alt="" coords="30,536,35,503,47,459,68,415,83,395,101,378,132,359,166,345,201,335,237,329,308,326,373,332,369,335,307,331,237,335,202,341,167,350,134,364,104,382,87,398,72,417,52,461,40,504,35,537"/>
+<area shape="rect" id="Node000018" href="$class_map.html#a37b0876b916f4a90fabfcf90b387d313" title="Find the start position in the map." alt="" coords="157,537,260,564"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="54,548,142,549,139,553,56,553"/>
+<area shape="rect" id="Node000019" href="$class_map.html#adf53720950a61164844df888a64cfdfa" title="Find the target position in the map." alt="" coords="153,588,264,615"/>
+<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="54,557,103,573,140,584,135,587,102,579,56,562"/>
+<area shape="rect" id="Node000020" href="$class_map.html#a623ff35948ec4fb068633ae6636a377a" title="Generate a random map." alt="" coords="132,639,285,665"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="40,562,68,594,104,624,119,633,115,635,101,629,64,598,41,567"/>
+<area shape="rect" id="Node000021" href="$namespace_console_app.html#ae109414fdf474cf5f7c1440128d232c0" title="Read a position (row and column) from console. Calls readNumber for each coordinate." alt="" coords="111,689,306,732"/>
+<area shape="poly" id="edge23_Node000001_Node000021" title=" " alt="" coords="35,562,60,618,79,649,104,675,110,680,105,682,101,679,75,652,56,620,36,567"/>
+<area shape="rect" id="Node000022" href="$namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6" title="Read a number from console." alt="" coords="368,727,539,753"/>
+<area shape="poly" id="edge35_Node000001_Node000022" title=" " alt="" coords="32,562,37,602,47,651,68,702,84,724,104,742,139,761,176,773,216,779,256,780,333,771,401,757,396,759,334,776,256,785,215,784,175,778,137,766,101,746,80,727,64,705,42,653,32,603,31,567"/>
+<area shape="rect" id="Node000023" href="$class_map.html#abf1a7748ff6051b8ca642653999f279e" title="Load a map from a RiskyLab Tilemap JSON file." alt="" coords="140,807,276,833"/>
+<area shape="poly" id="edge26_Node000001_Node000023" title=" " alt="" coords="31,561,36,607,46,666,67,730,83,760,104,786,128,803,123,805,101,790,79,763,62,733,41,668,31,607,31,567"/>
+<area shape="rect" id="Node000026" href="$class_map.html#a9e8ac590e98d7d3a69819adba7042724" title="Load path positions from JSON file." alt="" coords="127,857,290,884"/>
+<area shape="poly" id="edge29_Node000001_Node000026" title=" " alt="" coords="33,562,43,624,57,709,78,791,91,822,105,844,116,853,110,854,101,847,86,825,73,792,52,710,38,625,33,567"/>
+<area shape="rect" id="Node000028" href="$namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b" title="Replace existing marker (start or target) on the map with a new position." alt="" coords="362,436,544,463"/>
+<area shape="poly" id="edge36_Node000001_Node000028" title=" " alt="" coords="38,536,64,506,82,491,102,479,162,457,226,445,289,439,349,440,344,443,289,444,227,450,164,463,104,484,85,495,68,510,43,538"/>
+<area shape="rect" id="Node000030" href="$class_map.html#ac80cfbd9a1c7b249c198d2dbdd72896d" title="Save path positions to JSON file." alt="" coords="133,908,284,935"/>
+<area shape="poly" id="edge42_Node000001_Node000030" title=" " alt="" coords="32,562,41,633,54,733,75,831,89,869,105,894,121,908,116,909,101,898,84,871,70,832,49,734,36,634,32,567"/>
+<area shape="rect" id="Node000032" href="$class_map.html#a6472fdd1fce45b89251de7868d75cc75" title="Save map to a RiskyLab Tilemap JSON file." alt="" coords="146,959,270,985"/>
+<area shape="poly" id="edge44_Node000001_Node000032" title=" " alt="" coords="32,562,39,643,51,758,72,871,87,915,105,945,117,955,134,965,129,965,114,960,101,948,82,918,67,872,45,758,34,643,32,567"/>
 <area shape="rect" id="Node000004" href="$class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="385,183,521,209"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,282,290,251,361,219,384,213,380,216,363,224,293,255,236,285"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="275,231,372,211,369,215,278,235"/>
 <area shape="rect" id="Node000008" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="1207,360,1327,387"/>
-<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="313,298,523,306,766,320,999,341,1195,364,1189,365,999,346,765,325,523,311,315,303"/>
-<area shape="poly" id="edge12_Node000003_Node000011" title=" " alt="" coords="242,309,407,378,402,380,243,314"/>
-<area shape="rect" id="Node000017" href="$class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467" title="Print a cell positions as path coordinates." alt="" coords="386,233,520,260"/>
-<area shape="poly" id="edge19_Node000003_Node000017" title=" " alt="" coords="275,281,373,262,369,265,278,286"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="314,244,524,250,645,257,766,269,885,287,1004,310,1199,355,1194,356,1003,315,885,292,765,275,645,263,523,255,316,249"/>
+<area shape="poly" id="edge12_Node000003_Node000011" title=" " alt="" coords="275,258,374,279,369,282,277,263"/>
+<area shape="poly" id="edge19_Node000003_Node000017" title=" " alt="" coords="233,258,293,289,363,320,384,329,379,331,361,325,290,293,235,263"/>
 <area shape="rect" id="Node000005" href="$class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b" title="Internal A* implementation." alt="" coords="599,183,759,209"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="520,194,586,195,581,197,523,198"/>
 <area shape="rect" id="Node000006" href="$class_map.html#a7eff76e95bee3cf741285d301d21d1f3" title="Get all walkable cells from a position (4&#45;directions)." alt="" coords="838,107,970,133"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="720,180,850,137,845,140,722,184"/>
-<area shape="poly" id="edge9_Node000005_Node000007" title=" " alt="" coords="759,184,1029,153,1025,155,761,189"/>
-<area shape="rect" id="Node000009" href="$class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd" title="Calculate Manhattan distance heuristic." alt="" coords="835,208,972,235"/>
-<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="759,202,822,211,817,213,760,208"/>
-<area shape="rect" id="Node000010" href="$class_pathfinder.html#ab01c4d85253b1207849442ec1a667561" title="Reconstruct path from parent pointers." alt="" coords="814,259,994,285"/>
-<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="714,207,815,244,839,253,834,254,813,249,715,213"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="969,126,1029,135,1024,137,970,131"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1113,157,1250,348,1244,347,1111,162"/>
-<area shape="rect" id="Node000012" href="$class_renderer.html#a22b13cfa2f38a5f2e04a05dbc1075ef1" title="Convert a cell type to a character." alt="" coords="607,335,751,361"/>
-<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="515,382,604,364,599,367,517,387"/>
-<area shape="rect" id="Node000013" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="617,436,741,463"/>
-<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="516,410,604,431,599,433,517,415"/>
-<area shape="rect" id="Node000014" href="$class_renderer.html#a703d6070936441c6ddc595b6b89e48e0" title="Check if a cell is part of the traversed path." alt="" coords="592,385,766,412"/>
-<area shape="poly" id="edge16_Node000011_Node000014" title=" " alt="" coords="519,396,579,398,574,400,521,401"/>
-<area shape="poly" id="edge17_Node000011_Node000015" title=" " alt="" coords="472,410,546,473,594,523,653,578,648,578,590,527,542,477,472,415"/>
-<area shape="poly" id="edge18_Node000011_Node000016" title=" " alt="" coords="504,410,546,428,561,440,570,451,580,462,594,472,610,482,605,482,591,477,576,466,566,455,557,444,543,433,505,415"/>
-<area shape="poly" id="edge15_Node000013_Node000008" title=" " alt="" coords="741,439,1194,381,1190,384,742,444"/>
-<area shape="poly" id="edge24_Node000021_Node000022" title=" " alt="" coords="306,798,355,794,350,796,307,803"/>
-<area shape="rect" id="Node000024" href="$class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad" title="Load a RiskyLab Tilemap JSON file." alt="" coords="380,857,526,884"/>
-<area shape="poly" id="edge27_Node000023_Node000024" title=" " alt="" coords="277,868,367,870,362,871,277,873"/>
-<area shape="rect" id="Node000025" href="$class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7" title="Normalize a tile value to the nearest supported tile code." alt="" coords="592,849,766,892"/>
-<area shape="poly" id="edge28_Node000024_Node000025" title=" " alt="" coords="526,868,580,870,574,871,526,873"/>
-<area shape="poly" id="edge34_Node000026_Node000013" title=" " alt="" coords="515,484,604,465,600,468,517,488"/>
-<area shape="poly" id="edge35_Node000026_Node000015" title=" " alt="" coords="502,511,546,530,570,548,594,567,621,582,616,582,591,572,567,553,543,534,503,517"/>
-<area shape="poly" id="edge36_Node000026_Node000016" title=" " alt="" coords="544,497,609,499,604,501,545,503"/>
-<area shape="rect" id="Node000027" href="$class_map.html#a56edaec62c0f20677b60513cf249c676" title="Set a cell to a specific type." alt="" coords="1053,487,1148,513"/>
-<area shape="poly" id="edge37_Node000026_Node000027" title=" " alt="" coords="516,511,593,523,716,528,839,524,950,516,1040,508,1035,509,950,521,839,530,716,533,592,528,517,517"/>
-<area shape="poly" id="edge38_Node000027_Node000008" title=" " alt="" coords="1118,484,1234,398,1238,395,1121,489"/>
-<area shape="rect" id="Node000029" href="$class_json_loader.html#a69a5c23a1dd54d94efe286afe8914eb3" title="Save a map to RiskyLab Tilemap JSON format." alt="" coords="378,908,528,935"/>
-<area shape="poly" id="edge40_Node000028_Node000029" title=" " alt="" coords="271,919,366,921,360,921,271,924"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="713,180,813,143,838,137,834,140,815,148,716,184"/>
+<area shape="poly" id="edge9_Node000005_Node000007" title=" " alt="" coords="717,207,767,226,790,236,814,244,864,253,904,256,944,254,993,244,1030,232,1067,216,1063,219,1032,236,995,249,944,259,904,262,864,258,813,249,788,241,765,230,718,213"/>
+<area shape="rect" id="Node000009" href="$class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd" title="Calculate Manhattan distance heuristic." alt="" coords="835,157,972,184"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="758,185,822,179,818,181,760,189"/>
+<area shape="rect" id="Node000010" href="$class_pathfinder.html#ab01c4d85253b1207849442ec1a667561" title="Reconstruct path from parent pointers." alt="" coords="814,208,994,235"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="758,202,801,208,796,210,760,208"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="959,131,995,143,1063,175,1058,176,993,148,960,137"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1115,207,1245,349,1240,348,1114,213"/>
+<area shape="rect" id="Node000012" href="$class_renderer.html#a22b13cfa2f38a5f2e04a05dbc1075ef1" title="Convert a cell type to a character." alt="" coords="607,284,751,311"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="519,295,593,296,589,299,521,300"/>
+<area shape="rect" id="Node000013" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="617,385,741,412"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="519,309,546,320,561,333,571,346,579,359,594,371,605,379,600,379,591,376,575,363,566,349,557,337,543,325,520,314"/>
+<area shape="rect" id="Node000014" href="$class_renderer.html#a703d6070936441c6ddc595b6b89e48e0" title="Check if a cell is part of the traversed path." alt="" coords="592,335,766,361"/>
+<area shape="poly" id="edge16_Node000011_Node000014" title=" " alt="" coords="515,309,604,330,599,332,517,314"/>
+<area shape="poly" id="edge17_Node000011_Node000015" title=" " alt="" coords="519,305,546,321,561,340,569,360,571,398,573,436,580,455,594,473,614,488,609,488,591,477,576,457,568,437,566,399,564,361,557,343,543,325,520,310"/>
+<area shape="poly" id="edge18_Node000011_Node000016" title=" " alt="" coords="519,306,546,321,558,333,565,347,571,373,577,398,583,410,594,422,611,434,606,435,591,426,579,413,572,400,566,374,560,348,554,336,543,325,520,311"/>
+<area shape="poly" id="edge15_Node000013_Node000008" title=" " alt="" coords="741,393,1194,375,1190,378,742,399"/>
+<area shape="poly" id="edge24_Node000021_Node000022" title=" " alt="" coords="306,720,355,727,350,729,307,725"/>
+<area shape="rect" id="Node000024" href="$class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad" title="Load a RiskyLab Tilemap JSON file." alt="" coords="380,807,526,833"/>
+<area shape="poly" id="edge27_Node000023_Node000024" title=" " alt="" coords="277,817,367,819,362,821,278,823"/>
+<area shape="rect" id="Node000025" href="$class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7" title="Normalize a tile value to the nearest supported tile code." alt="" coords="592,799,766,841"/>
+<area shape="poly" id="edge28_Node000024_Node000025" title=" " alt="" coords="526,817,580,820,574,820,527,823"/>
+<area shape="rect" id="Node000027" href="$class_json_loader.html#a8e738775dd08b7c59ef039e6d569db70" title="Load path positions from JSON." alt="" coords="380,857,527,884"/>
+<area shape="poly" id="edge30_Node000026_Node000027" title=" " alt="" coords="290,868,367,870,361,871,291,873"/>
+<area shape="poly" id="edge37_Node000028_Node000013" title=" " alt="" coords="515,433,604,414,600,417,517,438"/>
+<area shape="poly" id="edge38_Node000028_Node000015" title=" " alt="" coords="516,461,613,484,608,486,517,466"/>
+<area shape="poly" id="edge39_Node000028_Node000016" title=" " alt="" coords="544,447,609,448,604,450,546,452"/>
+<area shape="rect" id="Node000029" href="$class_map.html#a56edaec62c0f20677b60513cf249c676" title="Set a cell to a specific type." alt="" coords="1053,487,1148,513"/>
+<area shape="poly" id="edge40_Node000028_Node000029" title=" " alt="" coords="472,460,526,494,558,511,593,523,653,535,715,541,777,542,837,540,949,528,1040,514,1035,516,950,533,838,545,777,548,714,546,652,540,592,528,556,516,523,499,473,466"/>
+<area shape="poly" id="edge41_Node000029_Node000008" title=" " alt="" coords="1118,484,1234,398,1238,395,1121,489"/>
+<area shape="rect" id="Node000031" href="$class_json_loader.html#a2af7c8aa0416a27e55241efa06274d73" title="Save path positions to JSON." alt="" coords="378,908,529,935"/>
+<area shape="poly" id="edge43_Node000030_Node000031" title=" " alt="" coords="284,919,364,921,359,922,284,924"/>
+<area shape="rect" id="Node000033" href="$class_json_loader.html#a69a5c23a1dd54d94efe286afe8914eb3" title="Save a map to RiskyLab Tilemap JSON format." alt="" coords="378,959,528,985"/>
+<area shape="poly" id="edge45_Node000032_Node000033" title=" " alt="" coords="271,969,366,972,360,972,271,975"/>
 </map>

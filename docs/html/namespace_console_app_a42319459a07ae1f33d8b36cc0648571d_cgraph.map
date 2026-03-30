@@ -1,0 +1,34 @@
+<map id="ConsoleApp::executePathfinding" name="ConsoleApp::executePathfinding">
+<area shape="rect" id="Node000001" title="Execute pathfinder." alt="" coords="5,259,217,285"/>
+<area shape="rect" id="Node000002" href="$class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="265,132,401,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,256,295,164,293,169,138,260"/>
+<area shape="rect" id="Node000006" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="1070,208,1189,235"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="184,255,344,231,439,222,534,219,762,219,1057,221,1052,222,762,224,534,224,439,228,345,237,185,261"/>
+<area shape="rect" id="Node000009" href="$class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="267,309,399,336"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="173,283,259,304,254,307,173,289"/>
+<area shape="rect" id="Node000015" href="$class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467" title="Print a cell positions as path coordinates." alt="" coords="266,360,400,387"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="139,283,266,346,281,354,276,354,264,350,138,289"/>
+<area shape="rect" id="Node000003" href="$class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b" title="Internal A* implementation." alt="" coords="456,107,616,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,134,442,131,438,133,402,139"/>
+<area shape="rect" id="Node000004" href="$class_map.html#a7eff76e95bee3cf741285d301d21d1f3" title="Get all walkable cells from a position (4&#45;directions)." alt="" coords="695,5,826,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="560,104,669,48,705,36,701,39,671,53,562,109"/>
+<area shape="rect" id="Node000005" href="$class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="902,56,1019,83"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="602,104,670,92,784,79,889,73,884,74,784,85,671,97,604,109"/>
+<area shape="rect" id="Node000007" href="$class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd" title="Calculate Manhattan distance heuristic." alt="" coords="692,107,829,133"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="615,117,679,119,674,121,617,123"/>
+<area shape="rect" id="Node000008" href="$class_pathfinder.html#ab01c4d85253b1207849442ec1a667561" title="Reconstruct path from parent pointers." alt="" coords="670,157,851,184"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="598,131,686,153,681,154,599,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="816,30,893,51,887,52,816,35"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="977,80,1105,198,1099,197,976,85"/>
+<area shape="rect" id="Node000010" href="$class_renderer.html#a22b13cfa2f38a5f2e04a05dbc1075ef1" title="Convert a cell type to a character." alt="" coords="464,259,608,285"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="389,306,467,289,462,291,390,311"/>
+<area shape="rect" id="Node000011" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="899,284,1022,311"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="399,317,884,298,882,303,400,323"/>
+<area shape="rect" id="Node000012" href="$class_renderer.html#a703d6070936441c6ddc595b6b89e48e0" title="Check if a cell is part of the traversed path." alt="" coords="449,360,622,387"/>
+<area shape="poly" id="edge14_Node000009_Node000012" title=" " alt="" coords="389,334,467,355,462,356,389,339"/>
+<area shape="rect" id="Node000013" href="$class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="482,411,589,437"/>
+<area shape="poly" id="edge15_Node000009_Node000013" title=" " alt="" coords="380,334,403,346,418,359,427,372,436,384,450,396,470,408,465,408,448,401,432,388,423,375,414,363,399,350,379,339"/>
+<area shape="rect" id="Node000014" href="$class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="479,461,592,488"/>
+<area shape="poly" id="edge16_Node000009_Node000014" title=" " alt="" coords="385,334,403,346,414,359,421,373,427,399,433,424,440,435,451,447,467,460,462,459,447,451,435,439,428,426,422,400,416,374,410,362,399,350,384,339"/>
+<area shape="poly" id="edge13_Node000011_Node000006" title=" " alt="" coords="991,281,1082,242,1087,241,993,286"/>
+</map>

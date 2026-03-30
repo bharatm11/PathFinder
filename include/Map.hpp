@@ -38,6 +38,22 @@ public:
     bool saveToJson(const std::string &filepath) const;
 
     /**
+     * @brief Save path positions to JSON file
+     * @param filepath Path to output JSON file
+     * @param path Path positions to save
+     * @return true if save succeeded
+     */
+    bool savePathToJson(const std::string &filepath, const std::vector<Position> &path) const;
+
+    /**
+     * @brief Load path positions from JSON file
+     * @param filepath Path to input JSON file
+     * @param outPath Loaded path positions
+     * @return true if load succeeded
+     */
+    bool loadPathFromJson(const std::string &filepath, std::vector<Position> &outPath) const;
+
+    /**
      * @brief Generate a random map
      * @param rows Number of rows in the map
      * @param cols Number of columns in the map

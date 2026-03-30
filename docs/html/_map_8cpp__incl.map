@@ -1,26 +1,27 @@
 <map id="src/Map.cpp" name="src/Map.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="140,5,234,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="131,5,224,32"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,80,70,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,35,79,75,76,71,162,30"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,35,77,74,74,70,154,30"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="94,80,165,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,35,151,69,147,66,178,30"/>
-<area shape="rect" id="Node000004" href="$_map_8hpp.html" title="Manages the grid and map operations. Handles loading/saving maps in JSON format, storing the grid,..." alt="" coords="326,80,397,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="217,30,319,73,314,75,217,35"/>
-<area shape="rect" id="Node000010" href="$_json_loader_8hpp.html" title="JSON loader for RiskyLab Tilemap format Handles loading and saving maps in RiskyLab Tilemap JSON form..." alt="" coords="189,80,302,107"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="197,30,228,68,223,68,197,35"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="185,155,242,181"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="338,106,254,150,252,145,333,108"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="267,155,320,181"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="352,106,317,145,314,141,347,109"/>
-<area shape="rect" id="Node000007" href="$_position_8hpp.html" title="struct to define 2D position on the battlefield grid" alt="" coords="467,155,560,181"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="388,105,476,147,470,148,388,110"/>
-<area shape="rect" id="Node000009" href="$_cell_type_8hpp.html" title="Cell type enumeration for the RiskyLab Tilemap format." alt="" coords="345,155,442,181"/>
-<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="368,105,384,141,379,140,366,110"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="475,229,552,256"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="515,180,516,215,511,212,512,184"/>
-<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="242,105,227,142,223,139,238,109"/>
-<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="255,105,280,142,274,141,253,110"/>
-<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="272,105,356,147,351,148,271,110"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="31,155,161,181"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="217,109,137,150,135,145,222,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,30,148,69,144,66,168,35"/>
+<area shape="rect" id="Node000004" href="$_map_8hpp.html" title="Manages the grid and map operations. Handles loading/saving maps in JSON format, storing the grid,..." alt="" coords="190,80,261,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,30,212,67,206,67,185,35"/>
+<area shape="rect" id="Node000010" href="$_json_loader_8hpp.html" title="JSON loader for RiskyLab Tilemap format Handles loading and saving maps in RiskyLab Tilemap JSON form..." alt="" coords="285,80,398,107"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="206,30,301,72,296,74,206,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="414,155,472,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="262,104,402,151,397,153,261,109"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="98,155,151,181"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="206,109,156,147,153,143,210,106"/>
+<area shape="rect" id="Node000007" href="$_position_8hpp.html" title="struct to define 2D position on the battlefield grid" alt="" coords="175,155,268,181"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="226,105,225,140,221,138,223,109"/>
+<area shape="rect" id="Node000009" href="$_cell_type_8hpp.html" title="Cell type enumeration for the RiskyLab Tilemap format." alt="" coords="293,155,390,181"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="246,105,311,146,305,146,245,110"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="183,229,260,256"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="223,180,224,215,219,212,220,184"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="360,105,415,145,410,145,359,110"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="302,109,166,155,165,150,306,105"/>
+<area shape="poly" id="edge14_Node000010_Node000007" title=" " alt="" coords="323,106,257,149,254,144,318,108"/>
+<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="343,105,344,140,339,138,340,109"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="495,155,625,181"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="380,105,510,149,505,150,379,110"/>
 </map>

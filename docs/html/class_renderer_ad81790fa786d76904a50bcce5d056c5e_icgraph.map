@@ -1,6 +1,6 @@
 <map id="Renderer::printMap" name="Renderer::printMap">
 <area shape="rect" id="Node000001" title="Print the map to console." alt="" coords="362,31,494,57"/>
-<area shape="rect" id="Node000002" href="$namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
+<area shape="rect" id="Node000002" href="$namespace_console_app.html#a42319459a07ae1f33d8b36cc0648571d" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="344,35,314,34,315,28,349,35"/>
 <area shape="rect" id="Node000003" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,31,55,57"/>
 <area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="346,47,55,47,55,41,346,41"/>

@@ -172,3 +172,77 @@ bool JsonLoader::saveMap(const std::string &filepath,
         return false;
     }
 }
+
+bool JsonLoader::savePath(const std::string &filepath,
+                          const std::vector<Position> &path)
+{
+    try
+    {
+        json j;
+        j["path"] = json::array();
+
+        for (const Position &p : path)
+        {
+            j["path"].push_back({{"row", p.row}, {"col", p.col}});
+        }
+
+        std::ofstream file(filepath);
+        if (!file.is_open())
+        {
+            throw std::runtime_error("Cannot open file for writing: " + filepath);
+        }
+
+        file << j.dump(2) << std::endl;
+        file.close();
+        return true;
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Error saving path: " << e.what() << std::endl;
+        return false;
+    }
+}
+
+bool JsonLoader::loadPath(const std::string &filepath,
+                          std::vector<Position> &outPath)
+{
+    try
+    {
+        std::ifstream file(filepath);
+        if (!file.is_open())
+        {
+            throw std::runtime_error("Cannot open file: " + filepath);
+        }
+
+        json j;
+        file >> j;
+        file.close();
+
+        if (!j.contains("path") || !j["path"].is_array())
+        {
+            throw std::runtime_error("Missing or invalid 'path' array");
+        }
+
+        std::vector<Position> parsedPath;
+        parsedPath.reserve(j["path"].size());
+
+        for (const auto &node : j["path"])
+        {
+            if (!node.contains("row") || !node.contains("col") ||
+                !node["row"].is_number_integer() || !node["col"].is_number_integer())
+            {
+                throw std::runtime_error("Each path node must contain integer 'row' and 'col'");
+            }
+
+            parsedPath.push_back({node["row"].get<int>(), node["col"].get<int>()});
+        }
+
+        outPath = std::move(parsedPath);
+        return true;
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Error loading path: " << e.what() << std::endl;
+        return false;
+    }
+}

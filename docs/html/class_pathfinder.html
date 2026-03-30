@@ -294,8 +294,8 @@ Private Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  106</span>    result.<a class="code hl_variable" href="struct_path_result.html#a62d5a967d58cc7a0ee36d9c86ea24350">errorMessage</a> = <span class="stringliteral">&quot;No path found - target unreachable&quot;</span>;</div>
 <div class="line"><span class="lineno">  107</span>    <span class="keywordflow">return</span> result;</div>
 <div class="line"><span class="lineno">  108</span>}</div>
-<div class="ttc" id="aclass_map_html_a0b0b80d043eefccc40db483b9debd07a"><div class="ttname"><a href="class_map.html#a0b0b80d043eefccc40db483b9debd07a">Map::isWalkable</a></div><div class="ttdeci">bool isWalkable(Position p) const</div><div class="ttdoc">Check if a position is walkable.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00100">Map.cpp:100</a></div></div>
-<div class="ttc" id="aclass_map_html_a7eff76e95bee3cf741285d301d21d1f3"><div class="ttname"><a href="class_map.html#a7eff76e95bee3cf741285d301d21d1f3">Map::getNeighbors</a></div><div class="ttdeci">std::vector&lt; Position &gt; getNeighbors(Position p) const</div><div class="ttdoc">Get all walkable cells from a position (4-directions).</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00116">Map.cpp:116</a></div></div>
+<div class="ttc" id="aclass_map_html_a0b0b80d043eefccc40db483b9debd07a"><div class="ttname"><a href="class_map.html#a0b0b80d043eefccc40db483b9debd07a">Map::isWalkable</a></div><div class="ttdeci">bool isWalkable(Position p) const</div><div class="ttdoc">Check if a position is walkable.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00110">Map.cpp:110</a></div></div>
+<div class="ttc" id="aclass_map_html_a7eff76e95bee3cf741285d301d21d1f3"><div class="ttname"><a href="class_map.html#a7eff76e95bee3cf741285d301d21d1f3">Map::getNeighbors</a></div><div class="ttdeci">std::vector&lt; Position &gt; getNeighbors(Position p) const</div><div class="ttdoc">Get all walkable cells from a position (4-directions).</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00126">Map.cpp:126</a></div></div>
 <div class="ttc" id="aclass_pathfinder_html_a7c0f0b6b1131b4f3fd8abcd17879e0cd"><div class="ttname"><a href="#a7c0f0b6b1131b4f3fd8abcd17879e0cd">Pathfinder::heuristic</a></div><div class="ttdeci">float heuristic(Position a, Position b) const</div><div class="ttdoc">Calculate Manhattan distance heuristic.</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8cpp_source.html#l00004">PathFinder.cpp:4</a></div></div>
 <div class="ttc" id="aclass_pathfinder_html_ab01c4d85253b1207849442ec1a667561"><div class="ttname"><a href="#ab01c4d85253b1207849442ec1a667561">Pathfinder::reconstructPath</a></div><div class="ttdeci">std::vector&lt; Position &gt; reconstructPath(const std::unordered_map&lt; Position, Position, Position::PositionHash &gt; &amp;parentMap, Position start, Position target) const</div><div class="ttdoc">Reconstruct path from parent pointers.</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8cpp_source.html#l00110">PathFinder.cpp:110</a></div></div>
 <div class="ttc" id="astruct_path_result_html_a1eade2557883c0021f711d89d88a81ae"><div class="ttname"><a href="struct_path_result.html#a1eade2557883c0021f711d89d88a81ae">PathResult::success</a></div><div class="ttdeci">bool success</div><div class="ttdef"><b>Definition</b> <a href="_path_result_8hpp_source.html#l00016">PathResult.hpp:16</a></div></div>
@@ -305,7 +305,7 @@ Private Member Functions</h2></td></tr>
 <div class="ttc" id="astruct_pathfinder_1_1_node_html"><div class="ttname"><a href="struct_pathfinder_1_1_node.html">Pathfinder::Node</a></div><div class="ttdoc">Node structure for A* algorithm.</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8hpp_source.html#l00039">PathFinder.hpp:40</a></div></div>
 <div class="ttc" id="astruct_pathfinder_1_1_node_html_ae61f959b490c9b49932eb71ec5e80b0b"><div class="ttname"><a href="struct_pathfinder_1_1_node.html#ae61f959b490c9b49932eb71ec5e80b0b">Pathfinder::Node::m_pos</a></div><div class="ttdeci">Position m_pos</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8hpp_source.html#l00041">PathFinder.hpp:41</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="_path_result_8hpp_source.html#l00018">PathResult::errorMessage</a>, <a class="el" href="_map_8cpp_source.html#l00116">Map::getNeighbors()</a>, <a class="el" href="_path_finder_8cpp_source.html#l00004">heuristic()</a>, <a class="el" href="_map_8cpp_source.html#l00100">Map::isWalkable()</a>, <a class="el" href="_path_finder_8hpp_source.html#l00042">Pathfinder::Node::m_gCost</a>, <a class="el" href="_path_finder_8hpp_source.html#l00043">Pathfinder::Node::m_hCost</a>, <a class="el" href="_path_finder_8hpp_source.html#l00044">Pathfinder::Node::m_parent</a>, <a class="el" href="_path_finder_8hpp_source.html#l00041">Pathfinder::Node::m_pos</a>, <a class="el" href="_path_result_8hpp_source.html#l00017">PathResult::path</a>, <a class="el" href="_path_finder_8cpp_source.html#l00110">reconstructPath()</a>, and <a class="el" href="_path_result_8hpp_source.html#l00016">PathResult::success</a>.</p>
+<p class="reference">References <a class="el" href="_path_result_8hpp_source.html#l00018">PathResult::errorMessage</a>, <a class="el" href="_map_8cpp_source.html#l00126">Map::getNeighbors()</a>, <a class="el" href="_path_finder_8cpp_source.html#l00004">heuristic()</a>, <a class="el" href="_map_8cpp_source.html#l00110">Map::isWalkable()</a>, <a class="el" href="_path_finder_8hpp_source.html#l00042">Pathfinder::Node::m_gCost</a>, <a class="el" href="_path_finder_8hpp_source.html#l00043">Pathfinder::Node::m_hCost</a>, <a class="el" href="_path_finder_8hpp_source.html#l00044">Pathfinder::Node::m_parent</a>, <a class="el" href="_path_finder_8hpp_source.html#l00041">Pathfinder::Node::m_pos</a>, <a class="el" href="_path_result_8hpp_source.html#l00017">PathResult::path</a>, <a class="el" href="_path_finder_8cpp_source.html#l00110">reconstructPath()</a>, and <a class="el" href="_path_result_8hpp_source.html#l00016">PathResult::success</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_path_finder_8cpp_source.html#l00011">findPath()</a>.</p>
 <div class="dynheader">
@@ -335,7 +335,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Internal A* implementation." alt="" coords="546,5,707,32"/>
 <area shape="rect" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="362,5,498,32"/>
 <area shape="poly" title=" " alt="" coords="528,19,499,21,499,16,533,19"/>
-<area shape="rect" href="namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
+<area shape="rect" href="namespace_console_app.html#a42319459a07ae1f33d8b36cc0648571d" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
 <area shape="poly" title=" " alt="" coords="344,19,315,21,315,16,349,19"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -387,7 +387,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_path_finder_8cpp_source.html#l00016">aStarSearch()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00094">ConsoleApp::executePathfinding()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00097">ConsoleApp::executePathfinding()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -415,7 +415,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_pathfinder_a3425c00d24a1acb3c5e4855199821ec5_icgraph.png" border="0" usemap="#aclass_pathfinder_a3425c00d24a1acb3c5e4855199821ec5_icgraph" loading="lazy" alt=""/></div>
 <map name="aclass_pathfinder_a3425c00d24a1acb3c5e4855199821ec5_icgraph" id="aclass_pathfinder_a3425c00d24a1acb3c5e4855199821ec5_icgraph">
 <area shape="rect" title="Find a path using A* algorithm." alt="" coords="362,5,498,32"/>
-<area shape="rect" href="namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
+<area shape="rect" href="namespace_console_app.html#a42319459a07ae1f33d8b36cc0648571d" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
 <area shape="poly" title=" " alt="" coords="344,19,315,21,315,16,349,19"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -483,7 +483,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="736,19,707,21,707,16,742,19"/>
 <area shape="rect" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="362,5,498,32"/>
 <area shape="poly" title=" " alt="" coords="528,19,499,21,499,16,533,19"/>
-<area shape="rect" href="namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
+<area shape="rect" href="namespace_console_app.html#a42319459a07ae1f33d8b36cc0648571d" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
 <area shape="poly" title=" " alt="" coords="344,19,315,21,315,16,349,19"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -573,7 +573,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="737,19,707,21,707,16,742,19"/>
 <area shape="rect" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="362,5,498,32"/>
 <area shape="poly" title=" " alt="" coords="528,19,499,21,499,16,533,19"/>
-<area shape="rect" href="namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
+<area shape="rect" href="namespace_console_app.html#a42319459a07ae1f33d8b36cc0648571d" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
 <area shape="poly" title=" " alt="" coords="344,19,315,21,315,16,349,19"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>

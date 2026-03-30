@@ -1,0 +1,5 @@
+<map id="Map::loadPathFromJson" name="Map::loadPathFromJson">
+<area shape="rect" id="Node000001" title="Load path positions from JSON file." alt="" coords="5,5,169,32"/>
+<area shape="rect" id="Node000002" href="$class_json_loader.html#a8e738775dd08b7c59ef039e6d569db70" title="Load path positions from JSON." alt="" coords="217,5,364,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,16,204,19,199,19,169,21"/>
+</map>

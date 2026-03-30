@@ -14,6 +14,7 @@
 #include <string>
 #include <nlohmann/json.hpp>
 #include "CellType.hpp"
+#include "Position.hpp"
 
 using json = nlohmann::json;
 
@@ -46,6 +47,24 @@ public:
       */
      static bool saveMap(const std::string &filepath,
                          const std::vector<std::vector<CellType>> &grid);
+
+     /**
+      * @brief Save path positions to JSON
+      * @param filepath Path to output JSON file
+      * @param path Path positions to save
+      * @return true if saving succeeded
+      */
+     static bool savePath(const std::string &filepath,
+                          const std::vector<Position> &path);
+
+     /**
+      * @brief Load path positions from JSON
+      * @param filepath Path to input JSON file
+      * @param outPath Output path positions
+      * @return true if loading succeeded
+      */
+     static bool loadPath(const std::string &filepath,
+                          std::vector<Position> &outPath);
 
 private:
      /**

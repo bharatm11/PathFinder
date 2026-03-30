@@ -50,6 +50,16 @@ bool Map::saveToJson(const std::string &filepath) const
     return JsonLoader::saveMap(filepath, m_grid);
 }
 
+bool Map::savePathToJson(const std::string &filepath, const std::vector<Position> &path) const
+{
+    return JsonLoader::savePath(filepath, path);
+}
+
+bool Map::loadPathFromJson(const std::string &filepath, std::vector<Position> &outPath) const
+{
+    return JsonLoader::loadPath(filepath, outPath);
+}
+
 void Map::generateRandom(int rows, int cols, float wallRatio)
 {
     // Return early if dimensions are invalid

@@ -1,6 +1,6 @@
 <map id="Map::isInBounds" name="Map::isInBounds">
 <area shape="rect" id="Node000001" title="Check if a position is within map bounds." alt="" coords="1145,169,1265,196"/>
-<area shape="rect" id="Node000002" href="$namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,144,314,171"/>
+<area shape="rect" id="Node000002" href="$namespace_console_app.html#a42319459a07ae1f33d8b36cc0648571d" title="Execute pathfinder." alt="" coords="103,144,314,171"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1127,174,1007,166,868,160,671,160,315,160,314,155,671,155,868,155,1007,160,1132,174"/>
 <area shape="rect" id="Node000004" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="611,195,734,221"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1127,186,735,208,734,202,1133,186"/>
