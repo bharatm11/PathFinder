@@ -108,18 +108,20 @@ Expected output includes:
 
 This example shows a full workflow using output files produced by the program.
 
-1. Choose `1` and load `../samples/take_home_project.json`
-2. Choose `5` to run pathfinding
-3. Choose `7` and save the current map to an output file such as `../samples/output_map.json`
-4. Choose `8` and save the computed path positions to an output file such as `../samples/output_path.json`
-5. Restart the program
-6. Choose `1` and load `../samples/output_map.json`
-7. Choose `9` and load `../samples/output_path.json`
+1. Choose `2` (Generate random map)
+2. Enter rows, cols, and wall ratio (e.g. `32`, `32`, `0.2`)
+3. Choose `5` (Run pathfinding)
+4. Choose `7` and save the current map to an output file such as `../out/random_map_32x32.json`
+4. Choose `8` and save the computed path positions to an output file such as `../samples/random_map_32x32_path.json`
+6. Choose `1` and load `../samples/random_map_32x32.json`
+7. Choose `9` and load `../samples/random_map_32x32_path.json`
 
 Expected output includes:
 - The saved map being loaded successfully
 - The saved path coordinates being printed
 - The loaded path rendered back onto the current map with `*`
+
+![Rendered path output](out/Screenshot%202026-03-30%20015230.png)
 
 ## Generate Docs (Doxygen)
 
