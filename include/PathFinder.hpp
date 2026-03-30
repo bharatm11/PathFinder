@@ -42,7 +42,6 @@ private:
         float m_gCost = 0.0f;         // Cost from start
         float m_hCost = 0.0f;         // Heuristic cost to goal (manhattan distance)
         Position m_parent = {-1, -1}; // Parent position in path
-        int m_timestep = 0;           // Timestep for multi-unit pathfinding
 
         /**
          * @brief Calculate f-cost (g + h)
