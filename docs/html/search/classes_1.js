@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['map_0',['Map',['../class_map.html',1,'']]]
+  ['jsonloader_0',['JsonLoader',['../class_json_loader.html',1,'']]]
 ];

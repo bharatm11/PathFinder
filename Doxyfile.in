@@ -1,26 +1,61 @@
+DOXYFILE_ENCODING      = UTF-8
+
 PROJECT_NAME           = "@PROJECT_NAME@"
 PROJECT_NUMBER         = "@PROJECT_VERSION@"
+PROJECT_BRIEF          = "A* pathfinding demo on a grid map loaded from JSON"
 OUTPUT_DIRECTORY       = "@CMAKE_CURRENT_SOURCE_DIR@/docs"
+OUTPUT_LANGUAGE        = English
+
+MARKDOWN_SUPPORT       = YES
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        = "@CMAKE_CURRENT_SOURCE_DIR@"
 
 INPUT                  = "@CMAKE_CURRENT_SOURCE_DIR@/include" \
-                         "@CMAKE_CURRENT_SOURCE_DIR@/src"
+                         "@CMAKE_CURRENT_SOURCE_DIR@/src" \
 FILE_PATTERNS          = *.h *.hpp *.c *.cc *.cpp
 RECURSIVE              = YES
+EXCLUDE                = "@CMAKE_CURRENT_SOURCE_DIR@/build" \
+                         "@CMAKE_CURRENT_SOURCE_DIR@/docs"
 
 EXTRACT_ALL            = YES
-EXTRACT_PRIVATE        = NO
-EXTRACT_STATIC         = NO
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_ANON_NSPACES   = YES
 
-QUIET                  = YES
+QUIET                  = NO
+WARNINGS               = YES
 WARN_IF_UNDOCUMENTED   = NO
-GENERATE_LATEX         = NO
+WARN_IF_DOC_ERROR      = YES
+
 GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_TREEVIEW      = YES
+SEARCHENGINE           = YES
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+GENERATE_LATEX         = NO
 
 # UML / Graphviz
 HAVE_DOT               = @DOXYGEN_HAVE_DOT@
 DOT_PATH               = "@DOXYGEN_DOT_PATH@"
+DOT_NUM_THREADS        = 4
 UML_LOOK               = YES
 UML_LIMIT_NUM_FIELDS   = 50
-DOT_UML_DETAILS        = YES
+TEMPLATE_RELATIONS     = YES
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
 CALL_GRAPH             = YES
 CALLER_GRAPH           = YES
+DIRECTORY_GRAPH        = YES
+DOT_IMAGE_FORMAT       = png
+DOT_GRAPH_MAX_NODES    = 200
+MAX_DOT_GRAPH_DEPTH    = 0
+DOT_MULTI_TARGETS      = YES
+DOT_CLEANUP            = YES

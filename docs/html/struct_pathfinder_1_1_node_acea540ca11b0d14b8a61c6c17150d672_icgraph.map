@@ -1,0 +1,5 @@
+<map id="Pathfinder::Node::fCost" name="Pathfinder::Node::fCost">
+<area shape="rect" id="Node000001" title="Calculate f&#45;cost (g + h)." alt="" coords="226,13,385,40"/>
+<area shape="rect" id="Node000002" href="$struct_pathfinder_1_1_compare_node.html#aacbd0d0612a60cbd3e7d7b8246a0fb0e" title=" " alt="" coords="5,5,178,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,27,178,29,178,24,213,26"/>
+</map>

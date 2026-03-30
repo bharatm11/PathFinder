@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">RTS_Pathfinder<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">A* pathfinding demo on a grid map loaded from JSON</div>
   </td>
  </tr>
  </tbody>
@@ -123,6 +124,23 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Display main menu. </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00050">50</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>    {</div>
+<div class="line"><span class="lineno">   52</span>        std::cout</div>
+<div class="line"><span class="lineno">   53</span>            &lt;&lt; <span class="stringliteral">&quot;\n=== RTS Pathfinder ===\n&quot;</span></div>
+<div class="line"><span class="lineno">   54</span>            &lt;&lt; <span class="stringliteral">&quot;1. Load map from JSON\n&quot;</span></div>
+<div class="line"><span class="lineno">   55</span>            &lt;&lt; <span class="stringliteral">&quot;2. Generate random map\n&quot;</span></div>
+<div class="line"><span class="lineno">   56</span>            &lt;&lt; <span class="stringliteral">&quot;3. Set start position\n&quot;</span></div>
+<div class="line"><span class="lineno">   57</span>            &lt;&lt; <span class="stringliteral">&quot;4. Set target position\n&quot;</span></div>
+<div class="line"><span class="lineno">   58</span>            &lt;&lt; <span class="stringliteral">&quot;5. Run pathfinding\n&quot;</span></div>
+<div class="line"><span class="lineno">   59</span>            &lt;&lt; <span class="stringliteral">&quot;6. Show current map\n&quot;</span></div>
+<div class="line"><span class="lineno">   60</span>            &lt;&lt; <span class="stringliteral">&quot;7. Save map to JSON\n&quot;</span></div>
+<div class="line"><span class="lineno">   61</span>            &lt;&lt; <span class="stringliteral">&quot;8. Exit\n&quot;</span></div>
+<div class="line"><span class="lineno">   62</span>            &lt;&lt; <span class="stringliteral">&quot;Select option: &quot;</span>;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00129">main()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -169,27 +187,90 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00094">94</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>     {</div>
+<div class="line"><span class="lineno">   96</span>         <span class="keywordflow">if</span> (start.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> == -1 || target.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> == -1)</div>
+<div class="line"><span class="lineno">   97</span>         {</div>
+<div class="line"><span class="lineno">   98</span>             std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Start or target not set.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   99</span>             <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  100</span>         }</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>         <span class="keywordflow">if</span> (!map.<a class="code hl_function" href="class_map.html#a77ebc27238305717d63418bf42b3f285">isInBounds</a>(start) || !map.<a class="code hl_function" href="class_map.html#a77ebc27238305717d63418bf42b3f285">isInBounds</a>(target))</div>
+<div class="line"><span class="lineno">  103</span>         {</div>
+<div class="line"><span class="lineno">  104</span>             std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Start or target out of bounds.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  105</span>             <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  106</span>         }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>         std::cout &lt;&lt; <span class="stringliteral">&quot;Running pathfinding from (&quot;</span> &lt;&lt; start.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; start.<a class="code hl_variable" href="struct_position.html#af7a05862963df619605457252dea6682">col</a></div>
+<div class="line"><span class="lineno">  109</span>                   &lt;&lt; <span class="stringliteral">&quot;) to (&quot;</span> &lt;&lt; target.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; target.<a class="code hl_variable" href="struct_position.html#af7a05862963df619605457252dea6682">col</a> &lt;&lt; <span class="stringliteral">&quot;)...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>         Pathfinder pathfinder;</div>
+<div class="line"><span class="lineno">  112</span>         <span class="keyword">const</span> PathResult result = pathfinder.<a class="code hl_function" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5">findPath</a>(map, start, target);</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>         <span class="keywordflow">if</span> (!result.<a class="code hl_variable" href="struct_path_result.html#a1eade2557883c0021f711d89d88a81ae">success</a>)</div>
+<div class="line"><span class="lineno">  115</span>         {</div>
+<div class="line"><span class="lineno">  116</span>             std::cerr &lt;&lt; <span class="stringliteral">&quot;Pathfinding failed: &quot;</span> &lt;&lt; result.<a class="code hl_variable" href="struct_path_result.html#a62d5a967d58cc7a0ee36d9c86ea24350">errorMessage</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  117</span>             <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  118</span>         }</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>         std::cout &lt;&lt; <span class="stringliteral">&quot;Path found. Length: &quot;</span> &lt;&lt; result.<a class="code hl_variable" href="struct_path_result.html#a6ccd31ed792a8049af29c24891246970">path</a>.size() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  121</span>         <a class="code hl_function" href="class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467">Renderer::printPath</a>(result.<a class="code hl_variable" href="struct_path_result.html#a6ccd31ed792a8049af29c24891246970">path</a>);</div>
+<div class="line"><span class="lineno">  122</span>         std::cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>         std::cout &lt;&lt; <span class="stringliteral">&quot;Solved map (* = traversed path):&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  125</span>         <a class="code hl_function" href="class_renderer.html#ad81790fa786d76904a50bcce5d056c5e">Renderer::printMap</a>(map, result.<a class="code hl_variable" href="struct_path_result.html#a6ccd31ed792a8049af29c24891246970">path</a>);</div>
+<div class="line"><span class="lineno">  126</span>     }</div>
+<div class="ttc" id="aclass_map_html_a77ebc27238305717d63418bf42b3f285"><div class="ttname"><a href="class_map.html#a77ebc27238305717d63418bf42b3f285">Map::isInBounds</a></div><div class="ttdeci">bool isInBounds(Position p) const</div><div class="ttdoc">Check if a position is within map bounds.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00111">Map.cpp:111</a></div></div>
+<div class="ttc" id="aclass_pathfinder_html_a3425c00d24a1acb3c5e4855199821ec5"><div class="ttname"><a href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5">Pathfinder::findPath</a></div><div class="ttdeci">PathResult findPath(const Map &amp;map, Position start, Position target)</div><div class="ttdoc">Find a path using A* algorithm.</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8cpp_source.html#l00011">PathFinder.cpp:11</a></div></div>
+<div class="ttc" id="aclass_renderer_html_ad81790fa786d76904a50bcce5d056c5e"><div class="ttname"><a href="class_renderer.html#ad81790fa786d76904a50bcce5d056c5e">Renderer::printMap</a></div><div class="ttdeci">static void printMap(const Map &amp;map, const std::vector&lt; Position &gt; &amp;path={})</div><div class="ttdoc">Print the map to console.</div><div class="ttdef"><b>Definition</b> <a href="_renderer_8cpp_source.html#l00028">Renderer.cpp:28</a></div></div>
+<div class="ttc" id="aclass_renderer_html_afaaf917bf9fa29c58d1bc34291ebf467"><div class="ttname"><a href="class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467">Renderer::printPath</a></div><div class="ttdeci">static void printPath(const std::vector&lt; Position &gt; &amp;path)</div><div class="ttdoc">Print a cell positions as path coordinates.</div><div class="ttdef"><b>Definition</b> <a href="_renderer_8cpp_source.html#l00065">Renderer.cpp:65</a></div></div>
+<div class="ttc" id="astruct_path_result_html_a1eade2557883c0021f711d89d88a81ae"><div class="ttname"><a href="struct_path_result.html#a1eade2557883c0021f711d89d88a81ae">PathResult::success</a></div><div class="ttdeci">bool success</div><div class="ttdef"><b>Definition</b> <a href="_path_result_8hpp_source.html#l00016">PathResult.hpp:16</a></div></div>
+<div class="ttc" id="astruct_path_result_html_a62d5a967d58cc7a0ee36d9c86ea24350"><div class="ttname"><a href="struct_path_result.html#a62d5a967d58cc7a0ee36d9c86ea24350">PathResult::errorMessage</a></div><div class="ttdeci">std::string errorMessage</div><div class="ttdef"><b>Definition</b> <a href="_path_result_8hpp_source.html#l00018">PathResult.hpp:18</a></div></div>
+<div class="ttc" id="astruct_path_result_html_a6ccd31ed792a8049af29c24891246970"><div class="ttname"><a href="struct_path_result.html#a6ccd31ed792a8049af29c24891246970">PathResult::path</a></div><div class="ttdeci">std::vector&lt; Position &gt; path</div><div class="ttdef"><b>Definition</b> <a href="_path_result_8hpp_source.html#l00017">PathResult.hpp:17</a></div></div>
+<div class="ttc" id="astruct_position_html_a224d714110152e1fca26b2437253f56a"><div class="ttname"><a href="struct_position.html#a224d714110152e1fca26b2437253f56a">Position::row</a></div><div class="ttdeci">int row</div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00014">Position.hpp:14</a></div></div>
+<div class="ttc" id="astruct_position_html_af7a05862963df619605457252dea6682"><div class="ttname"><a href="struct_position.html#af7a05862963df619605457252dea6682">Position::col</a></div><div class="ttdeci">int col</div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00015">Position.hpp:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_position_8hpp_source.html#l00015">Position::col</a>, <a class="el" href="_path_result_8hpp_source.html#l00018">PathResult::errorMessage</a>, <a class="el" href="_path_finder_8cpp_source.html#l00011">Pathfinder::findPath()</a>, <a class="el" href="_map_8cpp_source.html#l00111">Map::isInBounds()</a>, <a class="el" href="_path_result_8hpp_source.html#l00017">PathResult::path</a>, <a class="el" href="_renderer_8cpp_source.html#l00028">Renderer::printMap()</a>, <a class="el" href="_renderer_8cpp_source.html#l00065">Renderer::printPath()</a>, <a class="el" href="_position_8hpp_source.html#l00014">Position::row</a>, and <a class="el" href="_path_result_8hpp_source.html#l00016">PathResult::success</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00129">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespace_console_app_adaed072f5f07f9f1c919004c18e9d059_cgraph.png" border="0" usemap="#anamespace_console_app_adaed072f5f07f9f1c919004c18e9d059_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespace_console_app_adaed072f5f07f9f1c919004c18e9d059_cgraph" id="anamespace_console_app_adaed072f5f07f9f1c919004c18e9d059_cgraph">
-<area shape="rect" title="Execute pathfinder." alt="" coords="5,81,217,108"/>
-<area shape="rect" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="265,5,401,32"/>
-<area shape="poly" title=" " alt="" coords="151,78,279,36,275,40,154,83"/>
-<area shape="rect" href="class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="620,81,740,108"/>
-<area shape="poly" title=" " alt="" coords="217,92,606,92,604,97,217,97"/>
-<area shape="rect" href="class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="267,107,399,133"/>
-<area shape="poly" title=" " alt="" coords="216,104,254,110,249,111,217,109"/>
-<area shape="rect" href="class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467" title="Print a cell positions as path coordinates." alt="" coords="266,157,400,184"/>
-<area shape="poly" title=" " alt="" coords="153,106,279,150,275,153,152,111"/>
-<area shape="rect" href="class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="449,107,572,133"/>
-<area shape="poly" title=" " alt="" coords="399,117,436,120,431,120,400,123"/>
-<area shape="rect" href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="458,157,564,184"/>
-<area shape="poly" title=" " alt="" coords="383,131,450,153,444,153,382,137"/>
-<area shape="rect" href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="454,208,567,235"/>
-<area shape="poly" title=" " alt="" coords="380,131,402,143,418,156,427,169,436,181,451,194,459,201,454,200,447,198,432,185,423,172,414,160,400,148,379,137"/>
-<area shape="poly" title=" " alt="" coords="572,108,608,105,602,106,573,113"/>
+<area shape="rect" title="Execute pathfinder." alt="" coords="5,259,217,285"/>
+<area shape="rect" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="265,132,401,159"/>
+<area shape="poly" title=" " alt="" coords="135,256,295,164,293,169,138,260"/>
+<area shape="rect" href="class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="1070,208,1189,235"/>
+<area shape="poly" title=" " alt="" coords="184,255,344,231,439,222,534,219,762,219,1057,221,1052,222,762,224,534,224,439,228,345,237,185,261"/>
+<area shape="rect" href="class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="267,309,399,336"/>
+<area shape="poly" title=" " alt="" coords="173,283,259,304,254,307,173,289"/>
+<area shape="rect" href="class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467" title="Print a cell positions as path coordinates." alt="" coords="266,360,400,387"/>
+<area shape="poly" title=" " alt="" coords="139,283,266,346,281,354,276,354,264,350,138,289"/>
+<area shape="rect" href="class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b" title="Internal A* implementation." alt="" coords="456,107,616,133"/>
+<area shape="poly" title=" " alt="" coords="400,134,442,131,438,133,402,139"/>
+<area shape="rect" href="class_map.html#a7eff76e95bee3cf741285d301d21d1f3" title="Get all walkable cells from a position (4&#45;directions)." alt="" coords="695,5,826,32"/>
+<area shape="poly" title=" " alt="" coords="560,104,669,48,705,36,701,39,671,53,562,109"/>
+<area shape="rect" href="class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="902,56,1019,83"/>
+<area shape="poly" title=" " alt="" coords="602,104,670,92,784,79,889,73,884,74,784,85,671,97,604,109"/>
+<area shape="rect" href="class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd" title="Calculate Manhattan distance heuristic." alt="" coords="692,107,829,133"/>
+<area shape="poly" title=" " alt="" coords="615,117,679,119,674,121,617,123"/>
+<area shape="rect" href="class_pathfinder.html#ab01c4d85253b1207849442ec1a667561" title="Reconstruct path from parent pointers." alt="" coords="670,157,851,184"/>
+<area shape="poly" title=" " alt="" coords="598,131,686,153,681,154,599,137"/>
+<area shape="poly" title=" " alt="" coords="816,30,893,51,887,52,816,35"/>
+<area shape="poly" title=" " alt="" coords="977,80,1105,198,1099,197,976,85"/>
+<area shape="rect" href="class_renderer.html#a22b13cfa2f38a5f2e04a05dbc1075ef1" title="Convert a cell type to a character." alt="" coords="464,259,608,285"/>
+<area shape="poly" title=" " alt="" coords="389,306,467,289,462,291,390,311"/>
+<area shape="rect" href="class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="899,284,1022,311"/>
+<area shape="poly" title=" " alt="" coords="399,317,884,298,882,303,400,323"/>
+<area shape="rect" href="class_renderer.html#a703d6070936441c6ddc595b6b89e48e0" title="Check if a cell is part of the traversed path." alt="" coords="449,360,622,387"/>
+<area shape="poly" title=" " alt="" coords="389,334,467,355,462,356,389,339"/>
+<area shape="rect" href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="482,411,589,437"/>
+<area shape="poly" title=" " alt="" coords="380,334,403,346,418,359,427,372,436,384,450,396,470,408,465,408,448,401,432,388,423,375,414,363,399,350,379,339"/>
+<area shape="rect" href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="479,461,592,488"/>
+<area shape="poly" title=" " alt="" coords="385,334,403,346,414,359,421,373,427,399,433,424,440,435,451,447,467,460,462,459,447,451,435,439,428,426,422,400,416,374,410,362,399,350,384,339"/>
+<area shape="poly" title=" " alt="" coords="991,281,1082,242,1087,241,993,286"/>
 </map>
 </div>
 <div class="dynheader">
@@ -222,6 +303,24 @@ Here is the caller graph for this function:</div>
 
 <p>Read a position (row and column) from console. Calls readNumber for each coordinate. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_position.html">Position</a> struct with the parsed coordinates, or {-1, -1} on failure </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00034">34</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>    {</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">int</span> row = -1;</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">int</span> col = -1;</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="#ae0f9ca1aef7c7fc9e1a3ab64442091d6">readNumber</a>(<span class="stringliteral">&quot;Enter row: &quot;</span>, row) || !<a class="code hl_function" href="#ae0f9ca1aef7c7fc9e1a3ab64442091d6">readNumber</a>(<span class="stringliteral">&quot;Enter col: &quot;</span>, col))</div>
+<div class="line"><span class="lineno">   40</span>        {</div>
+<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">return</span> {-1, -1}; <span class="comment">// Return invalid position on failure</span></div>
+<div class="line"><span class="lineno">   42</span>        }</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordflow">return</span> {row, col};</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="ttc" id="anamespace_console_app_html_ae0f9ca1aef7c7fc9e1a3ab64442091d6"><div class="ttname"><a href="#ae0f9ca1aef7c7fc9e1a3ab64442091d6">ConsoleApp::readNumber</a></div><div class="ttdeci">bool readNumber(const std::string &amp;prompt, T &amp;outValue)</div><div class="ttdoc">Read a number from console.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="main_8cpp_source.html#l00018">readNumber()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00129">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -275,6 +374,21 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if parsing success </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        std::cout &lt;&lt; prompt;</div>
+<div class="line"><span class="lineno">   21</span>        std::string line;</div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">if</span> (!std::getline(std::cin, line))</div>
+<div class="line"><span class="lineno">   23</span>        {</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>        std::istringstream iss(line);</div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">return</span> (iss &gt;&gt; outValue) &amp;&amp; iss.eof();</div>
+<div class="line"><span class="lineno">   29</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00034">getPositionFromInput()</a>, and <a class="el" href="main_8cpp_source.html#l00129">main()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -324,6 +438,33 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00071">71</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>     {</div>
+<div class="line"><span class="lineno">   73</span>         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> r = 0; r &lt; map.<a class="code hl_function" href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f">numRows</a>(); ++r)</div>
+<div class="line"><span class="lineno">   74</span>         {</div>
+<div class="line"><span class="lineno">   75</span>             <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; map.<a class="code hl_function" href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8">numCols</a>(); ++c)</div>
+<div class="line"><span class="lineno">   76</span>             {</div>
+<div class="line"><span class="lineno">   77</span>                 <span class="keyword">const</span> <a class="code hl_struct" href="struct_position.html">Position</a> cell{r, c};</div>
+<div class="line"><span class="lineno">   78</span>                 <span class="keywordflow">if</span> (map.<a class="code hl_function" href="class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c">getCellType</a>(cell) == marker)</div>
+<div class="line"><span class="lineno">   79</span>                 {</div>
+<div class="line"><span class="lineno">   80</span>                     map.<a class="code hl_function" href="class_map.html#a56edaec62c0f20677b60513cf249c676">setCell</a>(cell, <a class="code hl_enumvalue" href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac3bf447eabe632720a3aa1a7ce401274">CellType::Open</a>);</div>
+<div class="line"><span class="lineno">   81</span>                 }</div>
+<div class="line"><span class="lineno">   82</span>             }</div>
+<div class="line"><span class="lineno">   83</span>         }</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>         map.<a class="code hl_function" href="class_map.html#a56edaec62c0f20677b60513cf249c676">setCell</a>(newPosition, marker);</div>
+<div class="line"><span class="lineno">   86</span>     }</div>
+<div class="ttc" id="a_cell_type_8hpp_html_ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac3bf447eabe632720a3aa1a7ce401274"><div class="ttname"><a href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac3bf447eabe632720a3aa1a7ce401274">CellType::Open</a></div><div class="ttdeci">@ Open</div><div class="ttdef"><b>Definition</b> <a href="_cell_type_8hpp_source.html#l00013">CellType.hpp:13</a></div></div>
+<div class="ttc" id="aclass_map_html_a56edaec62c0f20677b60513cf249c676"><div class="ttname"><a href="class_map.html#a56edaec62c0f20677b60513cf249c676">Map::setCell</a></div><div class="ttdeci">void setCell(Position p, CellType type)</div><div class="ttdoc">Set a cell to a specific type.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00169">Map.cpp:169</a></div></div>
+<div class="ttc" id="aclass_map_html_a9aea17d2fd24c6967b00757d2f5113f8"><div class="ttname"><a href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8">Map::numCols</a></div><div class="ttdeci">int numCols() const</div><div class="ttdoc">Get number of columns.</div><div class="ttdef"><b>Definition</b> <a href="_map_8hpp_source.html#l00079">Map.hpp:79</a></div></div>
+<div class="ttc" id="aclass_map_html_abddb4f6110ebb35cea36058e3c2e6a6c"><div class="ttname"><a href="class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c">Map::getCellType</a></div><div class="ttdeci">CellType getCellType(Position p) const</div><div class="ttdoc">Get the cell type at a position.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00090">Map.cpp:90</a></div></div>
+<div class="ttc" id="aclass_map_html_ae120067c4c2ab9d5ab00ced716945c2f"><div class="ttname"><a href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f">Map::numRows</a></div><div class="ttdeci">int numRows() const</div><div class="ttdoc">Get number of rows.</div><div class="ttdef"><b>Definition</b> <a href="_map_8hpp_source.html#l00073">Map.hpp:73</a></div></div>
+<div class="ttc" id="astruct_position_html"><div class="ttname"><a href="struct_position.html">Position</a></div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00012">Position.hpp:13</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_map_8cpp_source.html#l00090">Map::getCellType()</a>, <a class="el" href="_map_8hpp_source.html#l00079">Map::numCols()</a>, <a class="el" href="_map_8hpp_source.html#l00073">Map::numRows()</a>, <a class="el" href="_cell_type_8hpp_source.html#l00013">Open</a>, and <a class="el" href="_map_8cpp_source.html#l00169">Map::setCell()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cpp_source.html#l00129">main()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

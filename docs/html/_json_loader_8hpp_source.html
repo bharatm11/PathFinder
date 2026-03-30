@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RTS_Pathfinder: C:/Users/bhara/Downloads/Submission/include/JsonLoader.hpp Source File</title>
+<title>RTS_Pathfinder: include/JsonLoader.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">RTS_Pathfinder<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">A* pathfinding demo on a grid map loaded from JSON</div>
   </td>
  </tr>
  </tbody>
@@ -117,16 +118,17 @@ $(function(){initNavTree('_json_loader_8hpp_source.html','',''); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                         <span class="keyword">const</span> std::vector&lt;std::vector&lt;CellType&gt;&gt; &amp;grid);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>     <span class="keyword">static</span> <span class="keywordtype">int</span> normalizeTileValue(<span class="keywordtype">double</span> value);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>     <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7">normalizeTileValue</a>(<span class="keywordtype">double</span> value);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
 </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// JSONLOADER_HPP</span></div>
 <div class="ttc" id="a_cell_type_8hpp_html"><div class="ttname"><a href="_cell_type_8hpp.html">CellType.hpp</a></div><div class="ttdoc">Cell type enumeration for the RiskyLab Tilemap format.</div></div>
-<div class="ttc" id="a_json_loader_8hpp_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="_json_loader_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition</b> JsonLoader.hpp:18</div></div>
-<div class="ttc" id="aclass_json_loader_html_a0d1937a9b0f99f52054c06b650ed56ad"><div class="ttname"><a href="class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad">JsonLoader::loadMap</a></div><div class="ttdeci">static bool loadMap(const std::string &amp;filepath, std::vector&lt; int &gt; &amp;outData, int &amp;outWidth, int &amp;outHeight)</div><div class="ttdoc">Load a RiskyLab Tilemap JSON file.</div><div class="ttdef"><b>Definition</b> JsonLoader.cpp:30</div></div>
+<div class="ttc" id="a_json_loader_8hpp_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="_json_loader_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition</b> <a href="#l00018">JsonLoader.hpp:18</a></div></div>
+<div class="ttc" id="aclass_json_loader_html_a0d1937a9b0f99f52054c06b650ed56ad"><div class="ttname"><a href="class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad">JsonLoader::loadMap</a></div><div class="ttdeci">static bool loadMap(const std::string &amp;filepath, std::vector&lt; int &gt; &amp;outData, int &amp;outWidth, int &amp;outHeight)</div><div class="ttdoc">Load a RiskyLab Tilemap JSON file.</div><div class="ttdef"><b>Definition</b> <a href="_json_loader_8cpp_source.html#l00030">JsonLoader.cpp:30</a></div></div>
 <div class="ttc" id="aclass_json_loader_html_a3c6db70d817942ff34d5b08c37bc48db"><div class="ttname"><a href="class_json_loader.html#a3c6db70d817942ff34d5b08c37bc48db">JsonLoader::JsonLoader</a></div><div class="ttdeci">JsonLoader()=default</div><div class="ttdoc">Class constructor.</div></div>
-<div class="ttc" id="aclass_json_loader_html_a69a5c23a1dd54d94efe286afe8914eb3"><div class="ttname"><a href="class_json_loader.html#a69a5c23a1dd54d94efe286afe8914eb3">JsonLoader::saveMap</a></div><div class="ttdeci">static bool saveMap(const std::string &amp;filepath, const std::vector&lt; std::vector&lt; CellType &gt; &gt; &amp;grid)</div><div class="ttdoc">Save a map to RiskyLab Tilemap JSON format.</div><div class="ttdef"><b>Definition</b> JsonLoader.cpp:127</div></div>
+<div class="ttc" id="aclass_json_loader_html_a69a5c23a1dd54d94efe286afe8914eb3"><div class="ttname"><a href="class_json_loader.html#a69a5c23a1dd54d94efe286afe8914eb3">JsonLoader::saveMap</a></div><div class="ttdeci">static bool saveMap(const std::string &amp;filepath, const std::vector&lt; std::vector&lt; CellType &gt; &gt; &amp;grid)</div><div class="ttdoc">Save a map to RiskyLab Tilemap JSON format.</div><div class="ttdef"><b>Definition</b> <a href="_json_loader_8cpp_source.html#l00127">JsonLoader.cpp:127</a></div></div>
+<div class="ttc" id="aclass_json_loader_html_ac6a38d032f48b4f5b063571b4acfc5b7"><div class="ttname"><a href="class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7">JsonLoader::normalizeTileValue</a></div><div class="ttdeci">static int normalizeTileValue(double value)</div><div class="ttdoc">Normalize a tile value to the nearest supported tile code.</div><div class="ttdef"><b>Definition</b> <a href="_json_loader_8cpp_source.html#l00007">JsonLoader.cpp:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

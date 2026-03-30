@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['numcols_0',['numCols',['../class_map.html#a9aea17d2fd24c6967b00757d2f5113f8',1,'Map']]],
-  ['numrows_1',['numRows',['../class_map.html#ae120067c4c2ab9d5ab00ced716945c2f',1,'Map']]]
+  ['loadfromjson_0',['loadFromJson',['../class_map.html#abf1a7748ff6051b8ca642653999f279e',1,'Map']]],
+  ['loadmap_1',['loadMap',['../class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad',1,'JsonLoader']]]
 ];

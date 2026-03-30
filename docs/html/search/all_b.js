@@ -1,14 +1,7 @@
 var searchData=
 [
-  ['path_0',['path',['../struct_path_result.html#a6ccd31ed792a8049af29c24891246970',1,'PathResult']]],
-  ['pathfinder_1',['Pathfinder',['../class_pathfinder.html',1,'Pathfinder'],['../class_pathfinder.html#ae7e08ca283e7e75e47de9a8c99d895ba',1,'Pathfinder::Pathfinder()']]],
-  ['pathfinder_2ecpp_2',['PathFinder.cpp',['../_path_finder_8cpp.html',1,'']]],
-  ['pathfinder_2ehpp_3',['PathFinder.hpp',['../_path_finder_8hpp.html',1,'']]],
-  ['pathresult_4',['PathResult',['../struct_path_result.html',1,'']]],
-  ['pathresult_2ehpp_5',['PathResult.hpp',['../_path_result_8hpp.html',1,'']]],
-  ['position_6',['Position',['../struct_position.html',1,'']]],
-  ['position_2ehpp_7',['Position.hpp',['../_position_8hpp.html',1,'']]],
-  ['positionhash_8',['PositionHash',['../struct_position_1_1_position_hash.html',1,'Position']]],
-  ['printmap_9',['printMap',['../class_renderer.html#ad81790fa786d76904a50bcce5d056c5e',1,'Renderer']]],
-  ['printpath_10',['printPath',['../class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467',1,'Renderer']]]
+  ['node_0',['Node',['../struct_pathfinder_1_1_node.html',1,'Pathfinder']]],
+  ['normalizetilevalue_1',['normalizeTileValue',['../class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7',1,'JsonLoader']]],
+  ['numcols_2',['numCols',['../class_map.html#a9aea17d2fd24c6967b00757d2f5113f8',1,'Map']]],
+  ['numrows_3',['numRows',['../class_map.html#ae120067c4c2ab9d5ab00ced716945c2f',1,'Map']]]
 ];

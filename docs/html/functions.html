@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">RTS_Pathfinder<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">A* pathfinding demo on a grid map loaded from JSON</div>
   </td>
  </tr>
  </tbody>
@@ -90,7 +91,13 @@ $(function(){initNavTree('functions.html','',''); });
 <div class="contents">
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
+<h3 class="doxsection"><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>aStarSearch()&#160;:&#160;<a class="el" href="class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b">Pathfinder</a></li>
+</ul>
+
+
 <h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>cellToChar()&#160;:&#160;<a class="el" href="class_renderer.html#a22b13cfa2f38a5f2e04a05dbc1075ef1">Renderer</a></li>
 <li>col&#160;:&#160;<a class="el" href="struct_position.html#af7a05862963df619605457252dea6682">Position</a></li>
 </ul>
 
@@ -101,6 +108,7 @@ $(function(){initNavTree('functions.html','',''); });
 
 
 <h3 class="doxsection"><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>fCost()&#160;:&#160;<a class="el" href="struct_pathfinder_1_1_node.html#acea540ca11b0d14b8a61c6c17150d672">Pathfinder::Node</a></li>
 <li>findPath()&#160;:&#160;<a class="el" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5">Pathfinder</a></li>
 <li>findStart()&#160;:&#160;<a class="el" href="class_map.html#a37b0876b916f4a90fabfcf90b387d313">Map</a></li>
 <li>findTarget()&#160;:&#160;<a class="el" href="class_map.html#adf53720950a61164844df888a64cfdfa">Map</a></li>
@@ -114,8 +122,14 @@ $(function(){initNavTree('functions.html','',''); });
 </ul>
 
 
+<h3 class="doxsection"><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<li>heuristic()&#160;:&#160;<a class="el" href="class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd">Pathfinder</a></li>
+</ul>
+
+
 <h3 class="doxsection"><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>isInBounds()&#160;:&#160;<a class="el" href="class_map.html#a77ebc27238305717d63418bf42b3f285">Map</a></li>
+<li>isTraversedCell()&#160;:&#160;<a class="el" href="class_renderer.html#a703d6070936441c6ddc595b6b89e48e0">Renderer</a></li>
 <li>isWalkable()&#160;:&#160;<a class="el" href="class_map.html#a0b0b80d043eefccc40db483b9debd07a">Map</a></li>
 </ul>
 
@@ -132,14 +146,19 @@ $(function(){initNavTree('functions.html','',''); });
 
 
 <h3 class="doxsection"><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>m_gCost&#160;:&#160;<a class="el" href="struct_pathfinder_1_1_node.html#a59bb8f5016ecb2f0a51a82ccfcbf4971">Pathfinder::Node</a></li>
 <li>m_grid&#160;:&#160;<a class="el" href="class_map.html#a797ad42e09c36f4b98283079c308e417">Map</a></li>
+<li>m_hCost&#160;:&#160;<a class="el" href="struct_pathfinder_1_1_node.html#accbd0a49ade6dd203acb179d21dc2073">Pathfinder::Node</a></li>
 <li>m_numCols&#160;:&#160;<a class="el" href="class_map.html#a4a32ec8223b6cba2c8e378782e9938dd">Map</a></li>
 <li>m_numRows&#160;:&#160;<a class="el" href="class_map.html#a519784d53f4b757f042d19cbce21a28d">Map</a></li>
+<li>m_parent&#160;:&#160;<a class="el" href="struct_pathfinder_1_1_node.html#af160312ca3815168132e5a1e3fe902b0">Pathfinder::Node</a></li>
+<li>m_pos&#160;:&#160;<a class="el" href="struct_pathfinder_1_1_node.html#ae61f959b490c9b49932eb71ec5e80b0b">Pathfinder::Node</a></li>
 <li>Map()&#160;:&#160;<a class="el" href="class_map.html#a1197ab65e40dd20b891ba165471e3163">Map</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_n" name="index_n"></a>- n -</h3><ul>
+<li>normalizeTileValue()&#160;:&#160;<a class="el" href="class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7">JsonLoader</a></li>
 <li>numCols()&#160;:&#160;<a class="el" href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8">Map</a></li>
 <li>numRows()&#160;:&#160;<a class="el" href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f">Map</a></li>
 </ul>
@@ -147,7 +166,7 @@ $(function(){initNavTree('functions.html','',''); });
 
 <h3 class="doxsection"><a id="index_o" name="index_o"></a>- o -</h3><ul>
 <li>operator!=()&#160;:&#160;<a class="el" href="struct_position.html#a2072580ca3335d2abc1ef4b2eb024f27">Position</a></li>
-<li>operator()()&#160;:&#160;<a class="el" href="struct_position_1_1_position_hash.html#aed6e87e9771d271b55c6e8263e1921c0">Position::PositionHash</a></li>
+<li>operator()()&#160;:&#160;<a class="el" href="struct_pathfinder_1_1_compare_node.html#aacbd0d0612a60cbd3e7d7b8246a0fb0e">Pathfinder::CompareNode</a>, <a class="el" href="struct_position_1_1_position_hash.html#aed6e87e9771d271b55c6e8263e1921c0">Position::PositionHash</a></li>
 <li>operator==()&#160;:&#160;<a class="el" href="struct_position.html#abbcd55e2e1c2f64c81c1514fb104ef51">Position</a></li>
 </ul>
 
@@ -161,6 +180,7 @@ $(function(){initNavTree('functions.html','',''); });
 
 
 <h3 class="doxsection"><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>reconstructPath()&#160;:&#160;<a class="el" href="class_pathfinder.html#ab01c4d85253b1207849442ec1a667561">Pathfinder</a></li>
 <li>row&#160;:&#160;<a class="el" href="struct_position.html#a224d714110152e1fca26b2437253f56a">Position</a></li>
 </ul>
 

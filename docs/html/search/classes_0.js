@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jsonloader_0',['JsonLoader',['../class_json_loader.html',1,'']]]
+  ['comparenode_0',['CompareNode',['../struct_pathfinder_1_1_compare_node.html',1,'Pathfinder']]]
 ];

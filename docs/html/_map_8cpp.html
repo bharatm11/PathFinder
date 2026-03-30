@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RTS_Pathfinder: C:/Users/bhara/Downloads/Submission/src/Map.cpp File Reference</title>
+<title>RTS_Pathfinder: src/Map.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">RTS_Pathfinder<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">A* pathfinding demo on a grid map loaded from JSON</div>
   </td>
  </tr>
  </tbody>
@@ -98,35 +99,37 @@ $(function(){initNavTree('_map_8cpp.html','',''); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Map.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_map_8cpp__incl.png" border="0" usemap="#a_c_1_2_users_2bhara_2_downloads_2_submission_2src_2_map_8cpp" loading="lazy" alt=""/></div>
-<map name="a_c_1_2_users_2bhara_2_downloads_2_submission_2src_2_map_8cpp" id="a_c_1_2_users_2bhara_2_downloads_2_submission_2src_2_map_8cpp">
-<area shape="rect" title=" " alt="" coords="97,5,276,48"/>
-<area shape="rect" title=" " alt="" coords="5,96,70,123"/>
-<area shape="poly" title=" " alt="" coords="147,51,76,90,72,86,150,46"/>
-<area shape="rect" title=" " alt="" coords="94,96,165,123"/>
-<area shape="poly" title=" " alt="" coords="174,46,149,85,145,82,170,51"/>
-<area shape="rect" href="_map_8hpp.html" title="Manages the grid and map operations. Handles loading/saving maps in JSON format, storing the grid,..." alt="" coords="326,96,397,123"/>
-<area shape="poly" title=" " alt="" coords="232,46,323,88,318,90,232,51"/>
-<area shape="rect" href="_json_loader_8hpp.html" title="JSON loader for RiskyLab Tilemap format Handles loading and saving maps in RiskyLab Tilemap JSON form..." alt="" coords="189,96,302,123"/>
-<area shape="poly" title=" " alt="" coords="202,46,230,83,225,83,201,51"/>
-<area shape="rect" title=" " alt="" coords="185,171,242,197"/>
-<area shape="poly" title=" " alt="" coords="338,122,254,166,252,161,333,124"/>
-<area shape="rect" title=" " alt="" coords="267,171,320,197"/>
-<area shape="poly" title=" " alt="" coords="352,122,317,161,314,157,347,125"/>
-<area shape="rect" href="_position_8hpp.html" title="struct to define 2D position on the battlefield grid" alt="" coords="467,171,560,197"/>
-<area shape="poly" title=" " alt="" coords="388,121,476,163,470,164,388,126"/>
-<area shape="rect" href="_cell_type_8hpp.html" title="Cell type enumeration for the RiskyLab Tilemap format." alt="" coords="345,171,442,197"/>
-<area shape="poly" title=" " alt="" coords="368,121,384,157,379,156,366,126"/>
-<area shape="rect" title=" " alt="" coords="475,245,552,272"/>
-<area shape="poly" title=" " alt="" coords="515,196,516,231,511,228,512,200"/>
-<area shape="poly" title=" " alt="" coords="242,121,227,158,223,155,238,125"/>
-<area shape="poly" title=" " alt="" coords="255,121,280,158,274,157,253,126"/>
-<area shape="poly" title=" " alt="" coords="272,121,356,163,351,164,271,126"/>
-<area shape="rect" title=" " alt="" coords="31,171,161,197"/>
-<area shape="poly" title=" " alt="" coords="217,125,137,166,135,161,222,121"/>
+<div class="center"><img src="_map_8cpp__incl.png" border="0" usemap="#asrc_2_map_8cpp" loading="lazy" alt=""/></div>
+<map name="asrc_2_map_8cpp" id="asrc_2_map_8cpp">
+<area shape="rect" title=" " alt="" coords="140,5,234,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,70,107"/>
+<area shape="poly" title=" " alt="" coords="159,35,79,75,76,71,162,30"/>
+<area shape="rect" title=" " alt="" coords="94,80,165,107"/>
+<area shape="poly" title=" " alt="" coords="175,35,151,69,147,66,178,30"/>
+<area shape="rect" href="_map_8hpp.html" title="Manages the grid and map operations. Handles loading/saving maps in JSON format, storing the grid,..." alt="" coords="326,80,397,107"/>
+<area shape="poly" title=" " alt="" coords="217,30,319,73,314,75,217,35"/>
+<area shape="rect" href="_json_loader_8hpp.html" title="JSON loader for RiskyLab Tilemap format Handles loading and saving maps in RiskyLab Tilemap JSON form..." alt="" coords="189,80,302,107"/>
+<area shape="poly" title=" " alt="" coords="197,30,228,68,223,68,197,35"/>
+<area shape="rect" title=" " alt="" coords="185,155,242,181"/>
+<area shape="poly" title=" " alt="" coords="338,106,254,150,252,145,333,108"/>
+<area shape="rect" title=" " alt="" coords="267,155,320,181"/>
+<area shape="poly" title=" " alt="" coords="352,106,317,145,314,141,347,109"/>
+<area shape="rect" href="_position_8hpp.html" title="struct to define 2D position on the battlefield grid" alt="" coords="467,155,560,181"/>
+<area shape="poly" title=" " alt="" coords="388,105,476,147,470,148,388,110"/>
+<area shape="rect" href="_cell_type_8hpp.html" title="Cell type enumeration for the RiskyLab Tilemap format." alt="" coords="345,155,442,181"/>
+<area shape="poly" title=" " alt="" coords="368,105,384,141,379,140,366,110"/>
+<area shape="rect" title=" " alt="" coords="475,229,552,256"/>
+<area shape="poly" title=" " alt="" coords="515,180,516,215,511,212,512,184"/>
+<area shape="poly" title=" " alt="" coords="242,105,227,142,223,139,238,109"/>
+<area shape="poly" title=" " alt="" coords="255,105,280,142,274,141,253,110"/>
+<area shape="poly" title=" " alt="" coords="272,105,356,147,351,148,271,110"/>
+<area shape="rect" title=" " alt="" coords="31,155,161,181"/>
+<area shape="poly" title=" " alt="" coords="217,109,137,150,135,145,222,105"/>
 </map>
 </div>
-</div></div><!-- contents -->
+</div>
+<p><a href="_map_8cpp_source.html">Go to the source code of this file.</a></p>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

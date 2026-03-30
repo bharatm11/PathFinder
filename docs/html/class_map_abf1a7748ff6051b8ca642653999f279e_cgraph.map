@@ -1,5 +1,7 @@
 <map id="Map::loadFromJson" name="Map::loadFromJson">
-<area shape="rect" id="Node000001" title="Load a map from a RiskyLab Tilemap JSON file." alt="" coords="5,5,142,32"/>
-<area shape="rect" id="Node000002" href="$class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad" title="Load a RiskyLab Tilemap JSON file." alt="" coords="190,5,335,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,16,177,18,172,19,142,21"/>
+<area shape="rect" id="Node000001" title="Load a map from a RiskyLab Tilemap JSON file." alt="" coords="5,13,142,40"/>
+<area shape="rect" id="Node000002" href="$class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad" title="Load a RiskyLab Tilemap JSON file." alt="" coords="190,13,335,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,24,177,26,172,27,142,29"/>
+<area shape="rect" id="Node000003" href="$class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7" title="Normalize a tile value to the nearest supported tile code." alt="" coords="383,5,556,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,24,370,27,365,27,335,29"/>
 </map>

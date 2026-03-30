@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['open_0',['Open',['../_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac3bf447eabe632720a3aa1a7ce401274',1,'CellType.hpp']]],
-  ['operator_21_3d_1',['operator!=',['../struct_position.html#a2072580ca3335d2abc1ef4b2eb024f27',1,'Position']]],
-  ['operator_28_29_2',['operator()',['../struct_position_1_1_position_hash.html#aed6e87e9771d271b55c6e8263e1921c0',1,'Position::PositionHash']]],
-  ['operator_3d_3d_3',['operator==',['../struct_position.html#abbcd55e2e1c2f64c81c1514fb104ef51',1,'Position']]]
+  ['m_5fgcost_0',['m_gCost',['../struct_pathfinder_1_1_node.html#a59bb8f5016ecb2f0a51a82ccfcbf4971',1,'Pathfinder::Node']]],
+  ['m_5fgrid_1',['m_grid',['../class_map.html#a797ad42e09c36f4b98283079c308e417',1,'Map']]],
+  ['m_5fhcost_2',['m_hCost',['../struct_pathfinder_1_1_node.html#accbd0a49ade6dd203acb179d21dc2073',1,'Pathfinder::Node']]],
+  ['m_5fnumcols_3',['m_numCols',['../class_map.html#a4a32ec8223b6cba2c8e378782e9938dd',1,'Map']]],
+  ['m_5fnumrows_4',['m_numRows',['../class_map.html#a519784d53f4b757f042d19cbce21a28d',1,'Map']]],
+  ['m_5fparent_5',['m_parent',['../struct_pathfinder_1_1_node.html#af160312ca3815168132e5a1e3fe902b0',1,'Pathfinder::Node']]],
+  ['m_5fpos_6',['m_pos',['../struct_pathfinder_1_1_node.html#ae61f959b490c9b49932eb71ec5e80b0b',1,'Pathfinder::Node']]],
+  ['main_7',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp_8',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['map_9',['Map',['../class_map.html',1,'Map'],['../class_map.html#a1197ab65e40dd20b891ba165471e3163',1,'Map::Map()']]],
+  ['map_2ecpp_10',['Map.cpp',['../_map_8cpp.html',1,'']]],
+  ['map_2ehpp_11',['Map.hpp',['../_map_8hpp.html',1,'']]]
 ];

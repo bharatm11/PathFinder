@@ -5,5 +5,5 @@ var annotated_dup =
     [ "Pathfinder", "class_pathfinder.html", "class_pathfinder" ],
     [ "PathResult", "struct_path_result.html", "struct_path_result" ],
     [ "Position", "struct_position.html", "struct_position" ],
-    [ "Renderer", "class_renderer.html", null ]
+    [ "Renderer", "class_renderer.html", "class_renderer" ]
 ];

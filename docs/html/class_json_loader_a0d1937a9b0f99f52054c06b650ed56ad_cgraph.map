@@ -1,0 +1,5 @@
+<map id="JsonLoader::loadMap" name="JsonLoader::loadMap">
+<area shape="rect" id="Node000001" title="Load a RiskyLab Tilemap JSON file." alt="" coords="5,13,151,40"/>
+<area shape="rect" id="Node000002" href="$class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7" title="Normalize a tile value to the nearest supported tile code." alt="" coords="199,5,372,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,24,186,26,180,27,151,29"/>
+</map>

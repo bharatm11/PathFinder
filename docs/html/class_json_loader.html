@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">RTS_Pathfinder<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">A* pathfinding demo on a grid map loaded from JSON</div>
   </td>
  </tr>
  </tbody>
@@ -98,7 +99,7 @@ Collaboration diagram for JsonLoader:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_json_loader__coll__graph.png" border="0" usemap="#a_json_loader_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_json_loader_coll__map" id="a_json_loader_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,207,213"/>
+<area shape="rect" title=" " alt="" coords="5,5,146,139"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -113,8 +114,16 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0d1937a9b0f99f52054c06b650ed56ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a RiskyLab Tilemap JSON file.  <br /></td></tr>
 <tr class="memitem:a69a5c23a1dd54d94efe286afe8914eb3" id="r_a69a5c23a1dd54d94efe286afe8914eb3"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a69a5c23a1dd54d94efe286afe8914eb3">saveMap</a> (const std::string &amp;filepath, const std::vector&lt; std::vector&lt; <a class="el" href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271">CellType</a> &gt; &gt; &amp;grid)</td></tr>
 <tr class="memdesc:a69a5c23a1dd54d94efe286afe8914eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save a map to RiskyLab Tilemap JSON format.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ac6a38d032f48b4f5b063571b4acfc5b7" id="r_ac6a38d032f48b4f5b063571b4acfc5b7"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#ac6a38d032f48b4f5b063571b4acfc5b7">normalizeTileValue</a> (double value)</td></tr>
+<tr class="memdesc:ac6a38d032f48b4f5b063571b4acfc5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize a tile value to the nearest supported tile code.  <br /></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_json_loader_8hpp_source.html#l00020">20</a> of file <a class="el" href="_json_loader_8hpp_source.html">JsonLoader.hpp</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3c6db70d817942ff34d5b08c37bc48db" name="a3c6db70d817942ff34d5b08c37bc48db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c6db70d817942ff34d5b08c37bc48db">&#9670;&#160;</a></span>JsonLoader()</h2>
 
@@ -191,6 +200,116 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if loading succeeded </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_json_loader_8cpp_source.html#l00030">30</a> of file <a class="el" href="_json_loader_8cpp_source.html">JsonLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>{</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   36</span>    {</div>
+<div class="line"><span class="lineno">   37</span>        std::ifstream file(filepath);</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">if</span> (!file.is_open())</div>
+<div class="line"><span class="lineno">   39</span>        {</div>
+<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Cannot open file: &quot;</span> + filepath);</div>
+<div class="line"><span class="lineno">   41</span>        }</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>        <a class="code hl_typedef" href="_json_loader_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j;</div>
+<div class="line"><span class="lineno">   44</span>        file &gt;&gt; j;</div>
+<div class="line"><span class="lineno">   45</span>        file.close();</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>        <span class="comment">// Extract map dimensions</span></div>
+<div class="line"><span class="lineno">   48</span>        <span class="keywordflow">if</span> (j.contains(<span class="stringliteral">&quot;width&quot;</span>) &amp;&amp; j.contains(<span class="stringliteral">&quot;height&quot;</span>))</div>
+<div class="line"><span class="lineno">   49</span>        {</div>
+<div class="line"><span class="lineno">   50</span>            outWidth = j[<span class="stringliteral">&quot;width&quot;</span>].get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><span class="lineno">   51</span>            outHeight = j[<span class="stringliteral">&quot;height&quot;</span>].get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><span class="lineno">   52</span>        }</div>
+<div class="line"><span class="lineno">   53</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   54</span>        {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="comment">// Fallback for editor-exported format: derive dimensions from canvas and tile size.</span></div>
+<div class="line"><span class="lineno">   56</span>            <span class="keywordflow">if</span> (!j.contains(<span class="stringliteral">&quot;canvas&quot;</span>) || !j.contains(<span class="stringliteral">&quot;tilesets&quot;</span>) || j[<span class="stringliteral">&quot;tilesets&quot;</span>].empty())</div>
+<div class="line"><span class="lineno">   57</span>            {</div>
+<div class="line"><span class="lineno">   58</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Missing map dimensions: expected width/height or canvas+tilesets&quot;</span>);</div>
+<div class="line"><span class="lineno">   59</span>            }</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;canvas = j[<span class="stringliteral">&quot;canvas&quot;</span>];</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keyword">const</span> <span class="keyword">auto</span> &amp;tileset = j[<span class="stringliteral">&quot;tilesets&quot;</span>][0];</div>
+<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">if</span> (!canvas.contains(<span class="stringliteral">&quot;width&quot;</span>) || !canvas.contains(<span class="stringliteral">&quot;height&quot;</span>) ||</div>
+<div class="line"><span class="lineno">   64</span>                !tileset.contains(<span class="stringliteral">&quot;tilewidth&quot;</span>) || !tileset.contains(<span class="stringliteral">&quot;tileheight&quot;</span>))</div>
+<div class="line"><span class="lineno">   65</span>            {</div>
+<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Missing canvas/tile size fields needed to infer dimensions&quot;</span>);</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> canvasWidth = canvas[<span class="stringliteral">&quot;width&quot;</span>].get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><span class="lineno">   70</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> canvasHeight = canvas[<span class="stringliteral">&quot;height&quot;</span>].get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> tileWidth = tileset[<span class="stringliteral">&quot;tilewidth&quot;</span>].get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> tileHeight = tileset[<span class="stringliteral">&quot;tileheight&quot;</span>].get&lt;<span class="keywordtype">int</span>&gt;();</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">if</span> (tileWidth &lt;= 0 || tileHeight &lt;= 0)</div>
+<div class="line"><span class="lineno">   74</span>            {</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Invalid tile size while inferring dimensions&quot;</span>);</div>
+<div class="line"><span class="lineno">   76</span>            }</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>            outWidth = canvasWidth / tileWidth;</div>
+<div class="line"><span class="lineno">   79</span>            outHeight = canvasHeight / tileHeight;</div>
+<div class="line"><span class="lineno">   80</span>        }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>        <span class="comment">// Extract data from layers</span></div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">if</span> (!j.contains(<span class="stringliteral">&quot;layers&quot;</span>) || j[<span class="stringliteral">&quot;layers&quot;</span>].empty())</div>
+<div class="line"><span class="lineno">   84</span>        {</div>
+<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Missing &#39;layers&#39; field in JSON&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>        }</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;layer = j[<span class="stringliteral">&quot;layers&quot;</span>][0];</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">if</span> (!layer.contains(<span class="stringliteral">&quot;data&quot;</span>))</div>
+<div class="line"><span class="lineno">   90</span>        {</div>
+<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Missing &#39;data&#39; field in layer&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>        }</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (!layer[<span class="stringliteral">&quot;data&quot;</span>].is_array())</div>
+<div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Layer &#39;data&#39; must be an array&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>        }</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>        outData.clear();</div>
+<div class="line"><span class="lineno">  100</span>        outData.reserve(layer[<span class="stringliteral">&quot;data&quot;</span>].size());</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;value : layer[<span class="stringliteral">&quot;data&quot;</span>])</div>
+<div class="line"><span class="lineno">  102</span>        {</div>
+<div class="line"><span class="lineno">  103</span>            <span class="keywordflow">if</span> (!value.is_number())</div>
+<div class="line"><span class="lineno">  104</span>            {</div>
+<div class="line"><span class="lineno">  105</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Layer data contains a non-numeric tile value&quot;</span>);</div>
+<div class="line"><span class="lineno">  106</span>            }</div>
+<div class="line"><span class="lineno">  107</span>            outData.push_back(<a class="code hl_function" href="#ac6a38d032f48b4f5b063571b4acfc5b7">normalizeTileValue</a>(value.get&lt;<span class="keywordtype">double</span>&gt;()));</div>
+<div class="line"><span class="lineno">  108</span>        }</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>        <span class="comment">// Verify data size</span></div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(outData.size()) != outWidth * outHeight)</div>
+<div class="line"><span class="lineno">  112</span>        {</div>
+<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Data size mismatch: expected &quot;</span> +</div>
+<div class="line"><span class="lineno">  114</span>                                     std::to_string(outWidth * outHeight) +</div>
+<div class="line"><span class="lineno">  115</span>                                     <span class="stringliteral">&quot; but got &quot;</span> + std::to_string(outData.size()));</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e)</div>
+<div class="line"><span class="lineno">  121</span>    {</div>
+<div class="line"><span class="lineno">  122</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error loading map: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  124</span>    }</div>
+<div class="line"><span class="lineno">  125</span>}</div>
+<div class="ttc" id="a_json_loader_8hpp_html_ab701e3ac61a85b337ec5c1abaad6742d"><div class="ttname"><a href="_json_loader_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a></div><div class="ttdeci">nlohmann::json json</div><div class="ttdef"><b>Definition</b> <a href="_json_loader_8hpp_source.html#l00018">JsonLoader.hpp:18</a></div></div>
+<div class="ttc" id="aclass_json_loader_html_ac6a38d032f48b4f5b063571b4acfc5b7"><div class="ttname"><a href="#ac6a38d032f48b4f5b063571b4acfc5b7">JsonLoader::normalizeTileValue</a></div><div class="ttdeci">static int normalizeTileValue(double value)</div><div class="ttdoc">Normalize a tile value to the nearest supported tile code.</div><div class="ttdef"><b>Definition</b> <a href="_json_loader_8cpp_source.html#l00007">JsonLoader.cpp:7</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_json_loader_8cpp_source.html#l00007">normalizeTileValue()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_map_8cpp_source.html#l00006">Map::loadFromJson()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_json_loader_a0d1937a9b0f99f52054c06b650ed56ad_cgraph.png" border="0" usemap="#aclass_json_loader_a0d1937a9b0f99f52054c06b650ed56ad_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_json_loader_a0d1937a9b0f99f52054c06b650ed56ad_cgraph" id="aclass_json_loader_a0d1937a9b0f99f52054c06b650ed56ad_cgraph">
+<area shape="rect" title="Load a RiskyLab Tilemap JSON file." alt="" coords="5,13,151,40"/>
+<area shape="rect" href="class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7" title="Normalize a tile value to the nearest supported tile code." alt="" coords="199,5,372,48"/>
+<area shape="poly" title=" " alt="" coords="151,24,186,26,180,27,151,29"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -201,6 +320,85 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="269,19,239,21,239,16,274,19"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="84,20,55,21,55,16,90,18"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac6a38d032f48b4f5b063571b4acfc5b7" name="ac6a38d032f48b4f5b063571b4acfc5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a38d032f48b4f5b063571b4acfc5b7">&#9670;&#160;</a></span>normalizeTileValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int JsonLoader::normalizeTileValue </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Normalize a tile value to the nearest supported tile code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Input tile value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normalized tile value </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_json_loader_8cpp_source.html#l00007">7</a> of file <a class="el" href="_json_loader_8cpp_source.html">JsonLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>{</div>
+<div class="line"><span class="lineno">    9</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> supportedTileCodes[] = {</div>
+<div class="line"><span class="lineno">   10</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac3bf447eabe632720a3aa1a7ce401274">CellType::Open</a>),</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271aa6122a65eaa676f700ae68d393054a37">CellType::Start</a>),</div>
+<div class="line"><span class="lineno">   12</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271a705e67ab9c9c3cf43a821b42f87acbe7">CellType::Elevated</a>),</div>
+<div class="line"><span class="lineno">   13</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac41a31890959544c6523af684561abe5">CellType::Target</a>)};</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>    <span class="comment">// Find the closest supported tile code to the input value</span></div>
+<div class="line"><span class="lineno">   16</span>    <span class="keywordtype">int</span> closestTileCode = supportedTileCodes[0];</div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordtype">double</span> smallestDistance = std::fabs(value - <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(closestTileCode));</div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> candidateTileCode : supportedTileCodes)</div>
+<div class="line"><span class="lineno">   19</span>    {</div>
+<div class="line"><span class="lineno">   20</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> candidateDistance = std::fabs(value - <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(candidateTileCode));</div>
+<div class="line"><span class="lineno">   21</span>        <span class="keywordflow">if</span> (candidateDistance &lt; smallestDistance)</div>
+<div class="line"><span class="lineno">   22</span>        {</div>
+<div class="line"><span class="lineno">   23</span>            closestTileCode = candidateTileCode;</div>
+<div class="line"><span class="lineno">   24</span>            smallestDistance = candidateDistance;</div>
+<div class="line"><span class="lineno">   25</span>        }</div>
+<div class="line"><span class="lineno">   26</span>    }</div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">return</span> closestTileCode;</div>
+<div class="line"><span class="lineno">   28</span>}</div>
+<div class="ttc" id="a_cell_type_8hpp_html_ac3c2cbbef08f3b7ddc3b06c6bd5a2271a705e67ab9c9c3cf43a821b42f87acbe7"><div class="ttname"><a href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271a705e67ab9c9c3cf43a821b42f87acbe7">CellType::Elevated</a></div><div class="ttdeci">@ Elevated</div><div class="ttdef"><b>Definition</b> <a href="_cell_type_8hpp_source.html#l00015">CellType.hpp:15</a></div></div>
+<div class="ttc" id="a_cell_type_8hpp_html_ac3c2cbbef08f3b7ddc3b06c6bd5a2271aa6122a65eaa676f700ae68d393054a37"><div class="ttname"><a href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271aa6122a65eaa676f700ae68d393054a37">CellType::Start</a></div><div class="ttdeci">@ Start</div><div class="ttdef"><b>Definition</b> <a href="_cell_type_8hpp_source.html#l00014">CellType.hpp:14</a></div></div>
+<div class="ttc" id="a_cell_type_8hpp_html_ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac3bf447eabe632720a3aa1a7ce401274"><div class="ttname"><a href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac3bf447eabe632720a3aa1a7ce401274">CellType::Open</a></div><div class="ttdeci">@ Open</div><div class="ttdef"><b>Definition</b> <a href="_cell_type_8hpp_source.html#l00013">CellType.hpp:13</a></div></div>
+<div class="ttc" id="a_cell_type_8hpp_html_ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac41a31890959544c6523af684561abe5"><div class="ttname"><a href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac41a31890959544c6523af684561abe5">CellType::Target</a></div><div class="ttdeci">@ Target</div><div class="ttdef"><b>Definition</b> <a href="_cell_type_8hpp_source.html#l00016">CellType.hpp:16</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_cell_type_8hpp_source.html#l00015">Elevated</a>, <a class="el" href="_cell_type_8hpp_source.html#l00013">Open</a>, <a class="el" href="_cell_type_8hpp_source.html#l00014">Start</a>, and <a class="el" href="_cell_type_8hpp_source.html#l00016">Target</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_json_loader_8cpp_source.html#l00030">loadMap()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_json_loader_ac6a38d032f48b4f5b063571b4acfc5b7_icgraph.png" border="0" usemap="#aclass_json_loader_ac6a38d032f48b4f5b063571b4acfc5b7_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_json_loader_ac6a38d032f48b4f5b063571b4acfc5b7_icgraph" id="aclass_json_loader_ac6a38d032f48b4f5b063571b4acfc5b7_icgraph">
+<area shape="rect" title="Normalize a tile value to the nearest supported tile code." alt="" coords="480,5,654,48"/>
+<area shape="rect" href="class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad" title="Load a RiskyLab Tilemap JSON file." alt="" coords="287,13,432,40"/>
+<area shape="poly" title=" " alt="" coords="462,27,433,29,433,24,467,27"/>
+<area shape="rect" href="class_map.html#abf1a7748ff6051b8ca642653999f279e" title="Load a map from a RiskyLab Tilemap JSON file." alt="" coords="103,13,239,40"/>
+<area shape="poly" title=" " alt="" coords="269,27,239,29,239,24,274,27"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,55,40"/>
+<area shape="poly" title=" " alt="" coords="85,28,55,29,55,24,89,26"/>
 </map>
 </div>
 
@@ -242,6 +440,56 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if saving succeeded </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_json_loader_8cpp_source.html#l00127">127</a> of file <a class="el" href="_json_loader_8cpp_source.html">JsonLoader.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  131</span>    {</div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">if</span> (grid.empty())</div>
+<div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Grid is empty&quot;</span>);</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">int</span> height = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(grid.size());</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordtype">int</span> width = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(grid[0].size());</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>        <span class="comment">// Build data array</span></div>
+<div class="line"><span class="lineno">  141</span>        std::vector&lt;int&gt; data;</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;row : grid)</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;cell : row)</div>
+<div class="line"><span class="lineno">  145</span>            {</div>
+<div class="line"><span class="lineno">  146</span>                data.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(cell));</div>
+<div class="line"><span class="lineno">  147</span>            }</div>
+<div class="line"><span class="lineno">  148</span>        }</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>        <span class="comment">// Create JSON structure</span></div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_typedef" href="_json_loader_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> j;</div>
+<div class="line"><span class="lineno">  152</span>        j[<span class="stringliteral">&quot;width&quot;</span>] = width;</div>
+<div class="line"><span class="lineno">  153</span>        j[<span class="stringliteral">&quot;height&quot;</span>] = height;</div>
+<div class="line"><span class="lineno">  154</span>        j[<span class="stringliteral">&quot;layers&quot;</span>] = json::array();</div>
+<div class="line"><span class="lineno">  155</span>        j[<span class="stringliteral">&quot;layers&quot;</span>][0][<span class="stringliteral">&quot;data&quot;</span>] = data;</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>        <span class="comment">// Write to file</span></div>
+<div class="line"><span class="lineno">  158</span>        std::ofstream file(filepath);</div>
+<div class="line"><span class="lineno">  159</span>        <span class="keywordflow">if</span> (!file.is_open())</div>
+<div class="line"><span class="lineno">  160</span>        {</div>
+<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Cannot open file for writing: &quot;</span> + filepath);</div>
+<div class="line"><span class="lineno">  162</span>        }</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>        file &lt;&lt; j.dump(2) &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  165</span>        file.close();</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e)</div>
+<div class="line"><span class="lineno">  170</span>    {</div>
+<div class="line"><span class="lineno">  171</span>        std::cerr &lt;&lt; <span class="stringliteral">&quot;Error saving map: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  173</span>    }</div>
+<div class="line"><span class="lineno">  174</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="_map_8cpp_source.html#l00048">Map::saveToJson()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -258,8 +506,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/bhara/Downloads/Submission/include/<a class="el" href="_json_loader_8hpp_source.html">JsonLoader.hpp</a></li>
-<li>C:/Users/bhara/Downloads/Submission/src/<a class="el" href="_json_loader_8cpp.html">JsonLoader.cpp</a></li>
+<li>include/<a class="el" href="_json_loader_8hpp_source.html">JsonLoader.hpp</a></li>
+<li>src/<a class="el" href="_json_loader_8cpp_source.html">JsonLoader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

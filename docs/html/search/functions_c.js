@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['savemap_0',['saveMap',['../class_json_loader.html#a69a5c23a1dd54d94efe286afe8914eb3',1,'JsonLoader']]],
-  ['savetojson_1',['saveToJson',['../class_map.html#a6472fdd1fce45b89251de7868d75cc75',1,'Map']]],
-  ['setcell_2',['setCell',['../class_map.html#a56edaec62c0f20677b60513cf249c676',1,'Map']]]
+  ['operator_21_3d_0',['operator!=',['../struct_position.html#a2072580ca3335d2abc1ef4b2eb024f27',1,'Position']]],
+  ['operator_28_29_1',['operator()',['../struct_pathfinder_1_1_compare_node.html#aacbd0d0612a60cbd3e7d7b8246a0fb0e',1,'Pathfinder::CompareNode::operator()()'],['../struct_position_1_1_position_hash.html#aed6e87e9771d271b55c6e8263e1921c0',1,'Position::PositionHash::operator()()']]],
+  ['operator_3d_3d_2',['operator==',['../struct_position.html#abbcd55e2e1c2f64c81c1514fb104ef51',1,'Position']]]
 ];

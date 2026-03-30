@@ -1,24 +1,30 @@
 <map id="Map::isInBounds" name="Map::isInBounds">
-<area shape="rect" id="Node000001" title="Check if a position is within map bounds." alt="" coords="764,81,883,108"/>
-<area shape="rect" id="Node000002" href="$namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,5,314,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="784,73,752,60,715,47,610,27,503,16,402,13,315,15,314,9,402,8,503,11,611,21,716,41,754,55,790,74"/>
-<area shape="rect" id="Node000004" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="592,56,716,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="746,84,716,81,716,76,751,83"/>
-<area shape="rect" id="Node000007" href="$class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="595,157,713,184"/>
-<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="783,114,717,148,690,159,689,154,715,143,778,116"/>
-<area shape="rect" id="Node000009" href="$class_map.html#a56edaec62c0f20677b60513cf249c676" title="Set a cell to a specific type." alt="" coords="606,107,702,133"/>
-<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="746,106,702,116,702,110,751,105"/>
-<area shape="rect" id="Node000003" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,81,55,108"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,39,104,53,52,83,49,79,102,48,140,35"/>
-<area shape="rect" id="Node000005" href="$class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="387,56,519,83"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="575,70,520,72,519,67,580,69"/>
-<area shape="rect" id="Node000006" href="$namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b" title="Replace existing marker (start or target) on the map with a new position." alt="" coords="362,107,544,133"/>
-<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="586,86,510,109,508,103,581,88"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="370,54,277,35,276,30,375,52"/>
-<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="371,77,55,96,54,91,372,72"/>
-<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="346,116,55,99,55,93,348,111"/>
-<area shape="poly" id="edge11_Node000007_Node000003" title=" " alt="" coords="577,169,364,156,233,141,102,119,55,105,54,100,103,113,234,135,365,151,582,167"/>
-<area shape="rect" id="Node000008" href="$class_map.html#a7eff76e95bee3cf741285d301d21d1f3" title="Get all walkable cells from a position (4&#45;directions)." alt="" coords="388,208,519,235"/>
-<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="586,188,509,210,509,205,581,189"/>
-<area shape="poly" id="edge13_Node000009_Node000006" title=" " alt="" coords="588,120,545,123,544,117,593,120"/>
+<area shape="rect" id="Node000001" title="Check if a position is within map bounds." alt="" coords="1145,169,1265,196"/>
+<area shape="rect" id="Node000002" href="$namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,144,314,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1127,174,1007,166,868,160,671,160,315,160,314,155,671,155,868,155,1007,160,1132,174"/>
+<area shape="rect" id="Node000004" href="$class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="611,195,734,221"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1127,186,735,208,734,202,1133,186"/>
+<area shape="rect" id="Node000007" href="$class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="980,68,1097,95"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="1166,160,1061,98,1063,92,1171,161"/>
+<area shape="rect" id="Node000011" href="$class_map.html#a56edaec62c0f20677b60513cf249c676" title="Set a cell to a specific type." alt="" coords="991,245,1086,272"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="1163,202,1071,247,1069,242,1157,204"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,169,55,196"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,175,56,182,54,177,98,171"/>
+<area shape="rect" id="Node000005" href="$class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="387,195,519,221"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="592,208,520,211,520,205,598,208"/>
+<area shape="rect" id="Node000006" href="$namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b" title="Replace existing marker (start or target) on the map with a new position." alt="" coords="362,245,544,272"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="599,225,515,247,514,242,594,226"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="369,192,276,174,277,169,375,191"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="371,206,55,187,55,181,372,201"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="344,246,228,231,102,207,55,193,55,188,103,201,229,226,349,245"/>
+<area shape="poly" id="edge15_Node000007_Node000003" title=" " alt="" coords="980,63,920,47,843,28,759,14,674,8,452,8,389,13,327,28,267,48,210,74,114,128,51,171,48,167,111,123,208,69,265,44,325,22,388,8,452,3,674,3,760,8,844,23,921,42,986,63"/>
+<area shape="rect" id="Node000008" href="$class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b" title="Internal A* implementation." alt="" coords="592,93,753,120"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="962,78,886,80,801,84,731,95,730,90,800,79,885,74,967,77"/>
+<area shape="rect" id="Node000010" href="$class_map.html#a7eff76e95bee3cf741285d301d21d1f3" title="Get all walkable cells from a position (4&#45;directions)." alt="" coords="801,93,932,120"/>
+<area shape="poly" id="edge13_Node000007_Node000010" title=" " alt="" coords="962,93,933,100,932,94,967,92"/>
+<area shape="rect" id="Node000009" href="$class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="385,93,521,120"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="574,107,522,109,521,104,579,106"/>
+<area shape="poly" id="edge12_Node000009_Node000002" title=" " alt="" coords="368,125,277,146,276,141,373,123"/>
+<area shape="poly" id="edge14_Node000010_Node000008" title=" " alt="" coords="782,107,753,109,753,104,788,106"/>
+<area shape="poly" id="edge17_Node000011_Node000006" title=" " alt="" coords="973,259,545,261,545,256,978,259"/>
 </map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RTS_Pathfinder: C:/Users/bhara/Downloads/Submission/include/PathFinder.hpp Source File</title>
+<title>RTS_Pathfinder: include/PathFinder.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">RTS_Pathfinder<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">A* pathfinding demo on a grid map loaded from JSON</div>
   </td>
  </tr>
  </tbody>
@@ -111,35 +112,41 @@ $(function(){initNavTree('_path_finder_8hpp_source.html','',''); });
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_struct" href="struct_path_result.html">PathResult</a> <a class="code hl_function" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5">findPath</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_map.html">Map</a> &amp;map, <a class="code hl_struct" href="struct_position.html">Position</a> start, <a class="code hl_struct" href="struct_position.html">Position</a> target);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">struct </span>Node</div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_pathfinder_1_1_node.html">   39</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_pathfinder_1_1_node.html">Node</a></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_struct" href="struct_position.html">Position</a> m_pos;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">float</span> m_gCost = 0.0f;         <span class="comment">// Cost from start</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">float</span> m_hCost = 0.0f;         <span class="comment">// Heuristic cost to goal (manhattan distance)</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_struct" href="struct_position.html">Position</a> m_parent = {-1, -1}; <span class="comment">// Parent position in path</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_pathfinder_1_1_node.html#ae61f959b490c9b49932eb71ec5e80b0b">   41</a></span>        <a class="code hl_struct" href="struct_position.html">Position</a> <a class="code hl_variable" href="struct_pathfinder_1_1_node.html#ae61f959b490c9b49932eb71ec5e80b0b">m_pos</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_pathfinder_1_1_node.html#a59bb8f5016ecb2f0a51a82ccfcbf4971">   42</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_pathfinder_1_1_node.html#a59bb8f5016ecb2f0a51a82ccfcbf4971">m_gCost</a> = 0.0f;         <span class="comment">// Cost from start</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_pathfinder_1_1_node.html#accbd0a49ade6dd203acb179d21dc2073">   43</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_pathfinder_1_1_node.html#accbd0a49ade6dd203acb179d21dc2073">m_hCost</a> = 0.0f;         <span class="comment">// Heuristic cost to goal (manhattan distance)</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_pathfinder_1_1_node.html#af160312ca3815168132e5a1e3fe902b0">   44</a></span>        <a class="code hl_struct" href="struct_position.html">Position</a> <a class="code hl_variable" href="struct_pathfinder_1_1_node.html#af160312ca3815168132e5a1e3fe902b0">m_parent</a> = {-1, -1}; <span class="comment">// Parent position in path</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">float</span> fCost()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_gCost + m_hCost; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_pathfinder_1_1_node.html#acea540ca11b0d14b8a61c6c17150d672">   50</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="struct_pathfinder_1_1_node.html#acea540ca11b0d14b8a61c6c17150d672">fCost</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="struct_pathfinder_1_1_node.html#a59bb8f5016ecb2f0a51a82ccfcbf4971">m_gCost</a> + <a class="code hl_variable" href="struct_pathfinder_1_1_node.html#accbd0a49ade6dd203acb179d21dc2073">m_hCost</a>; }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    };</div>
+</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">struct </span>CompareNode</div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_pathfinder_1_1_compare_node.html">   56</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_pathfinder_1_1_compare_node.html">CompareNode</a></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> Node &amp;a, <span class="keyword">const</span> Node &amp;b)<span class="keyword"> const</span></div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_pathfinder_1_1_compare_node.html#aacbd0d0612a60cbd3e7d7b8246a0fb0e">   58</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_pathfinder_1_1_compare_node.html#aacbd0d0612a60cbd3e7d7b8246a0fb0e">operator()</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_pathfinder_1_1_node.html">Node</a> &amp;a, <span class="keyword">const</span> <a class="code hl_struct" href="struct_pathfinder_1_1_node.html">Node</a> &amp;b)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">        </span>{</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> a.fCost() &gt; b.fCost();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> a.<a class="code hl_function" href="struct_pathfinder_1_1_node.html#acea540ca11b0d14b8a61c6c17150d672">fCost</a>() &gt; b.<a class="code hl_function" href="struct_pathfinder_1_1_node.html#acea540ca11b0d14b8a61c6c17150d672">fCost</a>();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
+</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">float</span> heuristic(Position a, Position b) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd">heuristic</a>(<a class="code hl_struct" href="struct_position.html">Position</a> a, <a class="code hl_struct" href="struct_position.html">Position</a> b) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    PathResult aStarSearch(</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">const</span> Map &amp;map,</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        Position start,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        Position target);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_struct" href="struct_path_result.html">PathResult</a> <a class="code hl_function" href="class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b">aStarSearch</a>(</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_map.html">Map</a> &amp;map,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_struct" href="struct_position.html">Position</a> start,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_struct" href="struct_position.html">Position</a> target);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::vector&lt;Position&gt; reconstructPath(</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::vector&lt;Position&gt; <a class="code hl_function" href="class_pathfinder.html#ab01c4d85253b1207849442ec1a667561">reconstructPath</a>(</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">const</span> std::unordered_map&lt;Position, Position, Position::PositionHash&gt; &amp;parentMap,</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        Position start,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        Position target) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_struct" href="struct_position.html">Position</a> start,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_struct" href="struct_position.html">Position</a> target) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
 </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
@@ -147,11 +154,22 @@ $(function(){initNavTree('_path_finder_8hpp_source.html','',''); });
 <div class="ttc" id="a_map_8hpp_html"><div class="ttname"><a href="_map_8hpp.html">Map.hpp</a></div><div class="ttdoc">Manages the grid and map operations. Handles loading/saving maps in JSON format, storing the grid,...</div></div>
 <div class="ttc" id="a_path_result_8hpp_html"><div class="ttname"><a href="_path_result_8hpp.html">PathResult.hpp</a></div><div class="ttdoc">Result struct returned PathFinder A* search.</div></div>
 <div class="ttc" id="a_position_8hpp_html"><div class="ttname"><a href="_position_8hpp.html">Position.hpp</a></div><div class="ttdoc">struct to define 2D position on the battlefield grid</div></div>
-<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition</b> Map.hpp:17</div></div>
-<div class="ttc" id="aclass_pathfinder_html_a3425c00d24a1acb3c5e4855199821ec5"><div class="ttname"><a href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5">Pathfinder::findPath</a></div><div class="ttdeci">PathResult findPath(const Map &amp;map, Position start, Position target)</div><div class="ttdoc">Find a path using A* algorithm.</div><div class="ttdef"><b>Definition</b> PathFinder.cpp:11</div></div>
+<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition</b> <a href="_map_8hpp_source.html#l00016">Map.hpp:17</a></div></div>
+<div class="ttc" id="aclass_pathfinder_html_a3425c00d24a1acb3c5e4855199821ec5"><div class="ttname"><a href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5">Pathfinder::findPath</a></div><div class="ttdeci">PathResult findPath(const Map &amp;map, Position start, Position target)</div><div class="ttdoc">Find a path using A* algorithm.</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8cpp_source.html#l00011">PathFinder.cpp:11</a></div></div>
+<div class="ttc" id="aclass_pathfinder_html_a7c0f0b6b1131b4f3fd8abcd17879e0cd"><div class="ttname"><a href="class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd">Pathfinder::heuristic</a></div><div class="ttdeci">float heuristic(Position a, Position b) const</div><div class="ttdoc">Calculate Manhattan distance heuristic.</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8cpp_source.html#l00004">PathFinder.cpp:4</a></div></div>
+<div class="ttc" id="aclass_pathfinder_html_a844d6a4b5e05ba5ecec1d24140aaa86b"><div class="ttname"><a href="class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b">Pathfinder::aStarSearch</a></div><div class="ttdeci">PathResult aStarSearch(const Map &amp;map, Position start, Position target)</div><div class="ttdoc">Internal A* implementation.</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8cpp_source.html#l00016">PathFinder.cpp:16</a></div></div>
+<div class="ttc" id="aclass_pathfinder_html_ab01c4d85253b1207849442ec1a667561"><div class="ttname"><a href="class_pathfinder.html#ab01c4d85253b1207849442ec1a667561">Pathfinder::reconstructPath</a></div><div class="ttdeci">std::vector&lt; Position &gt; reconstructPath(const std::unordered_map&lt; Position, Position, Position::PositionHash &gt; &amp;parentMap, Position start, Position target) const</div><div class="ttdoc">Reconstruct path from parent pointers.</div><div class="ttdef"><b>Definition</b> <a href="_path_finder_8cpp_source.html#l00110">PathFinder.cpp:110</a></div></div>
 <div class="ttc" id="aclass_pathfinder_html_ae7e08ca283e7e75e47de9a8c99d895ba"><div class="ttname"><a href="class_pathfinder.html#ae7e08ca283e7e75e47de9a8c99d895ba">Pathfinder::Pathfinder</a></div><div class="ttdeci">Pathfinder()=default</div><div class="ttdoc">Construct a Pathfinder instance.</div></div>
-<div class="ttc" id="astruct_path_result_html"><div class="ttname"><a href="struct_path_result.html">PathResult</a></div><div class="ttdef"><b>Definition</b> PathResult.hpp:15</div></div>
-<div class="ttc" id="astruct_position_html"><div class="ttname"><a href="struct_position.html">Position</a></div><div class="ttdef"><b>Definition</b> Position.hpp:13</div></div>
+<div class="ttc" id="astruct_path_result_html"><div class="ttname"><a href="struct_path_result.html">PathResult</a></div><div class="ttdef"><b>Definition</b> <a href="_path_result_8hpp_source.html#l00014">PathResult.hpp:15</a></div></div>
+<div class="ttc" id="astruct_pathfinder_1_1_compare_node_html"><div class="ttname"><a href="struct_pathfinder_1_1_compare_node.html">Pathfinder::CompareNode</a></div><div class="ttdoc">Comparison functor for priority queue (min-heap by f-cost).</div><div class="ttdef"><b>Definition</b> <a href="#l00056">PathFinder.hpp:57</a></div></div>
+<div class="ttc" id="astruct_pathfinder_1_1_compare_node_html_aacbd0d0612a60cbd3e7d7b8246a0fb0e"><div class="ttname"><a href="struct_pathfinder_1_1_compare_node.html#aacbd0d0612a60cbd3e7d7b8246a0fb0e">Pathfinder::CompareNode::operator()</a></div><div class="ttdeci">bool operator()(const Node &amp;a, const Node &amp;b) const</div><div class="ttdef"><b>Definition</b> <a href="#l00058">PathFinder.hpp:58</a></div></div>
+<div class="ttc" id="astruct_pathfinder_1_1_node_html"><div class="ttname"><a href="struct_pathfinder_1_1_node.html">Pathfinder::Node</a></div><div class="ttdoc">Node structure for A* algorithm.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">PathFinder.hpp:40</a></div></div>
+<div class="ttc" id="astruct_pathfinder_1_1_node_html_a59bb8f5016ecb2f0a51a82ccfcbf4971"><div class="ttname"><a href="struct_pathfinder_1_1_node.html#a59bb8f5016ecb2f0a51a82ccfcbf4971">Pathfinder::Node::m_gCost</a></div><div class="ttdeci">float m_gCost</div><div class="ttdef"><b>Definition</b> <a href="#l00042">PathFinder.hpp:42</a></div></div>
+<div class="ttc" id="astruct_pathfinder_1_1_node_html_accbd0a49ade6dd203acb179d21dc2073"><div class="ttname"><a href="struct_pathfinder_1_1_node.html#accbd0a49ade6dd203acb179d21dc2073">Pathfinder::Node::m_hCost</a></div><div class="ttdeci">float m_hCost</div><div class="ttdef"><b>Definition</b> <a href="#l00043">PathFinder.hpp:43</a></div></div>
+<div class="ttc" id="astruct_pathfinder_1_1_node_html_acea540ca11b0d14b8a61c6c17150d672"><div class="ttname"><a href="struct_pathfinder_1_1_node.html#acea540ca11b0d14b8a61c6c17150d672">Pathfinder::Node::fCost</a></div><div class="ttdeci">float fCost() const</div><div class="ttdoc">Calculate f-cost (g + h).</div><div class="ttdef"><b>Definition</b> <a href="#l00050">PathFinder.hpp:50</a></div></div>
+<div class="ttc" id="astruct_pathfinder_1_1_node_html_ae61f959b490c9b49932eb71ec5e80b0b"><div class="ttname"><a href="struct_pathfinder_1_1_node.html#ae61f959b490c9b49932eb71ec5e80b0b">Pathfinder::Node::m_pos</a></div><div class="ttdeci">Position m_pos</div><div class="ttdef"><b>Definition</b> <a href="#l00041">PathFinder.hpp:41</a></div></div>
+<div class="ttc" id="astruct_pathfinder_1_1_node_html_af160312ca3815168132e5a1e3fe902b0"><div class="ttname"><a href="struct_pathfinder_1_1_node.html#af160312ca3815168132e5a1e3fe902b0">Pathfinder::Node::m_parent</a></div><div class="ttdeci">Position m_parent</div><div class="ttdef"><b>Definition</b> <a href="#l00044">PathFinder.hpp:44</a></div></div>
+<div class="ttc" id="astruct_position_html"><div class="ttname"><a href="struct_position.html">Position</a></div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00012">Position.hpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

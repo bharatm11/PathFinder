@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">RTS_Pathfinder<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">A* pathfinding demo on a grid map loaded from JSON</div>
   </td>
  </tr>
  </tbody>
@@ -101,7 +102,7 @@ Collaboration diagram for Position::PositionHash:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_position_1_1_position_hash__coll__graph.png" border="0" usemap="#a_position_1_1_position_hash_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="a_position_1_1_position_hash_coll__map" id="a_position_1_1_position_hash_coll__map">
-<area shape="rect" title="Hash function to support unordered containers." alt="" coords="5,5,162,107"/>
+<area shape="rect" title="Hash function to support unordered containers." alt="" coords="5,5,149,75"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -112,6 +113,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Hash function to support unordered containers. </p>
+
+<p class="definition">Definition at line <a class="el" href="_position_8hpp_source.html#l00040">40</a> of file <a class="el" href="_position_8hpp_source.html">Position.hpp</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aed6e87e9771d271b55c6e8263e1921c0" name="aed6e87e9771d271b55c6e8263e1921c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed6e87e9771d271b55c6e8263e1921c0">&#9670;&#160;</a></span>operator()()</h2>
@@ -145,10 +148,19 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Hash value </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_position_8hpp_source.html#l00047">47</a> of file <a class="el" href="_position_8hpp_source.html">Position.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>        {</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> std::hash&lt;int&gt;()(pos.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a>) ^ (std::hash&lt;int&gt;()(pos.<a class="code hl_variable" href="struct_position.html#af7a05862963df619605457252dea6682">col</a>) &lt;&lt; 1);</div>
+<div class="line"><span class="lineno">   50</span>        }</div>
+<div class="ttc" id="astruct_position_html_a224d714110152e1fca26b2437253f56a"><div class="ttname"><a href="struct_position.html#a224d714110152e1fca26b2437253f56a">Position::row</a></div><div class="ttdeci">int row</div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00014">Position.hpp:14</a></div></div>
+<div class="ttc" id="astruct_position_html_af7a05862963df619605457252dea6682"><div class="ttname"><a href="struct_position.html#af7a05862963df619605457252dea6682">Position::col</a></div><div class="ttdeci">int col</div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00015">Position.hpp:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_position_8hpp_source.html#l00015">Position::col</a>, and <a class="el" href="_position_8hpp_source.html#l00014">Position::row</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/bhara/Downloads/Submission/include/<a class="el" href="_position_8hpp_source.html">Position.hpp</a></li>
+<li>include/<a class="el" href="_position_8hpp_source.html">Position.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['operator_21_3d_0',['operator!=',['../struct_position.html#a2072580ca3335d2abc1ef4b2eb024f27',1,'Position']]],
-  ['operator_28_29_1',['operator()',['../struct_position_1_1_position_hash.html#aed6e87e9771d271b55c6e8263e1921c0',1,'Position::PositionHash']]],
-  ['operator_3d_3d_2',['operator==',['../struct_position.html#abbcd55e2e1c2f64c81c1514fb104ef51',1,'Position']]]
+  ['loadfromjson_0',['loadFromJson',['../class_map.html#abf1a7748ff6051b8ca642653999f279e',1,'Map']]],
+  ['loadmap_1',['loadMap',['../class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad',1,'JsonLoader']]]
 ];

@@ -1,0 +1,16 @@
+<map id="Pathfinder::findPath" name="Pathfinder::findPath">
+<area shape="rect" id="Node000001" title="Find a path using A* algorithm." alt="" coords="5,81,142,108"/>
+<area shape="rect" id="Node000002" href="$class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b" title="Internal A* implementation." alt="" coords="190,81,350,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,92,176,94,171,96,143,97"/>
+<area shape="rect" id="Node000003" href="$class_map.html#a7eff76e95bee3cf741285d301d21d1f3" title="Get all walkable cells from a position (4&#45;directions)." alt="" coords="422,5,554,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,78,430,39,435,37,312,83"/>
+<area shape="rect" id="Node000004" href="$class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="626,31,744,57"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="350,82,614,52,609,54,351,88"/>
+<area shape="rect" id="Node000006" href="$class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd" title="Calculate Manhattan distance heuristic." alt="" coords="420,107,557,133"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="350,101,407,110,401,110,350,107"/>
+<area shape="rect" id="Node000007" href="$class_pathfinder.html#ab01c4d85253b1207849442ec1a667561" title="Reconstruct path from parent pointers." alt="" coords="398,157,578,184"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="304,106,399,143,423,153,417,152,397,148,303,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="554,24,614,34,609,35,554,30"/>
+<area shape="rect" id="Node000005" href="$class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="792,31,911,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="744,41,779,44,773,44,744,47"/>
+</map>

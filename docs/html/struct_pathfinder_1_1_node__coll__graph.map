@@ -1,0 +1,5 @@
+<map id="Pathfinder::Node" name="Pathfinder::Node">
+<area shape="rect" id="Node000001" title="Node structure for A* algorithm." alt="" coords="5,211,114,301"/>
+<area shape="rect" id="Node000002" href="$struct_position.html" title=" " alt="" coords="12,5,107,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,115,62,194,57,194,58,119"/>
+</map>

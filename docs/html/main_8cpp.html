@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RTS_Pathfinder: C:/Users/bhara/Downloads/Submission/src/main.cpp File Reference</title>
+<title>RTS_Pathfinder: src/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,6 +28,7 @@
   <td id="projectalign">
    <div id="projectname">RTS_Pathfinder<span id="projectnumber">&#160;1.0</span>
    </div>
+   <div id="projectbrief">A* pathfinding demo on a grid map loaded from JSON</div>
   </td>
  </tr>
  </tbody>
@@ -100,49 +101,51 @@ $(function(){initNavTree('main_8cpp.html','',''); });
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#a_c_1_2_users_2bhara_2_downloads_2_submission_2src_2main_8cpp" loading="lazy" alt=""/></div>
-<map name="a_c_1_2_users_2bhara_2_downloads_2_submission_2src_2main_8cpp" id="a_c_1_2_users_2bhara_2_downloads_2_submission_2src_2main_8cpp">
-<area shape="rect" title=" " alt="" coords="338,5,517,48"/>
-<area shape="rect" title=" " alt="" coords="5,96,77,123"/>
-<area shape="poly" title=" " alt="" coords="336,49,96,99,93,99,90,95,95,93,338,44"/>
-<area shape="rect" title=" " alt="" coords="185,245,238,272"/>
-<area shape="poly" title=" " alt="" coords="349,50,306,70,257,95,213,129,195,150,179,172,175,187,177,202,193,234,188,233,172,204,170,186,175,170,191,146,210,125,255,91,303,65,354,47"/>
-<area shape="rect" title=" " alt="" coords="338,96,406,123"/>
-<area shape="poly" title=" " alt="" coords="415,47,391,85,387,81,411,50"/>
-<area shape="rect" href="_map_8hpp.html" title="Manages the grid and map operations. Handles loading/saving maps in JSON format, storing the grid,..." alt="" coords="653,171,725,197"/>
-<area shape="poly" title=" " alt="" coords="467,46,553,94,660,162,655,162,550,98,466,51"/>
-<area shape="rect" href="_path_finder_8hpp.html" title="implements the A* algorithm to find the shortest path from a start position to a target position on t..." alt="" coords="430,96,540,123"/>
-<area shape="poly" title=" " alt="" coords="443,46,470,83,465,83,442,51"/>
-<area shape="rect" href="_renderer_8hpp.html" title="Console rendering helpers for map." alt="" coords="675,96,775,123"/>
-<area shape="poly" title=" " alt="" coords="504,46,666,91,661,92,504,51"/>
-<area shape="poly" title=" " alt="" coords="653,193,254,254,253,248,653,188"/>
-<area shape="rect" title=" " alt="" coords="587,245,644,272"/>
-<area shape="poly" title=" " alt="" coords="679,197,640,237,638,232,674,199"/>
-<area shape="rect" href="_position_8hpp.html" title="struct to define 2D position on the battlefield grid" alt="" coords="453,245,546,272"/>
-<area shape="poly" title=" " alt="" coords="659,197,548,242,546,237,653,199"/>
-<area shape="rect" href="_cell_type_8hpp.html" title="Cell type enumeration for the RiskyLab Tilemap format." alt="" coords="668,245,766,272"/>
-<area shape="poly" title=" " alt="" coords="695,196,709,232,704,230,693,200"/>
-<area shape="rect" title=" " alt="" coords="461,320,538,347"/>
-<area shape="poly" title=" " alt="" coords="502,271,502,306,498,303,498,274"/>
-<area shape="poly" title=" " alt="" coords="428,122,280,153,192,173,186,186,186,201,198,233,192,232,181,201,181,184,189,169,279,147,432,120"/>
-<area shape="poly" title=" " alt="" coords="521,121,641,165,636,165,520,126"/>
-<area shape="poly" title=" " alt="" coords="522,121,559,140,592,169,608,199,615,231,611,228,603,201,588,172,556,144,521,126"/>
-<area shape="poly" title=" " alt="" coords="488,121,499,231,494,229,484,125"/>
-<area shape="rect" href="_path_result_8hpp.html" title="Result struct returned PathFinder A* search." alt="" coords="203,171,314,197"/>
-<area shape="poly" title=" " alt="" coords="443,124,313,168,312,163,448,122"/>
-<area shape="rect" title=" " alt="" coords="338,171,448,197"/>
-<area shape="poly" title=" " alt="" coords="471,122,422,163,419,159,467,125"/>
-<area shape="rect" title=" " alt="" coords="522,171,578,197"/>
-<area shape="poly" title=" " alt="" coords="497,121,532,160,526,159,496,126"/>
-<area shape="poly" title=" " alt="" coords="252,196,230,234,226,231,248,200"/>
-<area shape="poly" title=" " alt="" coords="314,194,559,243,574,248,569,248,558,248,314,199"/>
-<area shape="poly" title=" " alt="" coords="301,195,446,240,441,241,300,201"/>
-<area shape="poly" title=" " alt="" coords="721,122,704,159,700,155,717,125"/>
-<area shape="poly" title=" " alt="" coords="744,121,763,136,780,156,789,177,788,188,783,199,767,209,736,222,660,247,658,242,734,217,764,205,779,196,783,187,783,178,775,158,759,140,743,126"/>
-<area shape="poly" title=" " alt="" coords="733,120,747,158,747,180,739,199,715,211,671,224,562,248,561,243,670,219,713,206,735,196,742,179,741,159,730,125"/>
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" loading="lazy" alt=""/></div>
+<map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
+<area shape="rect" title=" " alt="" coords="380,5,476,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,77,107"/>
+<area shape="poly" title=" " alt="" coords="378,31,96,83,93,83,90,79,95,77,380,26"/>
+<area shape="rect" title=" " alt="" coords="185,229,238,256"/>
+<area shape="poly" title=" " alt="" coords="377,32,329,48,273,73,220,109,198,131,179,156,175,171,177,186,193,218,188,217,172,188,170,170,175,153,194,127,217,104,271,69,327,43,381,29"/>
+<area shape="rect" title=" " alt="" coords="338,80,406,107"/>
+<area shape="poly" title=" " alt="" coords="420,31,392,70,389,66,416,34"/>
+<area shape="rect" href="_map_8hpp.html" title="Manages the grid and map operations. Handles loading/saving maps in JSON format, storing the grid,..." alt="" coords="653,155,725,181"/>
+<area shape="poly" title=" " alt="" coords="456,30,553,78,661,146,655,146,550,82,455,35"/>
+<area shape="rect" href="_path_finder_8hpp.html" title="implements the A* algorithm to find the shortest path from a start position to a target position on t..." alt="" coords="430,80,540,107"/>
+<area shape="poly" title=" " alt="" coords="438,30,468,68,463,68,437,35"/>
+<area shape="rect" href="_renderer_8hpp.html" title="Console rendering helpers for map." alt="" coords="675,80,775,107"/>
+<area shape="poly" title=" " alt="" coords="476,29,663,76,658,77,476,34"/>
+<area shape="poly" title=" " alt="" coords="653,177,254,238,253,232,653,172"/>
+<area shape="rect" title=" " alt="" coords="587,229,644,256"/>
+<area shape="poly" title=" " alt="" coords="679,181,640,221,638,216,674,183"/>
+<area shape="rect" href="_position_8hpp.html" title="struct to define 2D position on the battlefield grid" alt="" coords="453,229,546,256"/>
+<area shape="poly" title=" " alt="" coords="659,181,548,226,546,221,653,183"/>
+<area shape="rect" href="_cell_type_8hpp.html" title="Cell type enumeration for the RiskyLab Tilemap format." alt="" coords="668,229,766,256"/>
+<area shape="poly" title=" " alt="" coords="695,180,709,216,704,214,693,184"/>
+<area shape="rect" title=" " alt="" coords="461,304,538,331"/>
+<area shape="poly" title=" " alt="" coords="502,255,502,290,498,287,498,258"/>
+<area shape="poly" title=" " alt="" coords="428,106,280,137,192,157,186,170,186,185,198,217,192,216,181,185,181,168,189,153,279,131,432,104"/>
+<area shape="poly" title=" " alt="" coords="521,105,641,149,636,149,520,110"/>
+<area shape="poly" title=" " alt="" coords="522,105,559,124,592,153,608,183,615,215,611,212,603,185,588,156,556,128,521,110"/>
+<area shape="poly" title=" " alt="" coords="488,105,499,215,494,213,484,109"/>
+<area shape="rect" href="_path_result_8hpp.html" title="Result struct returned PathFinder A* search." alt="" coords="203,155,314,181"/>
+<area shape="poly" title=" " alt="" coords="443,108,313,152,312,147,448,106"/>
+<area shape="rect" title=" " alt="" coords="338,155,448,181"/>
+<area shape="poly" title=" " alt="" coords="471,106,422,147,419,143,467,109"/>
+<area shape="rect" title=" " alt="" coords="522,155,578,181"/>
+<area shape="poly" title=" " alt="" coords="497,105,532,144,526,143,496,110"/>
+<area shape="poly" title=" " alt="" coords="252,180,230,218,226,215,248,184"/>
+<area shape="poly" title=" " alt="" coords="314,178,559,227,574,232,569,232,558,232,314,183"/>
+<area shape="poly" title=" " alt="" coords="301,179,446,224,441,225,300,185"/>
+<area shape="poly" title=" " alt="" coords="721,106,704,143,700,139,717,109"/>
+<area shape="poly" title=" " alt="" coords="744,105,763,120,780,140,789,161,788,172,783,183,767,193,736,206,660,231,658,226,734,201,764,189,779,180,783,171,783,162,775,142,759,124,743,110"/>
+<area shape="poly" title=" " alt="" coords="733,104,747,142,747,164,739,183,715,195,671,208,562,232,561,227,670,203,713,190,735,180,742,163,741,143,730,109"/>
 </map>
 </div>
-</div><table class="memberdecls">
+</div>
+<p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:ConsoleApp" id="r_ConsoleApp"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespace_console_app.html">ConsoleApp</a></td></tr>
@@ -181,64 +184,291 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00129">129</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  130</span>{</div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_class" href="class_map.html">Map</a> map;</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_struct" href="struct_position.html">Position</a> start{-1, -1};</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_struct" href="struct_position.html">Position</a> target{-1, -1};</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordtype">bool</span> hasMap = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordtype">bool</span> running = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">while</span> (running)</div>
+<div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>        <a class="code hl_function" href="namespace_console_app.html#ae6b9b06bd9625397cabb3a524b00af75">ConsoleApp::displayMainMenu</a>();</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordtype">int</span> choice = 0;</div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6">ConsoleApp::readNumber</a>(<span class="stringliteral">&quot;&quot;</span>, choice))</div>
+<div class="line"><span class="lineno">  143</span>        {</div>
+<div class="line"><span class="lineno">  144</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;Invalid input.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  146</span>        }</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">switch</span> (choice)</div>
+<div class="line"><span class="lineno">  149</span>        {</div>
+<div class="line"><span class="lineno">  150</span>        <span class="keywordflow">case</span> 1: <span class="comment">// Load map from JSON</span></div>
+<div class="line"><span class="lineno">  151</span>        {</div>
+<div class="line"><span class="lineno">  152</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Enter JSON file path: &quot;</span>;</div>
+<div class="line"><span class="lineno">  153</span>            std::string filepath;</div>
+<div class="line"><span class="lineno">  154</span>            std::getline(std::cin, filepath);</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">if</span> (map.<a class="code hl_function" href="class_map.html#abf1a7748ff6051b8ca642653999f279e">loadFromJson</a>(filepath))</div>
+<div class="line"><span class="lineno">  157</span>            {</div>
+<div class="line"><span class="lineno">  158</span>                hasMap = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  159</span>                start = map.<a class="code hl_function" href="class_map.html#a37b0876b916f4a90fabfcf90b387d313">findStart</a>();</div>
+<div class="line"><span class="lineno">  160</span>                target = map.<a class="code hl_function" href="class_map.html#adf53720950a61164844df888a64cfdfa">findTarget</a>();</div>
+<div class="line"><span class="lineno">  161</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Map loaded successfully (&quot;</span> &lt;&lt; map.<a class="code hl_function" href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f">numRows</a>() &lt;&lt; <span class="stringliteral">&quot;x&quot;</span> &lt;&lt; map.<a class="code hl_function" href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8">numCols</a>() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">if</span> (start.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> != -1)</div>
+<div class="line"><span class="lineno">  164</span>                {</div>
+<div class="line"><span class="lineno">  165</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;Start position: (&quot;</span> &lt;&lt; start.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; start.<a class="code hl_variable" href="struct_position.html#af7a05862963df619605457252dea6682">col</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  166</span>                }</div>
+<div class="line"><span class="lineno">  167</span>                <span class="keywordflow">if</span> (target.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> != -1)</div>
+<div class="line"><span class="lineno">  168</span>                {</div>
+<div class="line"><span class="lineno">  169</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;Target position: (&quot;</span> &lt;&lt; target.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; target.<a class="code hl_variable" href="struct_position.html#af7a05862963df619605457252dea6682">col</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  170</span>                }</div>
+<div class="line"><span class="lineno">  171</span>            }</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  173</span>            {</div>
+<div class="line"><span class="lineno">  174</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Failed to load map from JSON.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  175</span>            }</div>
+<div class="line"><span class="lineno">  176</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  177</span>        }</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>        <span class="keywordflow">case</span> 2: <span class="comment">// Generate random map</span></div>
+<div class="line"><span class="lineno">  180</span>        {</div>
+<div class="line"><span class="lineno">  181</span>            <span class="keywordtype">int</span> rows = 0;</div>
+<div class="line"><span class="lineno">  182</span>            <span class="keywordtype">int</span> cols = 0;</div>
+<div class="line"><span class="lineno">  183</span>            <span class="keywordtype">float</span> wallRatio = 0.2f;</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6">ConsoleApp::readNumber</a>(<span class="stringliteral">&quot;Enter number of rows: &quot;</span>, rows) || !<a class="code hl_function" href="namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6">ConsoleApp::readNumber</a>(<span class="stringliteral">&quot;Enter number of cols: &quot;</span>, cols))</div>
+<div class="line"><span class="lineno">  186</span>            {</div>
+<div class="line"><span class="lineno">  187</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Invalid dimensions.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  188</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  189</span>            }</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6">ConsoleApp::readNumber</a>(<span class="stringliteral">&quot;Enter wall ratio (0.0-1.0, default 0.2): &quot;</span>, wallRatio) || wallRatio &lt; 0.0f || wallRatio &gt; 1.0f)</div>
+<div class="line"><span class="lineno">  192</span>            {</div>
+<div class="line"><span class="lineno">  193</span>                wallRatio = 0.2f;</div>
+<div class="line"><span class="lineno">  194</span>            }</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>            map.<a class="code hl_function" href="class_map.html#a623ff35948ec4fb068633ae6636a377a">generateRandom</a>(rows, cols, wallRatio);</div>
+<div class="line"><span class="lineno">  197</span>            hasMap = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  198</span>            start = map.<a class="code hl_function" href="class_map.html#a37b0876b916f4a90fabfcf90b387d313">findStart</a>();</div>
+<div class="line"><span class="lineno">  199</span>            target = map.<a class="code hl_function" href="class_map.html#adf53720950a61164844df888a64cfdfa">findTarget</a>();</div>
+<div class="line"><span class="lineno">  200</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Random map generated (&quot;</span> &lt;&lt; rows &lt;&lt; <span class="stringliteral">&quot;x&quot;</span> &lt;&lt; cols &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  201</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  202</span>        }</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>        <span class="keywordflow">case</span> 3: <span class="comment">// Set start position (overrides existing start)</span></div>
+<div class="line"><span class="lineno">  205</span>        {</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">if</span> (!hasMap)</div>
+<div class="line"><span class="lineno">  207</span>            {</div>
+<div class="line"><span class="lineno">  208</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: No map loaded.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  209</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  210</span>            }</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Set start position:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keyword">const</span> <a class="code hl_struct" href="struct_position.html">Position</a> newStart = <a class="code hl_function" href="namespace_console_app.html#ae109414fdf474cf5f7c1440128d232c0">ConsoleApp::getPositionFromInput</a>();</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keywordflow">if</span> (!map.<a class="code hl_function" href="class_map.html#a0b0b80d043eefccc40db483b9debd07a">isWalkable</a>(newStart))</div>
+<div class="line"><span class="lineno">  215</span>            {</div>
+<div class="line"><span class="lineno">  216</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Position is not walkable. Start not set.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  217</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  218</span>            }</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>            start = newStart;</div>
+<div class="line"><span class="lineno">  221</span>            <a class="code hl_function" href="namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b">ConsoleApp::replaceMarker</a>(map, <a class="code hl_enumvalue" href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271aa6122a65eaa676f700ae68d393054a37">CellType::Start</a>, start);</div>
+<div class="line"><span class="lineno">  222</span>            <span class="keywordflow">if</span> (target == start)</div>
+<div class="line"><span class="lineno">  223</span>            {</div>
+<div class="line"><span class="lineno">  224</span>                target = {-1, -1};</div>
+<div class="line"><span class="lineno">  225</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Start now overlaps old target; please set a new target.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  226</span>            }</div>
+<div class="line"><span class="lineno">  227</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Start position set to (&quot;</span> &lt;&lt; start.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; start.<a class="code hl_variable" href="struct_position.html#af7a05862963df619605457252dea6682">col</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">case</span> 4: <span class="comment">// Set target position (overrides existing target)</span></div>
+<div class="line"><span class="lineno">  232</span>        {</div>
+<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">if</span> (!hasMap)</div>
+<div class="line"><span class="lineno">  234</span>            {</div>
+<div class="line"><span class="lineno">  235</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: No map loaded.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  236</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  237</span>            }</div>
+<div class="line"><span class="lineno">  238</span> </div>
+<div class="line"><span class="lineno">  239</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Set target position:&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  240</span>            <span class="keyword">const</span> <a class="code hl_struct" href="struct_position.html">Position</a> newTarget = <a class="code hl_function" href="namespace_console_app.html#ae109414fdf474cf5f7c1440128d232c0">ConsoleApp::getPositionFromInput</a>();</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (!map.<a class="code hl_function" href="class_map.html#a0b0b80d043eefccc40db483b9debd07a">isWalkable</a>(newTarget))</div>
+<div class="line"><span class="lineno">  242</span>            {</div>
+<div class="line"><span class="lineno">  243</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Position is not walkable. Target not set.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  244</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  245</span>            }</div>
+<div class="line"><span class="lineno">  246</span> </div>
+<div class="line"><span class="lineno">  247</span>            target = newTarget;</div>
+<div class="line"><span class="lineno">  248</span>            <a class="code hl_function" href="namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b">ConsoleApp::replaceMarker</a>(map, <a class="code hl_enumvalue" href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac41a31890959544c6523af684561abe5">CellType::Target</a>, target);</div>
+<div class="line"><span class="lineno">  249</span>            <span class="keywordflow">if</span> (start == target)</div>
+<div class="line"><span class="lineno">  250</span>            {</div>
+<div class="line"><span class="lineno">  251</span>                start = {-1, -1};</div>
+<div class="line"><span class="lineno">  252</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Target now overlaps old start; please set a new start.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  253</span>            }</div>
+<div class="line"><span class="lineno">  254</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Target position set to (&quot;</span> &lt;&lt; target.<a class="code hl_variable" href="struct_position.html#a224d714110152e1fca26b2437253f56a">row</a> &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; target.<a class="code hl_variable" href="struct_position.html#af7a05862963df619605457252dea6682">col</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  255</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  256</span>        }</div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">case</span> 5: <span class="comment">// Run pathfinding</span></div>
+<div class="line"><span class="lineno">  259</span>        {</div>
+<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">if</span> (!hasMap)</div>
+<div class="line"><span class="lineno">  261</span>            {</div>
+<div class="line"><span class="lineno">  262</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: No map loaded.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  263</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  264</span>            }</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>            <a class="code hl_function" href="namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059">ConsoleApp::executePathfinding</a>(map, start, target);</div>
+<div class="line"><span class="lineno">  267</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  268</span>        }</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">case</span> 6: <span class="comment">// Print map</span></div>
+<div class="line"><span class="lineno">  271</span>        {</div>
+<div class="line"><span class="lineno">  272</span>            <span class="keywordflow">if</span> (!hasMap)</div>
+<div class="line"><span class="lineno">  273</span>            {</div>
+<div class="line"><span class="lineno">  274</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: No map loaded.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  275</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  276</span>            }</div>
+<div class="line"><span class="lineno">  277</span>            <a class="code hl_function" href="class_renderer.html#ad81790fa786d76904a50bcce5d056c5e">Renderer::printMap</a>(map);</div>
+<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  279</span>        }</div>
+<div class="line"><span class="lineno">  280</span> </div>
+<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">case</span> 7: <span class="comment">// Save map</span></div>
+<div class="line"><span class="lineno">  282</span>        {</div>
+<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">if</span> (!hasMap)</div>
+<div class="line"><span class="lineno">  284</span>            {</div>
+<div class="line"><span class="lineno">  285</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: No map loaded.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  286</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  287</span>            }</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Enter output JSON file path: &quot;</span>;</div>
+<div class="line"><span class="lineno">  290</span>            std::string outputPath;</div>
+<div class="line"><span class="lineno">  291</span>            std::getline(std::cin, outputPath);</div>
+<div class="line"><span class="lineno">  292</span> </div>
+<div class="line"><span class="lineno">  293</span>            <span class="keywordflow">if</span> (map.<a class="code hl_function" href="class_map.html#a6472fdd1fce45b89251de7868d75cc75">saveToJson</a>(outputPath))</div>
+<div class="line"><span class="lineno">  294</span>            {</div>
+<div class="line"><span class="lineno">  295</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;Map saved to: &quot;</span> &lt;&lt; outputPath &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  296</span>            }</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  298</span>            {</div>
+<div class="line"><span class="lineno">  299</span>                std::cerr &lt;&lt; <span class="stringliteral">&quot;Failed to save map.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  300</span>            }</div>
+<div class="line"><span class="lineno">  301</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  302</span>        }</div>
+<div class="line"><span class="lineno">  303</span> </div>
+<div class="line"><span class="lineno">  304</span>        <span class="keywordflow">case</span> 8: <span class="comment">// Exit</span></div>
+<div class="line"><span class="lineno">  305</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Exiting...&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  306</span>            running = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  307</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  310</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;Invalid option.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  311</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  312</span>        }</div>
+<div class="line"><span class="lineno">  313</span>    }</div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  316</span>}</div>
+<div class="ttc" id="a_cell_type_8hpp_html_ac3c2cbbef08f3b7ddc3b06c6bd5a2271aa6122a65eaa676f700ae68d393054a37"><div class="ttname"><a href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271aa6122a65eaa676f700ae68d393054a37">CellType::Start</a></div><div class="ttdeci">@ Start</div><div class="ttdef"><b>Definition</b> <a href="_cell_type_8hpp_source.html#l00014">CellType.hpp:14</a></div></div>
+<div class="ttc" id="a_cell_type_8hpp_html_ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac41a31890959544c6523af684561abe5"><div class="ttname"><a href="_cell_type_8hpp.html#ac3c2cbbef08f3b7ddc3b06c6bd5a2271ac41a31890959544c6523af684561abe5">CellType::Target</a></div><div class="ttdeci">@ Target</div><div class="ttdef"><b>Definition</b> <a href="_cell_type_8hpp_source.html#l00016">CellType.hpp:16</a></div></div>
+<div class="ttc" id="aclass_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition</b> <a href="_map_8hpp_source.html#l00016">Map.hpp:17</a></div></div>
+<div class="ttc" id="aclass_map_html_a0b0b80d043eefccc40db483b9debd07a"><div class="ttname"><a href="class_map.html#a0b0b80d043eefccc40db483b9debd07a">Map::isWalkable</a></div><div class="ttdeci">bool isWalkable(Position p) const</div><div class="ttdoc">Check if a position is walkable.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00100">Map.cpp:100</a></div></div>
+<div class="ttc" id="aclass_map_html_a37b0876b916f4a90fabfcf90b387d313"><div class="ttname"><a href="class_map.html#a37b0876b916f4a90fabfcf90b387d313">Map::findStart</a></div><div class="ttdeci">Position findStart() const</div><div class="ttdoc">Find the start position in the map.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00139">Map.cpp:139</a></div></div>
+<div class="ttc" id="aclass_map_html_a623ff35948ec4fb068633ae6636a377a"><div class="ttname"><a href="class_map.html#a623ff35948ec4fb068633ae6636a377a">Map::generateRandom</a></div><div class="ttdeci">void generateRandom(int rows, int cols, float wallRatio=0.2f)</div><div class="ttdoc">Generate a random map.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00053">Map.cpp:53</a></div></div>
+<div class="ttc" id="aclass_map_html_a6472fdd1fce45b89251de7868d75cc75"><div class="ttname"><a href="class_map.html#a6472fdd1fce45b89251de7868d75cc75">Map::saveToJson</a></div><div class="ttdeci">bool saveToJson(const std::string &amp;filepath) const</div><div class="ttdoc">Save map to a RiskyLab Tilemap JSON file.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00048">Map.cpp:48</a></div></div>
+<div class="ttc" id="aclass_map_html_a9aea17d2fd24c6967b00757d2f5113f8"><div class="ttname"><a href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8">Map::numCols</a></div><div class="ttdeci">int numCols() const</div><div class="ttdoc">Get number of columns.</div><div class="ttdef"><b>Definition</b> <a href="_map_8hpp_source.html#l00079">Map.hpp:79</a></div></div>
+<div class="ttc" id="aclass_map_html_abf1a7748ff6051b8ca642653999f279e"><div class="ttname"><a href="class_map.html#abf1a7748ff6051b8ca642653999f279e">Map::loadFromJson</a></div><div class="ttdeci">bool loadFromJson(const std::string &amp;filepath)</div><div class="ttdoc">Load a map from a RiskyLab Tilemap JSON file.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00006">Map.cpp:6</a></div></div>
+<div class="ttc" id="aclass_map_html_adf53720950a61164844df888a64cfdfa"><div class="ttname"><a href="class_map.html#adf53720950a61164844df888a64cfdfa">Map::findTarget</a></div><div class="ttdeci">Position findTarget() const</div><div class="ttdoc">Find the target position in the map.</div><div class="ttdef"><b>Definition</b> <a href="_map_8cpp_source.html#l00154">Map.cpp:154</a></div></div>
+<div class="ttc" id="aclass_map_html_ae120067c4c2ab9d5ab00ced716945c2f"><div class="ttname"><a href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f">Map::numRows</a></div><div class="ttdeci">int numRows() const</div><div class="ttdoc">Get number of rows.</div><div class="ttdef"><b>Definition</b> <a href="_map_8hpp_source.html#l00073">Map.hpp:73</a></div></div>
+<div class="ttc" id="aclass_renderer_html_ad81790fa786d76904a50bcce5d056c5e"><div class="ttname"><a href="class_renderer.html#ad81790fa786d76904a50bcce5d056c5e">Renderer::printMap</a></div><div class="ttdeci">static void printMap(const Map &amp;map, const std::vector&lt; Position &gt; &amp;path={})</div><div class="ttdoc">Print the map to console.</div><div class="ttdef"><b>Definition</b> <a href="_renderer_8cpp_source.html#l00028">Renderer.cpp:28</a></div></div>
+<div class="ttc" id="anamespace_console_app_html_a6a75e1aee750730ff5525e55f9489d4b"><div class="ttname"><a href="namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b">ConsoleApp::replaceMarker</a></div><div class="ttdeci">void replaceMarker(Map &amp;map, CellType marker, Position newPosition)</div><div class="ttdoc">Replace existing marker (start or target) on the map with a new position.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00071">main.cpp:71</a></div></div>
+<div class="ttc" id="anamespace_console_app_html_adaed072f5f07f9f1c919004c18e9d059"><div class="ttname"><a href="namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059">ConsoleApp::executePathfinding</a></div><div class="ttdeci">void executePathfinding(Map &amp;map, Position start, Position target)</div><div class="ttdoc">Execute pathfinder.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00094">main.cpp:94</a></div></div>
+<div class="ttc" id="anamespace_console_app_html_ae0f9ca1aef7c7fc9e1a3ab64442091d6"><div class="ttname"><a href="namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6">ConsoleApp::readNumber</a></div><div class="ttdeci">bool readNumber(const std::string &amp;prompt, T &amp;outValue)</div><div class="ttdoc">Read a number from console.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00018">main.cpp:18</a></div></div>
+<div class="ttc" id="anamespace_console_app_html_ae109414fdf474cf5f7c1440128d232c0"><div class="ttname"><a href="namespace_console_app.html#ae109414fdf474cf5f7c1440128d232c0">ConsoleApp::getPositionFromInput</a></div><div class="ttdeci">Position getPositionFromInput()</div><div class="ttdoc">Read a position (row and column) from console. Calls readNumber for each coordinate.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00034">main.cpp:34</a></div></div>
+<div class="ttc" id="anamespace_console_app_html_ae6b9b06bd9625397cabb3a524b00af75"><div class="ttname"><a href="namespace_console_app.html#ae6b9b06bd9625397cabb3a524b00af75">ConsoleApp::displayMainMenu</a></div><div class="ttdeci">void displayMainMenu()</div><div class="ttdoc">Display main menu.</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00050">main.cpp:50</a></div></div>
+<div class="ttc" id="astruct_position_html"><div class="ttname"><a href="struct_position.html">Position</a></div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00012">Position.hpp:13</a></div></div>
+<div class="ttc" id="astruct_position_html_a224d714110152e1fca26b2437253f56a"><div class="ttname"><a href="struct_position.html#a224d714110152e1fca26b2437253f56a">Position::row</a></div><div class="ttdeci">int row</div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00014">Position.hpp:14</a></div></div>
+<div class="ttc" id="astruct_position_html_af7a05862963df619605457252dea6682"><div class="ttname"><a href="struct_position.html#af7a05862963df619605457252dea6682">Position::col</a></div><div class="ttdeci">int col</div><div class="ttdef"><b>Definition</b> <a href="_position_8hpp_source.html#l00015">Position.hpp:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="_position_8hpp_source.html#l00015">Position::col</a>, <a class="el" href="main_8cpp_source.html#l00050">ConsoleApp::displayMainMenu()</a>, <a class="el" href="main_8cpp_source.html#l00094">ConsoleApp::executePathfinding()</a>, <a class="el" href="_map_8cpp_source.html#l00139">Map::findStart()</a>, <a class="el" href="_map_8cpp_source.html#l00154">Map::findTarget()</a>, <a class="el" href="_map_8cpp_source.html#l00053">Map::generateRandom()</a>, <a class="el" href="main_8cpp_source.html#l00034">ConsoleApp::getPositionFromInput()</a>, <a class="el" href="_map_8cpp_source.html#l00100">Map::isWalkable()</a>, <a class="el" href="_map_8cpp_source.html#l00006">Map::loadFromJson()</a>, <a class="el" href="_map_8hpp_source.html#l00079">Map::numCols()</a>, <a class="el" href="_map_8hpp_source.html#l00073">Map::numRows()</a>, <a class="el" href="_renderer_8cpp_source.html#l00028">Renderer::printMap()</a>, <a class="el" href="main_8cpp_source.html#l00018">ConsoleApp::readNumber()</a>, <a class="el" href="main_8cpp_source.html#l00071">ConsoleApp::replaceMarker()</a>, <a class="el" href="_position_8hpp_source.html#l00014">Position::row</a>, <a class="el" href="_map_8cpp_source.html#l00048">Map::saveToJson()</a>, <a class="el" href="_cell_type_8hpp_source.html#l00014">Start</a>, and <a class="el" href="_cell_type_8hpp_source.html#l00016">Target</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" loading="lazy" alt=""/></div>
 <map name="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title=" " alt="" coords="5,436,55,463"/>
+<area shape="rect" title=" " alt="" coords="5,563,55,589"/>
 <area shape="rect" href="namespace_console_app.html#ae6b9b06bd9625397cabb3a524b00af75" title="Display main menu." alt="" coords="108,5,309,32"/>
-<area shape="poly" title=" " alt="" coords="29,435,34,357,46,241,67,126,82,80,101,49,116,38,113,42,105,52,87,83,73,127,51,242,40,357,35,436"/>
-<area shape="rect" href="namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,259,314,285"/>
-<area shape="poly" title=" " alt="" coords="32,435,53,371,73,334,101,302,122,290,119,294,104,306,77,337,58,373,37,436"/>
-<area shape="rect" href="class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="387,309,519,336"/>
-<area shape="poly" title=" " alt="" coords="37,435,62,400,80,382,101,367,169,340,240,324,310,317,374,317,369,319,310,322,241,329,170,345,104,372,84,386,66,403,41,437"/>
-<area shape="rect" href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="601,259,707,285"/>
-<area shape="poly" title=" " alt="" coords="29,435,33,397,43,345,65,291,81,266,101,245,155,203,207,173,258,156,309,148,361,149,417,158,545,194,592,217,631,248,626,249,590,222,543,198,416,163,361,154,309,153,259,161,209,178,158,207,104,249,85,269,70,293,49,347,38,398,34,436"/>
-<area shape="rect" href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="597,411,711,437"/>
-<area shape="poly" title=" " alt="" coords="55,446,583,424,581,429,56,451"/>
-<area shape="rect" href="class_map.html#a37b0876b916f4a90fabfcf90b387d313" title="Find the start position in the map." alt="" coords="157,461,260,488"/>
-<area shape="poly" title=" " alt="" coords="54,450,143,463,139,467,56,455"/>
-<area shape="rect" href="class_map.html#adf53720950a61164844df888a64cfdfa" title="Find the target position in the map." alt="" coords="153,512,264,539"/>
-<area shape="poly" title=" " alt="" coords="46,460,73,480,104,498,140,511,135,514,102,502,70,484,48,465"/>
-<area shape="rect" href="class_map.html#a623ff35948ec4fb068633ae6636a377a" title="Generate a random map." alt="" coords="132,563,285,589"/>
-<area shape="poly" title=" " alt="" coords="37,461,64,505,82,529,104,548,120,558,115,560,101,553,78,532,59,508,37,466"/>
-<area shape="rect" href="namespace_console_app.html#ae109414fdf474cf5f7c1440128d232c0" title="Read a position (row and column) from console. Calls readNumber for each coordinate." alt="" coords="111,664,306,707"/>
-<area shape="poly" title=" " alt="" coords="32,461,40,499,52,547,73,598,87,622,105,643,117,655,112,656,101,647,83,625,68,601,47,548,35,500,33,466"/>
-<area shape="rect" href="namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6" title="Read a number from console." alt="" coords="368,643,539,669"/>
-<area shape="poly" title=" " alt="" coords="33,460,42,492,55,529,75,568,104,599,122,609,146,618,209,632,354,649,350,652,208,637,145,623,120,614,101,603,71,571,50,531,37,493,33,466"/>
-<area shape="rect" href="class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="595,81,713,108"/>
-<area shape="poly" title=" " alt="" coords="30,435,38,379,53,302,74,227,86,198,101,178,155,139,216,110,281,91,347,79,413,73,475,73,582,82,577,84,475,78,413,79,348,84,282,96,218,115,158,143,105,182,91,200,79,229,58,303,44,380,36,436"/>
-<area shape="rect" href="class_map.html#abf1a7748ff6051b8ca642653999f279e" title="Load a map from a RiskyLab Tilemap JSON file." alt="" coords="140,731,276,757"/>
-<area shape="poly" title=" " alt="" coords="34,461,59,595,79,669,92,698,105,717,129,733,123,734,101,721,87,700,74,671,54,596,32,466"/>
-<area shape="rect" href="namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b" title="Replace existing marker (start or target) on the map with a new position." alt="" coords="362,360,544,387"/>
-<area shape="poly" title=" " alt="" coords="46,434,72,417,102,403,164,386,227,376,349,369,344,372,228,381,165,392,104,408,74,422,51,437"/>
-<area shape="rect" href="class_map.html#a6472fdd1fce45b89251de7868d75cc75" title="Save map to a RiskyLab Tilemap JSON file." alt="" coords="146,781,270,808"/>
-<area shape="poly" title=" " alt="" coords="33,460,42,528,56,620,76,710,90,744,105,768,117,778,134,787,129,787,115,782,101,771,85,747,71,711,50,621,37,528,32,466"/>
-<area shape="rect" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="385,259,521,285"/>
-<area shape="poly" title=" " alt="" coords="313,270,372,271,367,273,316,274"/>
-<area shape="rect" href="class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="764,233,883,260"/>
-<area shape="poly" title=" " alt="" coords="228,256,286,222,323,206,361,193,417,184,473,181,530,182,585,187,687,205,768,228,763,229,685,210,584,193,529,187,473,186,417,189,363,199,325,211,288,227,232,260"/>
-<area shape="poly" title=" " alt="" coords="276,283,374,305,369,307,277,289"/>
-<area shape="rect" href="class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467" title="Print a cell positions as path coordinates." alt="" coords="386,208,520,235"/>
-<area shape="poly" title=" " alt="" coords="275,256,373,236,369,240,278,260"/>
-<area shape="rect" href="class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="592,309,716,336"/>
-<area shape="poly" title=" " alt="" coords="519,320,580,322,575,324,521,325"/>
-<area shape="poly" title=" " alt="" coords="508,306,588,288,583,291,510,311"/>
-<area shape="poly" title=" " alt="" coords="519,334,546,346,561,358,571,371,580,384,594,397,602,403,597,403,591,401,576,387,567,374,558,362,543,350,520,339"/>
-<area shape="poly" title=" " alt="" coords="688,306,715,295,783,266,778,268,717,300,691,311"/>
-<area shape="poly" title=" " alt="" coords="306,671,355,667,350,669,307,676"/>
-<area shape="poly" title=" " alt="" coords="670,106,798,222,793,223,670,111"/>
-<area shape="rect" href="class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad" title="Load a RiskyLab Tilemap JSON file." alt="" coords="380,731,526,757"/>
-<area shape="poly" title=" " alt="" coords="277,741,367,744,362,744,277,747"/>
-<area shape="poly" title=" " alt="" coords="508,357,586,339,581,342,510,362"/>
-<area shape="poly" title=" " alt="" coords="519,357,543,346,558,334,567,322,576,309,591,295,602,291,598,294,594,299,580,312,571,325,561,338,546,350,521,362"/>
-<area shape="poly" title=" " alt="" coords="509,385,586,406,581,407,510,390"/>
-<area shape="rect" href="class_map.html#a56edaec62c0f20677b60513cf249c676" title="Set a cell to a specific type." alt="" coords="606,360,702,387"/>
-<area shape="poly" title=" " alt="" coords="544,371,593,372,588,374,546,376"/>
-<area shape="poly" title=" " alt="" coords="693,357,714,346,761,308,799,273,803,270,765,312,717,350,695,362"/>
-<area shape="rect" href="class_json_loader.html#a69a5c23a1dd54d94efe286afe8914eb3" title="Save a map to RiskyLab Tilemap JSON format." alt="" coords="378,781,528,808"/>
-<area shape="poly" title=" " alt="" coords="271,792,366,795,360,795,271,797"/>
+<area shape="poly" title=" " alt="" coords="29,562,30,462,39,309,47,228,60,153,78,92,88,68,101,49,115,38,113,43,105,52,93,70,83,94,65,155,53,229,44,309,35,462,34,562"/>
+<area shape="rect" href="namespace_console_app.html#adaed072f5f07f9f1c919004c18e9d059" title="Execute pathfinder." alt="" coords="103,284,314,311"/>
+<area shape="poly" title=" " alt="" coords="31,562,52,480,72,428,101,378,133,344,172,317,169,321,137,348,105,382,77,430,57,482,36,563"/>
+<area shape="rect" href="class_map.html#a0b0b80d043eefccc40db483b9debd07a" title="Check if a position is walkable." alt="" coords="1042,132,1159,159"/>
+<area shape="poly" title=" " alt="" coords="28,562,29,511,38,435,47,392,60,350,77,308,100,270,175,178,211,142,249,114,290,93,336,78,389,69,452,67,680,67,839,66,908,73,995,92,1031,105,1066,124,1061,124,1029,110,993,97,907,78,839,71,680,72,452,72,390,75,337,83,292,98,251,119,215,147,179,181,105,274,82,311,65,351,52,394,43,435,35,511,34,562"/>
+<area shape="rect" href="class_renderer.html#ad81790fa786d76904a50bcce5d056c5e" title="Print the map to console." alt="" coords="387,385,519,412"/>
+<area shape="poly" title=" " alt="" coords="31,562,38,533,50,496,71,459,101,429,133,410,167,397,238,382,309,378,374,384,369,386,308,384,239,387,168,402,135,415,104,433,75,462,55,498,43,534,36,563"/>
+<area shape="rect" href="class_map.html#a9aea17d2fd24c6967b00757d2f5113f8" title="Get number of columns." alt="" coords="626,588,732,615"/>
+<area shape="poly" title=" " alt="" coords="54,573,167,571,314,573,474,582,613,594,608,596,473,587,314,579,167,577,56,578"/>
+<area shape="rect" href="class_map.html#ae120067c4c2ab9d5ab00ced716945c2f" title="Get number of rows." alt="" coords="622,487,736,513"/>
+<area shape="poly" title=" " alt="" coords="36,561,62,526,80,508,101,494,168,468,238,452,310,445,381,444,450,449,513,458,618,481,613,483,512,463,449,455,381,450,310,450,239,457,170,473,104,498,83,512,66,529,41,563"/>
+<area shape="rect" href="class_map.html#a37b0876b916f4a90fabfcf90b387d313" title="Find the start position in the map." alt="" coords="157,588,260,615"/>
+<area shape="poly" title=" " alt="" coords="54,577,143,590,139,594,56,582"/>
+<area shape="rect" href="class_map.html#adf53720950a61164844df888a64cfdfa" title="Find the target position in the map." alt="" coords="153,639,264,665"/>
+<area shape="poly" title=" " alt="" coords="46,587,73,607,104,624,140,638,135,640,102,629,70,611,48,592"/>
+<area shape="rect" href="class_map.html#a623ff35948ec4fb068633ae6636a377a" title="Generate a random map." alt="" coords="132,689,285,716"/>
+<area shape="poly" title=" " alt="" coords="37,587,64,632,82,655,104,675,120,685,115,687,101,680,78,659,59,635,37,593"/>
+<area shape="rect" href="namespace_console_app.html#ae109414fdf474cf5f7c1440128d232c0" title="Read a position (row and column) from console. Calls readNumber for each coordinate." alt="" coords="111,791,306,833"/>
+<area shape="poly" title=" " alt="" coords="32,587,40,625,52,674,73,725,87,749,105,770,117,782,112,783,101,774,83,752,68,727,47,675,35,626,33,593"/>
+<area shape="rect" href="namespace_console_app.html#ae0f9ca1aef7c7fc9e1a3ab64442091d6" title="Read a number from console." alt="" coords="368,769,539,796"/>
+<area shape="poly" title=" " alt="" coords="33,587,42,618,55,656,75,694,104,726,122,736,146,744,209,758,354,776,350,779,208,764,145,750,120,741,101,730,71,697,50,658,37,620,33,592"/>
+<area shape="rect" href="class_map.html#abf1a7748ff6051b8ca642653999f279e" title="Load a map from a RiskyLab Tilemap JSON file." alt="" coords="140,857,276,884"/>
+<area shape="poly" title=" " alt="" coords="34,587,59,722,79,796,92,825,105,843,129,860,123,861,101,847,87,827,74,798,54,723,32,593"/>
+<area shape="rect" href="namespace_console_app.html#a6a75e1aee750730ff5525e55f9489d4b" title="Replace existing marker (start or target) on the map with a new position." alt="" coords="362,487,544,513"/>
+<area shape="poly" title=" " alt="" coords="46,561,72,544,102,529,164,513,227,502,349,495,344,499,228,508,165,518,104,535,74,548,51,564"/>
+<area shape="rect" href="class_map.html#a6472fdd1fce45b89251de7868d75cc75" title="Save map to a RiskyLab Tilemap JSON file." alt="" coords="146,908,270,935"/>
+<area shape="poly" title=" " alt="" coords="33,587,42,654,56,746,76,836,90,871,105,894,117,904,134,914,129,914,115,909,101,898,85,873,71,838,50,747,37,655,32,592"/>
+<area shape="rect" href="class_pathfinder.html#a3425c00d24a1acb3c5e4855199821ec5" title="Find a path using A* algorithm." alt="" coords="385,183,521,209"/>
+<area shape="poly" title=" " alt="" coords="232,282,290,251,361,219,384,213,380,216,363,224,293,255,236,285"/>
+<area shape="rect" href="class_map.html#a77ebc27238305717d63418bf42b3f285" title="Check if a position is within map bounds." alt="" coords="1207,360,1327,387"/>
+<area shape="poly" title=" " alt="" coords="313,298,523,306,766,320,999,341,1195,364,1189,365,999,346,765,325,523,311,315,303"/>
+<area shape="poly" title=" " alt="" coords="242,309,407,378,402,380,243,314"/>
+<area shape="rect" href="class_renderer.html#afaaf917bf9fa29c58d1bc34291ebf467" title="Print a cell positions as path coordinates." alt="" coords="386,233,520,260"/>
+<area shape="poly" title=" " alt="" coords="275,281,373,262,369,265,278,286"/>
+<area shape="rect" href="class_pathfinder.html#a844d6a4b5e05ba5ecec1d24140aaa86b" title="Internal A* implementation." alt="" coords="599,183,759,209"/>
+<area shape="poly" title=" " alt="" coords="520,194,586,195,581,197,523,198"/>
+<area shape="rect" href="class_map.html#a7eff76e95bee3cf741285d301d21d1f3" title="Get all walkable cells from a position (4&#45;directions)." alt="" coords="838,107,970,133"/>
+<area shape="poly" title=" " alt="" coords="720,180,850,137,845,140,722,184"/>
+<area shape="poly" title=" " alt="" coords="759,184,1029,153,1025,155,761,189"/>
+<area shape="rect" href="class_pathfinder.html#a7c0f0b6b1131b4f3fd8abcd17879e0cd" title="Calculate Manhattan distance heuristic." alt="" coords="835,208,972,235"/>
+<area shape="poly" title=" " alt="" coords="759,202,822,211,817,213,760,208"/>
+<area shape="rect" href="class_pathfinder.html#ab01c4d85253b1207849442ec1a667561" title="Reconstruct path from parent pointers." alt="" coords="814,259,994,285"/>
+<area shape="poly" title=" " alt="" coords="714,207,815,244,839,253,834,254,813,249,715,213"/>
+<area shape="poly" title=" " alt="" coords="969,126,1029,135,1024,137,970,131"/>
+<area shape="poly" title=" " alt="" coords="1113,157,1250,348,1244,347,1111,162"/>
+<area shape="rect" href="class_renderer.html#a22b13cfa2f38a5f2e04a05dbc1075ef1" title="Convert a cell type to a character." alt="" coords="607,335,751,361"/>
+<area shape="poly" title=" " alt="" coords="515,382,604,364,599,367,517,387"/>
+<area shape="rect" href="class_map.html#abddb4f6110ebb35cea36058e3c2e6a6c" title="Get the cell type at a position." alt="" coords="617,436,741,463"/>
+<area shape="poly" title=" " alt="" coords="516,410,604,431,599,433,517,415"/>
+<area shape="rect" href="class_renderer.html#a703d6070936441c6ddc595b6b89e48e0" title="Check if a cell is part of the traversed path." alt="" coords="592,385,766,412"/>
+<area shape="poly" title=" " alt="" coords="519,396,579,398,574,400,521,401"/>
+<area shape="poly" title=" " alt="" coords="472,410,546,473,594,523,653,578,648,578,590,527,542,477,472,415"/>
+<area shape="poly" title=" " alt="" coords="504,410,546,428,561,440,570,451,580,462,594,472,610,482,605,482,591,477,576,466,566,455,557,444,543,433,505,415"/>
+<area shape="poly" title=" " alt="" coords="741,439,1194,381,1190,384,742,444"/>
+<area shape="poly" title=" " alt="" coords="306,798,355,794,350,796,307,803"/>
+<area shape="rect" href="class_json_loader.html#a0d1937a9b0f99f52054c06b650ed56ad" title="Load a RiskyLab Tilemap JSON file." alt="" coords="380,857,526,884"/>
+<area shape="poly" title=" " alt="" coords="277,868,367,870,362,871,277,873"/>
+<area shape="rect" href="class_json_loader.html#ac6a38d032f48b4f5b063571b4acfc5b7" title="Normalize a tile value to the nearest supported tile code." alt="" coords="592,849,766,892"/>
+<area shape="poly" title=" " alt="" coords="526,868,580,870,574,871,526,873"/>
+<area shape="poly" title=" " alt="" coords="515,484,604,465,600,468,517,488"/>
+<area shape="poly" title=" " alt="" coords="502,511,546,530,570,548,594,567,621,582,616,582,591,572,567,553,543,534,503,517"/>
+<area shape="poly" title=" " alt="" coords="544,497,609,499,604,501,545,503"/>
+<area shape="rect" href="class_map.html#a56edaec62c0f20677b60513cf249c676" title="Set a cell to a specific type." alt="" coords="1053,487,1148,513"/>
+<area shape="poly" title=" " alt="" coords="516,511,593,523,716,528,839,524,950,516,1040,508,1035,509,950,521,839,530,716,533,592,528,517,517"/>
+<area shape="poly" title=" " alt="" coords="1118,484,1234,398,1238,395,1121,489"/>
+<area shape="rect" href="class_json_loader.html#a69a5c23a1dd54d94efe286afe8914eb3" title="Save a map to RiskyLab Tilemap JSON format." alt="" coords="378,908,528,935"/>
+<area shape="poly" title=" " alt="" coords="271,919,366,921,360,921,271,924"/>
 </map>
 </div>
 

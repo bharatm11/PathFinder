@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['renderer_0',['Renderer',['../class_renderer.html',1,'']]]
+  ['node_0',['Node',['../struct_pathfinder_1_1_node.html',1,'Pathfinder']]]
 ];
