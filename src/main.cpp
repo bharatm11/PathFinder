@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
         {
             int rows = 0;
             int cols = 0;
-            float wallRatio = 0.3f;
+            float wallRatio = 0.2f;
 
             if (!ConsoleApp::readNumber("Enter number of rows: ", rows) || !ConsoleApp::readNumber("Enter number of cols: ", cols))
             {
@@ -191,9 +191,9 @@ int main(int argc, char *argv[])
                 break;
             }
 
-            if (!ConsoleApp::readNumber("Enter wall ratio (0.0-1.0, default 0.3): ", wallRatio) || wallRatio < 0.0f || wallRatio > 1.0f)
+            if (!ConsoleApp::readNumber("Enter wall ratio (0.0-1.0, default 0.2): ", wallRatio) || wallRatio < 0.0f || wallRatio > 1.0f)
             {
-                wallRatio = 0.3f;
+                wallRatio = 0.2f;
             }
 
             map.generateRandom(rows, cols, wallRatio);

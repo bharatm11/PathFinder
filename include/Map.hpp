@@ -31,12 +31,19 @@ public:
     bool loadFromJson(const std::string &filepath);
 
     /**
+     * @brief Save map to a RiskyLab Tilemap JSON file
+     * @param filepath Path to the output JSON file
+     * @return true if save succeeded, false otherwise
+     */
+    bool saveToJson(const std::string &filepath) const;
+
+    /**
      * @brief Generate a random map
      * @param rows Number of rows in the map
      * @param cols Number of columns in the map
-     * @param wallRatio Ratio of walls to total cells (default 0.3f = 30%)
+     * @param wallRatio Ratio of walls to total cells (default 0.2f = 20%)
      */
-    void generateRandom(int rows, int cols, float wallRatio = 0.3f);
+    void generateRandom(int rows, int cols, float wallRatio = 0.2f);
 
     /**
      * @brief Get the cell type at a position
