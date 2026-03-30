@@ -92,3 +92,7 @@ Open: `docs/html/index.html`
 
 - Multiple start/target markers on import:
 	If a JSON map contains multiple `Start` (`0`) or `Target` (`8`) cells, the loader currently keeps all of them in the grid, and pathfinding uses the first one found during scan (`findStart`/`findTarget`). This may lead to multiple start or target locations.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
