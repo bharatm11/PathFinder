@@ -13,9 +13,9 @@
 
 struct PathResult
 {
-    bool success = false;
-    std::vector<Position> path;
-    std::string errorMessage;
+    bool success = false; // If a path was successfully found or not
+    std::vector<Position> path; // Vector of positions representing the path from start to target 
+    std::string errorMessage; // Error message describing the failure reason. Empty if success.
 };
 
 #endif // PATHRESULT_HPP
