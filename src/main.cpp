@@ -46,8 +46,6 @@ namespace ConsoleApp
 
     /**
      *  @brief Display main menu
-     *  @param none
-     *  @return none
      */
     void displayMainMenu()
     {
@@ -69,7 +67,6 @@ namespace ConsoleApp
      *  @param map Map to modify
      *  @param marker CellType::Start or CellType::Target to replace
      *  @param newPosition New position for the marker
-     *  @return none
      */
     void replaceMarker(Map &map, CellType marker, Position newPosition)
      {
@@ -93,7 +90,6 @@ namespace ConsoleApp
       *  @param map Map to traverse
       *  @param start Start position
       *  @param target Target position
-      *  @return none
       */
      void executePathfinding(Map & map, Position start, Position target)
      {

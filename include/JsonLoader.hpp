@@ -22,8 +22,6 @@ class JsonLoader
 public:
      /**
       * @brief Class constructor
-      * @param none
-      * @return none
       */
      JsonLoader() = default;
 
