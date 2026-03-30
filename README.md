@@ -41,6 +41,40 @@ cd build
 .\Debug\RTS_Pathfinder.exe
 ```
 
+## Example Usage
+
+The app runs as an interactive console menu.
+
+### Example 1: Load a map and run pathfinding
+
+1. Choose `1` (Load map from JSON)
+2. Enter: `../samples/take_home_project.json`
+3. Choose `5` (Run pathfinding)
+
+Expected output includes:
+- Path length
+- Traversed path coordinates
+- Solved map with `*` over the traversed path
+
+### Example 2: Generate a random map and solve
+
+1. Choose `2` (Generate random map)
+2. Enter rows, cols, and wall ratio (e.g. `32`, `32`, `0.2`)
+3. Choose `5` (Run pathfinding)
+
+### Example 3: Override start/target then solve
+
+1. Load or generate a map first
+2. Choose `3` and enter new start `row` and `col`
+3. Choose `4` and enter new target `row` and `col`
+4. Choose `5` to run pathfinding
+
+### Example 4: Save current map
+
+1. Load/generate/edit map state
+2. Choose `7` (Save map to JSON)
+3. Enter output path, for example: `../samples/random_map.json`
+
 ## Generate Docs (Doxygen)
 
 ```
