@@ -7,9 +7,9 @@
  * @brief implements the A* algorithm to find the shortest path from a start position to a target position on the map.
  */
 
-#include <Position.hpp>
-#include <Map.hpp>
-#include <PathResult.hpp>
+#include "Position.hpp"
+#include "Map.hpp"
+#include "PathResult.hpp"
 #include <unordered_map>
 #include <vector>
 #include <string>
