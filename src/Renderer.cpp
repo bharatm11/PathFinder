@@ -1,6 +1,8 @@
 #include "Renderer.hpp"
 #include <algorithm>
+#include <iomanip>
 #include <iostream>
+#include <string>
 
 char Renderer::cellToChar(CellType cell)
 {
@@ -28,8 +30,20 @@ void Renderer::printMap(const Map &map, const std::vector<Position> &path)
     const char *kYellow = "\033[33m";
     const char *kReset = "\033[0m";
 
+    const int rowWidth = static_cast<int>(std::to_string(map.numRows() - 1).size());
+
+    // Column numbers
+    std::cout << std::string(rowWidth + 1, ' ');
+    for (int c = 0; c < map.numCols(); ++c)
+    {
+        std::cout << std::left << std::setw(2) << c;
+    }
+    std::cout << '\n';
+
     for (int r = 0; r < map.numRows(); ++r)
     {
+        // Row number
+        std::cout << std::right << std::setw(rowWidth) << r << ' ';
         for (int c = 0; c < map.numCols(); ++c)
         {
             const Position cell{r, c};
