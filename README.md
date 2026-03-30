@@ -1,6 +1,8 @@
 # RTS Pathfinder
 
-A* pathfinding demo on a grid map loaded from JSON.
+RTS Pathfinder is a C++ grid-based pathfinding application built around a single-unit A* search implementation. It can load maps from JSON, generate random maps, let the user adjust start and target positions interactively, compute the shortest traversable path, and render both the map and traversed path in the console.
+
+The project is structured to separate map storage, JSON serialization, search logic, rendering, and CLI interaction into different components. In addition to running pathfinding, the application can save maps back to JSON, export computed path positions, reload saved path outputs, and generate Doxygen documentation with optional UML/call graphs through Graphviz.
 
 ## Dependencies
 
