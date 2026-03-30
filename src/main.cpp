@@ -59,7 +59,8 @@ namespace ConsoleApp
             << "4. Set target position\n"
             << "5. Run pathfinding\n"
             << "6. Show current map\n"
-            << "7. Exit\n"
+            << "7. Save map to JSON\n"
+            << "8. Exit\n"
             << "Select option: ";
     }
 
@@ -281,7 +282,30 @@ int main(int argc, char *argv[])
             break;
         }
 
-        case 7: // Exit
+        case 7: // Save map
+        {
+            if (!hasMap)
+            {
+                std::cerr << "Error: No map loaded." << std::endl;
+                break;
+            }
+
+            std::cout << "Enter output JSON file path: ";
+            std::string outputPath;
+            std::getline(std::cin, outputPath);
+
+            if (map.saveToJson(outputPath))
+            {
+                std::cout << "Map saved to: " << outputPath << std::endl;
+            }
+            else
+            {
+                std::cerr << "Failed to save map." << std::endl;
+            }
+            break;
+        }
+
+        case 8: // Exit
             std::cout << "Exiting..." << std::endl;
             running = false;
             break;
