@@ -23,7 +23,7 @@ set(SOURCES
     src/main.cpp
     src/Map.cpp
     src/JsonLoader.cpp
-
+    src/PathFinder.cpp
 )
 
 # Create executable

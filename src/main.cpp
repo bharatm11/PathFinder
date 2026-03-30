@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Map.hpp"
+#include "PathFinder.hpp"
 
 char cellToChar(CellType cell)
 {
@@ -60,6 +61,25 @@ int main(int argc, char *argv[])
     }
 
     printMap(jsonMap);
+
+    const Position start = jsonMap.findStart();
+    const Position target = jsonMap.findTarget();
+    if (start.row < 0 || target.row < 0)
+    {
+        std::cerr << "Map missing start or target tile." << std::endl;
+        return 1;
+    }
+
+    Pathfinder pathfinder;
+    const PathResult result = pathfinder.findPath(jsonMap, start, target);
+    if (!result.success)
+    {
+        std::cerr << "Pathfinding failed: " << result.errorMessage << std::endl;
+        return 1;
+    }
+
+    std::cout << "Path found. Length: " << result.path.size() << std::endl;
+
 
     return 0;
 }
