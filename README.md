@@ -112,6 +112,25 @@ cmake --build . --target docs
 
 Open: `docs/html/index.html`
 
+## Overview of Project Structure
+
+- `include/CellType.hpp`
+	- Defines the `CellType` enum used to label map cells (start, target, wall, free, path).
+- `include/Position.hpp`
+	- Defines the `Position` coordinate type and hash support used by pathfinding containers.
+- `include/PathResult.hpp`
+	- Defines `PathResult`, the result object returned by the solver (`success`, `path`, `errorMessage`).
+- `include/Map.hpp` and `src/Map.cpp`
+	- Defines `Map`, the grid data model with map generation, cell access, start/target lookup, and JSON load/save integration.
+- `include/JsonLoader.hpp` and `src/JsonLoader.cpp`
+	- Defines `JsonLoader`, the serialization layer for reading/writing map JSON and normalizing incoming tile values.
+- `include/PathFinder.hpp` and `src/PathFinder.cpp`
+	- Defines `PathFinder`, the A* search engine for single-unit shortest-path computation on the grid.
+- `include/Renderer.hpp` and `src/Renderer.cpp`
+	- Defines `Renderer`, responsible for console output of maps and solved paths.
+- `src/main.cpp`
+	- Implements the interactive CLI workflow: load/generate map, set start/target, run pathfinding, render, and save.
+
 ## Design Decisions
 
 1. Why A* for pathfinding
