@@ -102,6 +102,23 @@ Expected output includes:
 2. Choose `7` (Save map to JSON)
 3. Enter output path, for example: `../samples/random_map.json`
 
+### Example 5: FULL WORKFLOW: Save traversed paths, then read them
+
+This example shows a full workflow using output files produced by the program.
+
+1. Choose `1` and load `../samples/take_home_project.json`
+2. Choose `5` to run pathfinding
+3. Choose `7` and save the current map to an output file such as `../samples/output_map.json`
+4. Choose `8` and save the computed path positions to an output file such as `../samples/output_path.json`
+5. Restart the program
+6. Choose `1` and load `../samples/output_map.json`
+7. Choose `9` and load `../samples/output_path.json`
+
+Expected output includes:
+- The saved map being loaded successfully
+- The saved path coordinates being printed
+- The loaded path rendered back onto the current map with `*`
+
 ## Generate Docs (Doxygen)
 
 ```
